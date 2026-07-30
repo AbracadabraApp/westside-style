@@ -402,16 +402,41 @@
     </section>
 
     <!-- ABOUT JENNIFER -->
-    <section id="about" class="py-24 px-6 lg:px-8 bg-white">
-        <div class="max-w-4xl mx-auto">
+    <section id="about" class="relative py-24 px-6 lg:px-8 bg-white overflow-hidden">
+        <!-- Video Background Container -->
+        <div class="absolute inset-0 z-0">
+            <!-- Video Element -->
+            <video
+                autoplay
+                muted
+                loop
+                playsinline
+                poster="https://via.placeholder.com/1920x1080/1a1a1a/666666?text=Video+Background"
+                class="absolute inset-0 w-full h-full object-cover"
+            >
+                <!-- USER TODO: Replace with your actual video files -->
+                <source src="jennifer-background.mp4" type="video/mp4">
+                <source src="jennifer-background.webm" type="video/webm">
+                <!-- Fallback for browsers that don't support video -->
+                <img src="https://via.placeholder.com/1920x1080/1a1a1a/666666?text=Video+Background"
+                     alt="Background"
+                     class="absolute inset-0 w-full h-full object-cover">
+            </video>
+
+            <!-- Overlay for better text readability -->
+            <div class="absolute inset-0 bg-white/85 backdrop-blur-sm"></div>
+        </div>
+
+        <!-- Content (now with relative positioning to be above video) -->
+        <div class="relative z-10 max-w-4xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="font-serif text-4xl md:text-5xl mb-4">Meet Jennifer Arges</h2>
                 <p class="text-salon-gold text-lg">Stylist & Owner</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- About Text -->
-                <div class="space-y-6">
+                <!-- About Text - Enhanced with semi-transparent white background -->
+                <div class="space-y-6 bg-white/90 p-8 rounded-lg shadow-xl backdrop-blur-sm">
                     <p class="text-gray-700 font-light leading-relaxed">
                         With over a decade of experience in luxury hair styling, Jennifer Arges founded Westside Style
                         with a vision to create more than just beautiful hair – but to elevate confidence and celebrate
@@ -432,9 +457,9 @@
                     </p>
                 </div>
 
-                <!-- Image Placeholder -->
+                <!-- Image - Enhanced with shadow -->
                 <div class="relative">
-                    <div class="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden">
+                    <div class="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden shadow-2xl">
                         <!-- USER TODO: Replace with Jennifer's professional photo -->
                         <img src="https://via.placeholder.com/600x800/f0f0f0/999999?text=Jennifer+Arges"
                              alt="Jennifer Arges, Stylist & Owner"
@@ -445,13 +470,12 @@
 
             <!-- Call to Action -->
             <div class="text-center mt-12">
-                <a href="#booking" class="inline-block px-10 py-4 bg-salon-charcoal text-white hover:bg-salon-gold hover:text-salon-charcoal transition-all duration-300 text-sm tracking-widest uppercase font-medium">
+                <a href="#booking" class="inline-block px-10 py-4 bg-salon-charcoal text-white hover:bg-salon-gold hover:text-salon-charcoal transition-all duration-300 text-sm tracking-widest uppercase font-medium shadow-lg">
                     Book Your Consultation
                 </a>
             </div>
         </div>
     </section>
-
     <!-- BOOKING & CONTACT -->
     <section id="booking" class="py-24 px-6 lg:px-8 bg-salon-cream">
         <div class="max-w-6xl mx-auto">
