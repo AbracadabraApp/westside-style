@@ -297,103 +297,88 @@
             </div>        </div>
     </section>
 
-    <!-- INSTAGRAM GALLERY -->
+    <!-- VIDEO GALLERY -->
     <section id="gallery" class="py-24 px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="font-serif text-4xl md:text-5xl mb-4">Follow Our Journey</h2>
-                <a href="https://www.instagram.com/_westside_style_" target="_blank" class="text-salon-gold hover:text-salon-charcoal transition-colors text-lg">@_westside_style_</a>
+                <h2 class="font-serif text-4xl md:text-5xl mb-4">Our Work</h2>
+                <p class="text-gray-600 font-light">Transformations that speak for themselves</p>
+                <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block mt-4 text-salon-gold hover:text-salon-charcoal transition-colors text-lg">@_westside_style_</a>
             </div>
 
-            <!-- Instagram Grid Container -->
-            <div id="instagram-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- Instagram posts will be dynamically loaded here -->
-                <!-- Fallback placeholders shown initially -->
-                <div class="instagram-tile relative group cursor-pointer overflow-hidden bg-gray-200 aspect-square">
-                    <img src="https://via.placeholder.com/400x400/f0f0f0/999999?text=Hair+1" alt="Instagram post" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <div class="flex items-center space-x-4 text-sm">
-                                <span>❤️ 243</span>
-                                <span>💬 18</span>
-                            </div>
+            <!-- Video Grid - 3 Videos -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Video 1 -->
+                <div class="video-tile relative group cursor-pointer overflow-hidden bg-gray-100 aspect-[9/16] rounded-lg shadow-lg">
+                    <video
+                        class="w-full h-full object-cover"
+                        muted
+                        loop
+                        playsinline
+                        poster=""
+                        onmouseover="this.play()"
+                        onmouseout="this.pause(); this.currentTime = 0;"
+                    >
+                        <source src="gallery-video-1.mp4" type="video/mp4">
+                        <!-- Fallback message -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
+                            <p class="text-gray-500">Video 1 Coming Soon</p>
+                        </div>
+                    </video>
+                    <!-- Overlay on hover -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="text-white p-4">
+                            <p class="text-sm font-light">Transformation</p>
                         </div>
                     </div>
                 </div>
-                <div class="instagram-tile relative group cursor-pointer overflow-hidden bg-gray-200 aspect-square">
-                    <img src="https://via.placeholder.com/400x400/f0f0f0/999999?text=Hair+2" alt="Instagram post" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <div class="flex items-center space-x-4 text-sm">
-                                <span>❤️ 189</span>
-                                <span>💬 12</span>
-                            </div>
+
+                <!-- Video 2 -->
+                <div class="video-tile relative group cursor-pointer overflow-hidden bg-gray-100 aspect-[9/16] rounded-lg shadow-lg">
+                    <video
+                        class="w-full h-full object-cover"
+                        muted
+                        loop
+                        playsinline
+                        poster=""
+                        onmouseover="this.play()"
+                        onmouseout="this.pause(); this.currentTime = 0;"
+                    >
+                        <source src="gallery-video-2.mp4" type="video/mp4">
+                        <!-- Fallback message -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
+                            <p class="text-gray-500">Video 2 Coming Soon</p>
+                        </div>
+                    </video>
+                    <!-- Overlay on hover -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="text-white p-4">
+                            <p class="text-sm font-light">Styling Excellence</p>
                         </div>
                     </div>
                 </div>
-                <div class="instagram-tile relative group cursor-pointer overflow-hidden bg-gray-200 aspect-square">
-                    <img src="https://via.placeholder.com/400x400/f0f0f0/999999?text=Hair+3" alt="Instagram post" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <div class="flex items-center space-x-4 text-sm">
-                                <span>❤️ 312</span>
-                                <span>💬 24</span>
-                            </div>
+
+                <!-- Video 3 -->
+                <div class="video-tile relative group cursor-pointer overflow-hidden bg-gray-100 aspect-[9/16] rounded-lg shadow-lg">
+                    <video
+                        class="w-full h-full object-cover"
+                        muted
+                        loop
+                        playsinline
+                        poster=""
+                        onmouseover="this.play()"
+                        onmouseout="this.pause(); this.currentTime = 0;"
+                    >
+                        <source src="gallery-video-3.mp4" type="video/mp4">
+                        <!-- Fallback message -->
+                        <div class="absolute inset-0 flex items-center justify-center bg-gray-200">
+                            <p class="text-gray-500">Video 3 Coming Soon</p>
                         </div>
-                    </div>
-                </div>
-                <div class="instagram-tile relative group cursor-pointer overflow-hidden bg-gray-200 aspect-square">
-                    <img src="https://via.placeholder.com/400x400/f0f0f0/999999?text=Hair+4" alt="Instagram post" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <div class="flex items-center space-x-4 text-sm">
-                                <span>❤️ 267</span>
-                                <span>💬 19</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="instagram-tile relative group cursor-pointer overflow-hidden bg-gray-200 aspect-square">
-                    <img src="https://via.placeholder.com/400x400/f0f0f0/999999?text=Hair+5" alt="Instagram post" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <div class="flex items-center space-x-4 text-sm">
-                                <span>❤️ 421</span>
-                                <span>💬 31</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="instagram-tile relative group cursor-pointer overflow-hidden bg-gray-200 aspect-square">
-                    <img src="https://via.placeholder.com/400x400/f0f0f0/999999?text=Hair+6" alt="Instagram post" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <div class="flex items-center space-x-4 text-sm">
-                                <span>❤️ 198</span>
-                                <span>💬 14</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="instagram-tile relative group cursor-pointer overflow-hidden bg-gray-200 aspect-square">
-                    <img src="https://via.placeholder.com/400x400/f0f0f0/999999?text=Hair+7" alt="Instagram post" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <div class="flex items-center space-x-4 text-sm">
-                                <span>❤️ 356</span>
-                                <span>💬 28</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="instagram-tile relative group cursor-pointer overflow-hidden bg-gray-200 aspect-square">
-                    <img src="https://via.placeholder.com/400x400/f0f0f0/999999?text=Hair+8" alt="Instagram post" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <div class="text-white text-center">
-                            <div class="flex items-center space-x-4 text-sm">
-                                <span>❤️ 289</span>
-                                <span>💬 22</span>
-                            </div>
+                    </video>
+                    <!-- Overlay on hover -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div class="text-white p-4">
+                            <p class="text-sm font-light">Color Artistry</p>
                         </div>
                     </div>
                 </div>
@@ -609,78 +594,8 @@
             lastScroll = currentScroll;
         });
 
-        // Instagram Feed Component
-        class InstagramFeed {
-            constructor(containerId, accessToken) {
-                this.container = document.getElementById(containerId);
-                this.accessToken = accessToken;
-
-                // USER TODO: Replace 'YOUR_ACCESS_TOKEN' with your actual Instagram Graph API Access Token
-                // To get an access token, follow the Instagram Basic Display API documentation:
-                // https://developers.facebook.com/docs/instagram-basic-display-api/getting-started
-
-                if (this.accessToken && this.accessToken !== 'YOUR_ACCESS_TOKEN') {
-                    this.loadFeed();
-                } else {
-                    console.log('Instagram feed using placeholder images. Add your access token to display real posts.');
-                    this.showPlaceholder();
-                }
-            }
-
-            async loadFeed() {
-                try {
-                    // Instagram Graph API endpoint
-                    const apiUrl = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,permalink,thumbnail_url,caption&access_token=${this.accessToken}&limit=8`;
-
-                    const response = await fetch(apiUrl);
-                    const data = await response.json();
-
-                    if (data.data) {
-                        this.renderPosts(data.data);
-                    } else {
-                        this.showPlaceholder();
-                    }
-                } catch (error) {
-                    console.error('Error loading Instagram feed:', error);
-                    this.showPlaceholder();
-                }
-            }
-
-            renderPosts(posts) {
-                this.container.innerHTML = '';
-
-                posts.forEach(post => {
-                    const imageUrl = post.media_type === 'VIDEO' ? post.thumbnail_url : post.media_url;
-
-                    const postElement = document.createElement('div');
-                    postElement.className = 'instagram-tile relative group cursor-pointer overflow-hidden bg-gray-200 aspect-square';
-                    postElement.innerHTML = `
-                        <a href="${post.permalink}" target="_blank" rel="noopener noreferrer">
-                            <img src="${imageUrl}" alt="${post.caption ? post.caption.substring(0, 50) : 'Instagram post'}" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <div class="text-white text-center">
-                                    <div class="flex items-center space-x-4 text-sm">
-                                        <span>❤️ ${Math.floor(Math.random() * 500) + 100}</span>
-                                        <span>💬 ${Math.floor(Math.random() * 50) + 5}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    `;
-
-                    this.container.appendChild(postElement);
-                });
-            }
-
-            showPlaceholder() {
-                // Placeholder is already in HTML, no action needed
-                console.log('Using placeholder Instagram grid');
-            }
-        }
-
-        // Initialize Instagram Feed
-        // USER TODO: Replace 'YOUR_ACCESS_TOKEN' with your actual Instagram API access token
-        const instagramFeed = new InstagramFeed('instagram-grid', 'YOUR_ACCESS_TOKEN');
+        // Video Gallery Handler
+        // Videos will play on hover automatically using inline onmouseover/onmouseout events
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
