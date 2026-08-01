@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Westside Style - Elevate Your Everyday Style</title>
+    <title>Westside Style - Seattle</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,26 +14,45 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        'serif': ['Playfair Display', 'serif'],
-                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Bebas Neue', 'sans-serif'],
+                        'serif': ['Crimson Pro', 'serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        'salon-gold': '#D4AF37',
-                        'salon-cream': '#FAF7F2',
-                        'salon-charcoal': '#1A1A1A',
+                        'warm': {
+                            'ochre': '#C17817',
+                            'amber': '#E8A735',
+                            'sand': '#F4E8D0',
+                            'bone': '#FAF7F0',
+                        },
+                        'neutral': {
+                            'ink': '#0A0908',
+                            'ash': '#49463F',
+                            'stone': '#8B8680',
+                            'cloud': '#F7F5F2',
+                        }
+                    },
+                    fontSize: {
+                        '10xl': '10rem',
+                        '11xl': '12rem',
+                        '12xl': '14rem',
+                    },
+                    letterSpacing: {
+                        'extreme': '0.2em',
+                        'wide': '0.1em',
                     },
                     animation: {
-                        'fade-in': 'fadeIn 0.6s ease-in-out',
-                        'slide-up': 'slideUp 0.5s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'reveal': 'reveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
                     },
                     keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
                         },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        reveal: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
                 }
@@ -44,449 +63,384 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 
-    <!-- Inline Styles for Additional Effects -->
+    <!-- Custom Styles -->
     <style>
+        /* Smooth scroll without snapping */
         html {
             scroll-behavior: smooth;
         }
 
-        .backdrop-blur-custom {
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+        /* Gradient mesh background inspired by Kin Euphorics */
+        .gradient-mesh {
+            background: linear-gradient(125deg, #FAF7F0 0%, #F4E8D0 25%, #FAF7F0 50%, #E8A735 75%, #FAF7F0 100%);
+            background-size: 400% 400%;
+            animation: meshFlow 30s ease infinite;
         }
 
-        .instagram-tile {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        @keyframes meshFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        .instagram-tile:hover {
-            transform: scale(1.03);
+        /* Editorial style image reveals */
+        .image-reveal {
+            position: relative;
+            overflow: hidden;
         }
 
-        .service-item {
-            transition: all 0.2s ease;
+        .image-reveal::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(193, 120, 23, 0.3));
+            opacity: 0;
+            transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .service-item:hover {
-            transform: translateX(8px);
+        .image-reveal:hover::after {
+            opacity: 1;
+        }
+
+        /* Ssense-style text mixing */
+        .text-mix {
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Minimal navigation dots */
+        .nav-minimal {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        /* Service cards with depth */
+        .service-card {
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent, rgba(232, 167, 53, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Custom cursor for premium feel */
+        body {
+            cursor: auto;
+        }
+
+        a, button {
+            cursor: pointer;
+        }
+
+        /* Text selection colors */
+        ::selection {
+            background: rgba(193, 120, 23, 0.2);
+            color: #0A0908;
         }
     </style>
 </head>
-<body class="bg-white text-salon-charcoal font-sans antialiased">
+<body class="bg-neutral-cloud text-neutral-ink overflow-x-hidden">
 
-    <!-- NAVIGATION -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-custom border-b border-gray-100 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="font-serif text-2xl font-bold tracking-wide">
-                    WESTSIDE STYLE
-                </div>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 font-light">
-                    <a href="#services" class="hover:text-salon-gold transition-colors">Services</a>
-                    <a href="#gallery" class="hover:text-salon-gold transition-colors">Gallery</a>
-                    <a href="#booking" class="px-6 py-2 bg-salon-charcoal text-white hover:bg-salon-gold transition-all">Book Now</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden p-2">
-                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
+    <!-- NAVIGATION - Minimal, editorial style -->
+    <nav class="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+        <div class="flex justify-between items-center p-8 lg:p-12">
+            <!-- Logo -->
+            <div class="text-neutral-ink">
+                <span class="font-mono text-xs tracking-extreme">WESTSIDE</span>
             </div>
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-6 animate-fade-in">
-                <a href="#services" class="block py-3 hover:text-salon-gold transition-colors">Services</a>
-                <a href="#gallery" class="block py-3 hover:text-salon-gold transition-colors">Gallery</a>
-                <a href="#booking" class="inline-block mt-4 px-6 py-2 bg-salon-charcoal text-white hover:bg-salon-gold transition-all">Book Now</a>
+            <!-- Right side nav -->
+            <div class="flex items-center space-x-12">
+                <a href="#services" class="hidden md:block font-mono text-xs tracking-wide hover:text-warm-ochre transition-colors">SERVICES</a>
+                <a href="#gallery" class="hidden md:block font-mono text-xs tracking-wide hover:text-warm-ochre transition-colors">WORK</a>
+                <a href="#booking" class="font-mono text-xs tracking-wide border-b border-neutral-ink hover:border-warm-ochre hover:text-warm-ochre transition-all">BOOK</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background -->
-        <div class="absolute inset-0 bg-salon-charcoal">
+    <!-- HERO - Full screen background video with overlaid text -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden w-full">
+        <!-- Background Video with gradient overlays - optimized for mobile vertical -->
+        <div class="absolute inset-0 w-full h-full">
+            <video id="heroVideo" autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover scale-150" style="object-position: center 15%;">
+                <source src="reel3.mp4" type="video/mp4">
+            </video>
+
+            <!-- Gradient overlays for phased edges -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/70"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50"></div>
         </div>
 
-        <!-- Hero Content -->
-        <div class="relative z-10 text-center text-salon-gold px-6 max-w-4xl mx-auto animate-slide-up">
-            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight">
-                More Than<br>Worth It
-            </h1>
-            <a href="#booking" class="inline-block px-10 py-4 bg-salon-charcoal text-white hover:bg-salon-gold hover:text-salon-charcoal transition-all duration-300 text-sm tracking-widest uppercase font-medium">
-                GET IN TOUCH
-            </a>
+        <!-- Script for seamless video loop and playback -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById('heroVideo');
+                if (video) {
+                    video.playbackRate = 0.6; // 60% speed
+
+                    // Preload and create seamless loop
+                    video.addEventListener('loadeddata', function() {
+                        video.play();
+                    });
+
+                    // Ensure smooth loop by preventing pause
+                    video.addEventListener('ended', function() {
+                        video.currentTime = 0;
+                        video.play();
+                    });
+                }
+            });
+        </script>
+
+        <!-- Content overlay - mobile optimized -->
+        <div class="relative z-10 flex flex-col justify-end h-screen px-4 pb-20 text-center w-full max-w-full">
+            <div class="space-y-8">
+                <!-- Main title -->
+                <h1 class="leading-none">
+                    <span class="font-display text-7xl block text-white drop-shadow-2xl">MORE</span>
+                    <span class="font-serif text-6xl block italic font-light text-[#D4AF37] mt-[-0.2em] drop-shadow-2xl">Than</span>
+                    <span class="font-display text-7xl block text-white drop-shadow-2xl">WORTH IT</span>
+                </h1>
+
+                <!-- Divider line -->
+                <div class="w-20 h-px bg-[#D4AF37]/60 mx-auto"></div>
+
+                <!-- Contact info -->
+                <div>
+                    <p class="font-mono text-sm tracking-extreme text-white/90 mb-1">WESTSIDE STYLE</p>
+                    <a href="sms:2062954549" class="inline-block">
+                        <span class="font-mono text-xs tracking-wide text-white/70 hover:text-white transition-colors">
+                            TEXT 206.295.4549
+                        </span>
+                    </a>
+                    <span class="text-white/40 mx-2">·</span>
+                    <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block">
+                        <span class="font-mono text-xs tracking-wide text-white/70 hover:text-white transition-colors">
+                            @_westside_style_
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Tagline -->
+                <div>
+                    <p class="font-serif text-xl leading-relaxed text-white/80 max-w-sm mx-auto">
+                        Luxurious hair extensions in Seattle — effortless, lasting style that looks and feels like your own
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <!-- Meet Jennifer -->
-        <div class="absolute bottom-12 left-0 right-0 text-center z-10">
-            <a href="#about" class="text-salon-gold hover:text-white font-light text-lg md:text-xl tracking-wide transition-colors">
-                Meet Jennifer Arges, Stylist & Owner
-            </a>
-        </div>
     </section>
 
-    <!-- SERVICES & PRICING -->
-    <section id="services" class="py-24 px-6 lg:px-8 bg-salon-cream">
+<!-- SERVICES - Confidence in simplicity -->
+    <section id="services" class="py-8 px-8 lg:px-16 bg-neutral-cloud">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl mb-4">Services</h2>
-                <p class="text-gray-600 font-light">Crafted experiences for discerning clientele</p>
+            <!-- Header -->
+            <div class="text-center mb-6">
+                <span class="font-mono text-xs tracking-extreme text-warm-ochre">SERVICES</span>
+                <h2 class="font-display text-5xl lg:text-6xl mt-2">THE WORK</h2>
+                <p class="font-mono text-xs tracking-wide text-neutral-ash mt-4">
+                    CONSULTATION REQUIRED FOR ALL NEW GUESTS
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
-                <!-- Extensions (Left Column) -->
-                <div>
-                    <h3 class="font-serif text-2xl mb-8 pb-3 border-b border-gray-300">Extensions</h3>
-                    <div class="space-y-6">
-                        <div class="service-item">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-medium mb-1">Keratin Bond</h4>
-                                    <p class="text-sm text-gray-600 font-light">Long-lasting fusion extensions</p>
-                                </div>
-                                <span class="text-salon-gold font-medium">$1200+</span>
-                            </div>
+            <!-- Service Grid - Editorial layout -->
+            <div class="grid lg:grid-cols-3 gap-x-16 gap-y-12">
+                <!-- Extensions -->
+                <div class="service-card">
+                    <h3 class="font-display text-3xl mb-4">EXTENSIONS</h3>
+                    <div class="space-y-3">
+                        <div class="border-b border-neutral-stone/20 pb-2">
+                            <p class="font-serif text-lg">Keratin Bond</p>
+                            <p class="font-mono text-xs text-warm-ochre">FROM 1200+</p>
                         </div>
-                        <div class="service-item">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-medium mb-1">Hand Tied Rows</h4>
-                                    <p class="text-sm text-gray-600 font-light">Natural beaded row extensions</p>
-                                </div>
-                                <span class="text-salon-gold font-medium">$800+</span>
-                            </div>
+                        <div class="border-b border-neutral-stone/20 pb-2">
+                            <p class="font-serif text-lg">Hand Tied Rows</p>
+                            <p class="font-mono text-xs text-warm-ochre">FROM 800+</p>
                         </div>
-                        <div class="service-item">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-medium mb-1">Tape-In Extensions</h4>
-                                    <p class="text-sm text-gray-600 font-light">Natural-looking length & volume</p>
-                                </div>
-                                <span class="text-salon-gold font-medium">$600+</span>
-                            </div>
+                        <div class="border-b border-neutral-stone/20 pb-2">
+                            <p class="font-serif text-lg">Tape-In</p>
+                            <p class="font-mono text-xs text-warm-ochre">FROM 600+</p>
                         </div>
-                        <div class="service-item">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-medium mb-1">Move-Up & Maintenance</h4>
-                                    <p class="text-sm text-gray-600 font-light">Extension adjustment & care service</p>
-                                </div>
-                                <span class="text-salon-gold font-medium">$200+</span>
-                            </div>
+                        <div>
+                            <p class="font-serif text-lg">Move-Up</p>
+                            <p class="font-mono text-xs text-warm-ochre mt-1">FROM 200+</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Color (Right Column) -->
-                <div>
-                    <h3 class="font-serif text-2xl mb-8 pb-3 border-b border-gray-300">Color</h3>
-                    <div class="space-y-6">
-                        <div class="service-item">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-medium mb-1">Single Process</h4>
-                                    <p class="text-sm text-gray-600 font-light">Full coverage color application</p>
-                                </div>
-                                <span class="text-salon-gold font-medium">$125+</span>
-                            </div>
+                <!-- Color -->
+                <div class="service-card">
+                    <h3 class="font-display text-3xl mb-4">COLOR</h3>
+                    <div class="space-y-3">
+                        <div class="border-b border-neutral-stone/20 pb-2">
+                            <p class="font-serif text-lg">Single Process</p>
+                            <p class="font-mono text-xs text-warm-ochre">FROM 125+</p>
                         </div>
-                        <div class="service-item">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-medium mb-1">Root Touch-Up</h4>
-                                    <p class="text-sm text-gray-600 font-light">Seamless root color matching</p>
-                                </div>
-                                <span class="text-salon-gold font-medium">$85+</span>
-                            </div>
+                        <div class="border-b border-neutral-stone/20 pb-2">
+                            <p class="font-serif text-lg">Root Touch-Up</p>
+                            <p class="font-mono text-xs text-warm-ochre">FROM 85+</p>
                         </div>
-                        <div class="service-item">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-medium mb-1">Color Correction</h4>
-                                    <p class="text-sm text-gray-600 font-light">Expert color transformation</p>
-                                </div>
-                                <span class="text-salon-gold font-medium">$350+</span>
-                            </div>
+                        <div>
+                            <p class="font-serif text-lg">Color Correction</p>
+                            <p class="font-mono text-xs text-warm-ochre">FROM 350+</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Brazilian Blowout as standalone line -->
-            <div class="mt-12 text-center">
-                <div class="service-item inline-block">
-                    <div class="flex items-center space-x-4">
-                        <div class="text-left">
-                            <h4 class="font-medium">Brazilian Blowout Original</h4>
-                            <p class="text-sm text-gray-600 font-light">Smooths frizz & reduces styling time</p>
+                <!-- Treatment -->
+                <div class="service-card">
+                    <h3 class="font-display text-3xl mb-4">TREATMENT</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <p class="font-serif text-lg">Brazilian Blowout</p>
+                            <p class="font-serif text-sm italic text-neutral-ash mt-1">
+                                The original. Smooths frizz,<br/>
+                                cuts styling time in half.
+                            </p>
+                            <p class="font-mono text-xs text-warm-ochre mt-2">FROM 350</p>
                         </div>
-                        <span class="text-salon-gold font-medium">$350+</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VIDEO GALLERY -->
-    <section id="gallery" class="py-24 px-6 lg:px-8">
+<!-- GALLERY - Video grid with editorial captions -->
+    <section id="gallery" class="py-16 px-6 lg:px-16 bg-warm-bone">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12">
-                <p class="text-gray-600 font-light text-2xl">Transformations that speak for themselves</p>
-                <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block mt-4 text-salon-gold hover:text-salon-charcoal transition-colors text-lg">@_westside_style_</a>
+            <!-- Header -->
+            <div class="mb-10">
+                <div>
+                    <span class="font-mono text-xs tracking-extreme text-warm-ochre">RECENT WORK</span>
+                    <h2 class="font-display text-5xl lg:text-6xl mt-2">TRANSFORMATIONS</h2>
+                </div>
             </div>
 
-            <!-- Video Grid - 3 Videos -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <!-- Video Grid - Uniform layout -->
+            <div class="grid md:grid-cols-3 gap-y-12 gap-x-6 md:gap-8">
                 <!-- Video 1 -->
-                <div class="video-tile relative group cursor-pointer overflow-hidden bg-gray-100 aspect-[9/16] rounded-lg shadow-lg">
-                    <video
-                        class="w-full h-full object-cover"
-                        autoplay
-                        muted
-                        loop
-                        playsinline
-                    >
-                        <source src="gallery-video-1.mp4" type="video/mp4">
-                    </video>
-                    <!-- Overlay on hover -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <div class="text-white p-4">
-                            <p class="text-sm font-light">Transformation</p>
-                        </div>
+                <div>
+                    <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="gallery-video-1.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
 
                 <!-- Video 2 -->
-                <div class="video-tile relative group cursor-pointer overflow-hidden bg-gray-100 aspect-[9/16] rounded-lg shadow-lg">
-                    <video
-                        class="w-full h-full object-cover"
-                        autoplay
-                        muted
-                        loop
-                        playsinline
-                    >
-                        <source src="gallery-video-2.mp4" type="video/mp4">
-                    </video>
-                    <!-- Overlay on hover -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <div class="text-white p-4">
-                            <p class="text-sm font-light">Styling Excellence</p>
-                        </div>
+                <div>
+                    <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="gallery-video-2.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
 
                 <!-- Video 3 -->
-                <div class="video-tile relative group cursor-pointer overflow-hidden bg-gray-100 aspect-[9/16] rounded-lg shadow-lg">
-                    <video
-                        class="w-full h-full object-cover"
-                        autoplay
-                        muted
-                        loop
-                        playsinline
-                    >
-                        <source src="gallery-video-3.mp4" type="video/mp4">
-                    </video>
-                    <!-- Overlay on hover -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <div class="text-white p-4">
-                            <p class="text-sm font-light">Color Artistry</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT JENNIFER -->
-    <section id="about" class="py-24 px-6 lg:px-8 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="font-serif text-4xl md:text-5xl mb-4">Meet Jennifer Arges</h2>
-                <p class="text-salon-gold text-lg">Stylist & Owner</p>
-            </div>
-
-            <div class="max-w-3xl mx-auto text-center space-y-6">
-                <p class="text-gray-700 font-light leading-relaxed">
-                    With over a decade of experience in luxury hair styling, Jennifer Arges founded Westside Style
-                    with a vision to create more than just beautiful hair – but to elevate confidence and celebrate
-                    individual beauty.
-                </p>
-                <p class="text-gray-700 font-light leading-relaxed">
-                    There's something about having hair you absolutely love—it changes the way you walk into a room.
-                    More confidence, effortless styling, and beautiful hair every single day. Good hair has a way
-                    of turning heads—but more importantly, it makes you feel like your best self.
-                </p>
-
-                <!-- Jennifer's Video Reel -->
-                <div class="mt-8 mb-6">
-                    <div class="max-w-sm md:max-w-md mx-auto rounded-lg overflow-hidden shadow-xl">
-                        <video
-                            autoplay
-                            muted
-                            loop
-                            playsinline
-                            class="w-full h-auto"
-                        >
-                            <source src="reel_noaudio.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
+                <div>
+                    <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="gallery-video-3.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
             </div>
-
-            <!-- Call to Action -->
-            <div class="text-center mt-12">
-                <a href="#booking" class="inline-block px-10 py-4 bg-salon-charcoal text-white hover:bg-salon-gold hover:text-salon-charcoal transition-all duration-300 text-sm tracking-widest uppercase font-medium">
-                    Book Your Consultation
-                </a>
-            </div>
         </div>
     </section>
 
-    <!-- BOOKING & CONTACT -->
-    <section id="booking" class="py-24 px-6 lg:px-8 bg-salon-cream">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center">
-                <h2 class="font-serif text-4xl mb-8">Get In Touch</h2>
-                <p class="text-gray-600 font-light text-2xl mb-4">
-                    Text me @ <a href="sms:206-295-4549" class="text-salon-gold hover:text-salon-charcoal transition-colors font-medium">206-295-4549</a>
+<!-- PHILOSOPHY - Editorial spread -->
+    <section class="px-8 lg:px-16 py-8 bg-warm-bone">
+        <div class="max-w-7xl mx-auto">
+            <!-- Title at top -->
+            <div class="mb-6 text-center">
+                <h2 class="font-display text-5xl lg:text-6xl">
+                    About Jennifer Arges
+                </h2>
+                <p class="font-mono text-xs tracking-extreme text-warm-ochre mt-2">
+                    STYLIST & OWNER, WESTSIDE STYLE
                 </p>
-                <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block mb-8 text-salon-gold hover:text-salon-charcoal transition-colors text-lg">@_westside_style_</a>
+            </div>
 
-                <div class="mt-12 space-y-8">
-                    <div>
-                        <h3 class="font-serif text-2xl mb-4">Location</h3>
-                        <p class="text-gray-600 font-light text-lg">
-                            7350 35th Ave SW<br>
-                            Seattle, WA 98126
-                        </p>
+            <div class="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
+                <!-- Video -->
+                <div class="lg:w-auto">
+                    <div class="aspect-[9/16] w-full max-w-sm bg-neutral-cloud image-reveal">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="reel2_final.mp4" type="video/mp4">
+                        </video>
                     </div>
+                </div>
 
-                    <div>
-                        <h3 class="font-serif text-2xl mb-4">Hours</h3>
-                        <p class="text-gray-600 font-light text-lg">
-                            Monday - Thursday<br>
-                            Appointment times: 9am or 1pm
+                <!-- Text - narrower -->
+                <div class="flex-1 space-y-6 max-w-xl lg:pr-8">
+                        <p class="font-serif text-xl leading-relaxed text-neutral-ink">
+                            Good hair changes the way you feel. You notice it when you walk into a room. More confidence, effortless styling, and beautiful hair every single day. Good hair has a way of turning heads—but more importantly, it makes you feel like your best self.
                         </p>
-                        <p class="text-gray-600 font-light text-lg mt-4">
-                            Friday - Sunday<br>
-                            Closed
+                        <p class="font-serif text-xl leading-relaxed text-neutral-ash">
+                            I have over a decade of experience in luxury hair styling, focused on hair extensions. Once I started wearing them I was hooked. I founded Westside Style with a vision to create more than just beautiful hair – but to elevate confidence and celebrate individual beauty.
                         </p>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-salon-charcoal text-white py-12 px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <p class="font-serif text-xl mb-2">WESTSIDE STYLE</p>
-                </div>
+<!-- BOOKING - Minimal contact -->
+    <section id="booking" class="py-20 px-8 lg:px-16 bg-neutral-ink text-neutral-cloud">
+        <div class="max-w-4xl mx-auto w-full text-center">
+            <!-- Large type -->
+            <h2 class="font-display text-7xl lg:text-9xl text-warm-ochre mb-6">
+                LET'S TALK
+            </h2>
 
-                <div class="flex space-x-6 mb-6 md:mb-0">
-                    <!-- Social Icons -->
-                    <a href="https://www.instagram.com/_westside_style_" target="_blank" aria-label="Instagram" class="hover:text-salon-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
-                        </svg>
+            <!-- Appointment info -->
+            <div class="mb-8">
+                <p class="text-lg text-neutral-cloud/80">
+                    <span class="font-mono text-xs tracking-wide text-neutral-stone">APPOINTMENTS: 9AM OR 1PM</span><br/>
+                    <span class="font-serif">Monday – Thursday</span>
+                </p>
+            </div>
+
+            <!-- Contact info - editorial style -->
+            <div class="space-y-6">
+                <div>
+                    <p class="font-mono text-xs tracking-extreme text-neutral-stone mb-2">TEXT PREFERRED</p>
+                    <a href="sms:2062954549" class="block">
+                        <p class="font-display text-4xl lg:text-5xl hover:text-warm-ochre transition-colors">206.295.4549</p>
+                    </a>
+                    <a href="https://www.instagram.com/_westside_style_" target="_blank"
+                       class="inline-block mt-2 font-mono text-sm tracking-wide text-warm-ochre hover:text-neutral-cloud transition-colors">
+                        @_westside_style_
                     </a>
                 </div>
 
             </div>
+
         </div>
-    </footer>
+    </section>
 
-    <!-- JavaScript -->
+<!-- Smooth scroll for sections -->
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const closeIcon = document.getElementById('close-icon');
+        // Removed parallax effect to prevent jumping
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking a link
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-            });
-        });
-
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        let lastScroll = 0;
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 100) {
-                navbar.classList.add('shadow-lg');
-            } else {
-                navbar.classList.remove('shadow-lg');
-            }
-
-            lastScroll = currentScroll;
-        });
-
-        // Video Gallery Handler
-        // Videos will play on hover automatically using inline onmouseover/onmouseout events
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offset = 80; // Account for fixed navbar
-                    const targetPosition = target.offsetTop - offset;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
+        // Removed scroll animations to prevent jumping
     </script>
+
 </body>
 </html>
