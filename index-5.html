@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westside Style - Seattle</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Bebas Neue', 'sans-serif'],
+                        'serif': ['Crimson Pro', 'serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'warm': {
+                            'ochre': '#C17817',
+                            'amber': '#E8A735',
+                            'sand': '#F4E8D0',
+                            'bone': '#FAF7F0',
+                        },
+                        'neutral': {
+                            'ink': '#0A0908',
+                            'ash': '#49463F',
+                            'stone': '#8B8680',
+                            'cloud': '#F7F5F2',
+                        }
+                    },
+                    fontSize: {
+                        '10xl': '10rem',
+                        '11xl': '12rem',
+                        '12xl': '14rem',
+                    },
+                    letterSpacing: {
+                        'extreme': '0.2em',
+                        'wide': '0.1em',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'reveal': 'reveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        reveal: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Smooth scroll without snapping */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Gradient mesh background inspired by Kin Euphorics */
+        .gradient-mesh {
+            background: linear-gradient(125deg, #FAF7F0 0%, #F4E8D0 25%, #FAF7F0 50%, #E8A735 75%, #FAF7F0 100%);
+            background-size: 400% 400%;
+            animation: meshFlow 30s ease infinite;
+        }
+
+        @keyframes meshFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Editorial style image reveals */
+        .image-reveal {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-reveal::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(193, 120, 23, 0.3));
+            opacity: 0;
+            transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .image-reveal:hover::after {
+            opacity: 1;
+        }
+
+        /* Ssense-style text mixing */
+        .text-mix {
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Minimal navigation dots */
+        .nav-minimal {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        /* Service cards with depth */
+        .service-card {
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent, rgba(232, 167, 53, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Custom cursor for premium feel */
+        body {
+            cursor: auto;
+        }
+
+        a, button {
+            cursor: pointer;
+        }
+
+        /* Text selection colors */
+        ::selection {
+            background: rgba(193, 120, 23, 0.2);
+            color: #0A0908;
+        }
+    </style>
+</head>
+<body class="bg-neutral-cloud text-neutral-ink">
+
+    <!-- NAVIGATION - Minimal, editorial style -->
+    <nav class="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+        <div class="flex justify-between items-center p-8 lg:p-12">
+            <!-- Logo -->
+            <div class="text-neutral-ink">
+                <span class="font-mono text-xs tracking-extreme">WESTSIDE</span>
+            </div>
+
+            <!-- Right side nav -->
+            <div class="flex items-center space-x-12">
+                <a href="#services" class="hidden md:block font-mono text-xs tracking-wide hover:text-warm-ochre transition-colors">SERVICES</a>
+                <a href="#gallery" class="hidden md:block font-mono text-xs tracking-wide hover:text-warm-ochre transition-colors">WORK</a>
+                <a href="#booking" class="font-mono text-xs tracking-wide border-b border-neutral-ink hover:border-warm-ochre hover:text-warm-ochre transition-all">BOOK</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO - Extreme typography mixing -->
+    <section class="min-h-screen flex items-center justify-center px-8 lg:px-16 gradient-mesh">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                <!-- Left: Massive type -->
+                <div class="lg:col-span-7">
+                    <h1 class="leading-none">
+                        <span class="font-display text-8xl lg:text-10xl xl:text-11xl block text-neutral-ink opacity-90">MORE</span>
+                        <span class="font-serif text-6xl lg:text-7xl xl:text-8xl block italic font-light text-warm-ochre mt-[-0.2em]">Than</span>
+                        <span class="font-display text-8xl lg:text-10xl xl:text-11xl block text-neutral-ink opacity-90">WORTH IT</span>
+                    </h1>
+                </div>
+
+                <!-- Right: Editorial info -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="border-l-2 border-warm-ochre pl-4">
+                        <p class="font-mono text-xs tracking-wide text-neutral-ash mb-1">WEST SEATTLE</p>
+                        <p class="font-serif text-xl leading-snug text-neutral-ink">
+                            A Seattle studio focused on<br/>
+                            luxurious hair extensions, providing<br/>
+                            a sustainable style for exceptional looks.
+                        </p>
+                    </div>
+
+                    <!-- Micro CTA -->
+                    <div class="border-l-2 border-transparent pl-4 space-y-1">
+                        <a href="#booking" class="block">
+                            <span class="font-mono text-xs tracking-wide text-neutral-ash hover:text-warm-ochre transition-colors">
+                                TEXT 206.295.4549
+                            </span>
+                        </a>
+                        <a href="https://www.instagram.com/_westside_style_" target="_blank" class="block">
+                            <span class="font-mono text-xs tracking-wide text-neutral-ash hover:text-warm-ochre transition-colors">
+                                @_westside_style_
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2">
+                <div class="font-mono text-xs tracking-wide text-neutral-ash animate-float">
+                    ↓
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- SERVICES - Confidence in simplicity -->
+    <section id="services" class="py-16 px-8 lg:px-16 bg-neutral-cloud">
+        <div class="max-w-6xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <span class="font-mono text-xs tracking-extreme text-warm-ochre">SERVICES</span>
+                <h2 class="font-display text-5xl lg:text-6xl mt-4">THE WORK</h2>
+                <p class="font-mono text-xs tracking-wide text-neutral-ash mt-8">
+                    CONSULTATION REQUIRED FOR ALL NEW GUESTS
+                </p>
+            </div>
+
+            <!-- Service Grid - Editorial layout -->
+            <div class="grid lg:grid-cols-3 gap-x-16 gap-y-24">
+                <!-- Extensions -->
+                <div class="service-card">
+                    <h3 class="font-display text-3xl mb-8">EXTENSIONS</h3>
+                    <div class="space-y-6">
+                        <div class="border-b border-neutral-stone/20 pb-4">
+                            <p class="font-serif text-lg">Keratin Bond</p>
+                            <p class="font-mono text-xs text-warm-ochre mt-1">FROM 1200+</p>
+                        </div>
+                        <div class="border-b border-neutral-stone/20 pb-4">
+                            <p class="font-serif text-lg">Hand Tied Rows</p>
+                            <p class="font-mono text-xs text-warm-ochre mt-1">FROM 800+</p>
+                        </div>
+                        <div class="border-b border-neutral-stone/20 pb-4">
+                            <p class="font-serif text-lg">Tape-In</p>
+                            <p class="font-mono text-xs text-warm-ochre mt-1">FROM 600+</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-lg">Move-Up</p>
+                            <p class="font-mono text-xs text-warm-ochre mt-1">FROM 200+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Color -->
+                <div class="service-card">
+                    <h3 class="font-display text-3xl mb-8">COLOR</h3>
+                    <div class="space-y-6">
+                        <div class="border-b border-neutral-stone/20 pb-4">
+                            <p class="font-serif text-lg">Single Process</p>
+                            <p class="font-mono text-xs text-warm-ochre mt-1">FROM 125+</p>
+                        </div>
+                        <div class="border-b border-neutral-stone/20 pb-4">
+                            <p class="font-serif text-lg">Root Touch-Up</p>
+                            <p class="font-mono text-xs text-warm-ochre mt-1">FROM 85+</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-lg">Color Correction</p>
+                            <p class="font-mono text-xs text-warm-ochre mt-1">FROM 350+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Treatment -->
+                <div class="service-card">
+                    <h3 class="font-display text-3xl mb-8">TREATMENT</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-serif text-lg">Brazilian Blowout</p>
+                            <p class="font-serif text-sm italic text-neutral-ash mt-2">
+                                The original. Smooths frizz,<br/>
+                                cuts styling time in half.
+                            </p>
+                            <p class="font-mono text-xs text-warm-ochre mt-3">FROM 350</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- GALLERY - Video grid with editorial captions -->
+    <section id="gallery" class="py-16 px-8 lg:px-16 bg-warm-bone">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <div class="mb-12">
+                <div class="flex items-end justify-between">
+                    <div>
+                        <span class="font-mono text-xs tracking-extreme text-warm-ochre">RECENT WORK</span>
+                        <h2 class="font-display text-5xl lg:text-6xl mt-4">TRANSFORMATIONS</h2>
+                    </div>
+                    <a href="https://www.instagram.com/_westside_style_" target="_blank"
+                       class="font-mono text-xs tracking-wide text-neutral-ash hover:text-warm-ochre transition-colors">
+                        @_WESTSIDE_STYLE_
+                    </a>
+                </div>
+            </div>
+
+            <!-- Video Grid - Uniform layout -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div>
+                    <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="gallery-video-1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div>
+                    <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="gallery-video-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div>
+                    <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="gallery-video-3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- PHILOSOPHY - Editorial spread -->
+    <section class="px-8 lg:px-16 py-16 bg-warm-bone">
+        <div class="max-w-7xl mx-auto">
+            <!-- Title at top -->
+            <div class="mb-12 text-center">
+                <h2 class="font-display text-5xl lg:text-6xl">
+                    About Jennifer Arges
+                </h2>
+                <p class="font-mono text-xs tracking-extreme text-warm-ochre mt-4">
+                    STYLIST & OWNER, WESTSIDE STYLE
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
+                <!-- Video -->
+                <div class="lg:w-auto">
+                    <div class="aspect-[9/16] w-full max-w-sm bg-neutral-cloud image-reveal">
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="reel2_final.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Text - narrower -->
+                <div class="flex-1 space-y-6 max-w-xl lg:pr-8">
+                        <p class="font-serif text-xl leading-relaxed text-neutral-ink">
+                            Good hair changes the way you feel. You notice it when you walk into a room. More confidence, effortless styling, and beautiful hair every single day. Good hair has a way of turning heads—but more importantly, it makes you feel like your best self.
+                        </p>
+                        <p class="font-serif text-xl leading-relaxed text-neutral-ash">
+                            I have over a decade of experience in luxury hair styling, focused on hair extensions. Once I started wearing them I was hooked. I founded Westside Style with a vision to create more than just beautiful hair – but to elevate confidence and celebrate individual beauty.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- BOOKING - Minimal contact -->
+    <section id="booking" class="min-h-screen flex items-center px-8 lg:px-16 bg-neutral-ink text-neutral-cloud">
+        <div class="max-w-4xl mx-auto w-full text-center">
+            <!-- Large type -->
+            <h2 class="font-display text-7xl lg:text-9xl text-warm-ochre mb-16">
+                LET'S TALK
+            </h2>
+
+            <!-- Contact info - editorial style -->
+            <div class="space-y-12">
+                <div>
+                    <p class="font-mono text-xs tracking-extreme text-neutral-stone mb-4">TEXT PREFERRED</p>
+                    <p class="font-display text-4xl lg:text-5xl">206.295.4549</p>
+                    <a href="https://www.instagram.com/_westside_style_" target="_blank"
+                       class="inline-block mt-4 font-mono text-sm tracking-wide text-warm-ochre hover:text-neutral-cloud transition-colors">
+                        @_westside_style_
+                    </a>
+                </div>
+
+                <div>
+                    <p class="font-mono text-xs tracking-extreme text-neutral-stone mb-4">APPOINTMENTS</p>
+                    <p class="font-serif text-xl font-light">
+                        Monday — Thursday<br/>
+                        <span class="text-base">9am or 1pm</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!-- Smooth scroll for sections -->
+    <script>
+        // Removed parallax effect to prevent jumping
+
+        // Removed scroll animations to prevent jumping
+    </script>
+
+</body>
+</html>
