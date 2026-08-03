@@ -223,6 +223,9 @@
         <!-- Content overlay - flush to bottom -->
         <div class="relative z-10 flex flex-col justify-end h-screen px-4 pb-4 text-center w-full max-w-full">
             <div>
+                <!-- Tagline above title -->
+                <p class="font-serif text-2xl italic text-white/70 mb-4">Hair that looks effortless, feels luxurious, and fits your lifestyle.</p>
+
                 <!-- Main title -->
                 <h1 class="leading-none mb-8">
                     <span class="font-display text-7xl block text-white">MORE</span>
@@ -254,12 +257,12 @@
         <div class="max-w-6xl mx-auto">
             <!-- Header -->
             <div class="text-center mb-10">
-                <span class="font-mono text-xs tracking-extreme text-warm-ochre">EXTENSIONS</span>
+                <span class="font-mono text-sm tracking-extreme text-warm-ochre">EXTENSIONS</span>
                 <h2 class="font-display text-5xl lg:text-6xl mt-2">THE WORK</h2>
                 <p class="font-serif text-lg text-neutral-ash mt-3 max-w-md mx-auto">
                     Expertly applied extensions by a dedicated specialist with over a decade of experience.
                 </p>
-                <p class="font-mono text-xs tracking-wide text-neutral-stone mt-4">
+                <p class="font-mono text-sm tracking-wide text-neutral-stone mt-4">
                     CONSULTATION REQUIRED FOR ALL NEW GUESTS
                 </p>
             </div>
@@ -292,7 +295,7 @@
 
             <!-- Divider -->
             <div class="border-t border-neutral-stone/20 pt-10">
-                <p class="font-mono text-xs tracking-extreme text-neutral-stone mb-8 text-center">ADDITIONAL SERVICES FOR EXTENSION CLIENTS</p>
+                <p class="font-mono text-sm tracking-extreme text-neutral-stone mb-8 text-center">ADDITIONAL SERVICES FOR EXTENSION CLIENTS</p>
                 <div class="grid lg:grid-cols-2 gap-x-16 gap-y-8 max-w-3xl mx-auto">
                     <!-- Color -->
                     <div class="service-card">
@@ -324,7 +327,7 @@
             <!-- Header -->
             <div class="mb-10">
                 <div>
-                    <span class="font-mono text-xs tracking-extreme text-warm-ochre">RECENT WORK</span>
+                    <span class="font-mono text-sm tracking-extreme text-warm-ochre">RECENT WORK</span>
                     <h2 class="font-display text-5xl lg:text-6xl mt-2">TRANSFORMATIONS</h2>
                 </div>
             </div>
@@ -334,7 +337,7 @@
                 <!-- Video 1 -->
                 <div>
                     <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
                             <source src="gallery-video-1.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -343,7 +346,7 @@
                 <!-- Video 2 -->
                 <div>
                     <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
                             <source src="gallery-video-2.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -352,7 +355,7 @@
                 <!-- Video 3 -->
                 <div>
                     <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
                             <source src="gallery-video-3.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -369,7 +372,7 @@
                 <h2 class="font-display text-5xl lg:text-6xl">
                     Jennifer Arges
                 </h2>
-                <p class="font-mono text-xs tracking-extreme text-warm-ochre mt-2">
+                <p class="font-mono text-sm tracking-extreme text-warm-ochre mt-2">
                     EXTENSIONS SPECIALIST & FOUNDER, WESTSIDE STYLE
                 </p>
             </div>
@@ -378,7 +381,7 @@
                 <!-- Video -->
                 <div class="lg:w-auto">
                     <div class="aspect-[9/16] w-full max-w-sm bg-neutral-cloud image-reveal">
-                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
                             <source src="reel2_final.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -401,9 +404,14 @@
     <section id="booking" class="px-8 lg:px-16 bg-neutral-ink text-neutral-cloud flex flex-col" style="min-height: 60vh; padding-top: 5rem; padding-bottom: 3rem;">
         <!-- Large type -->
         <div class="text-center flex-1">
-            <button onclick="openContactModal()" class="font-display text-7xl lg:text-9xl text-neutral-ink px-12 py-4 transition-opacity hover:opacity-80" style="background-color: rgba(212,175,55,0.7);">
+            <h2 class="font-display text-7xl lg:text-9xl" style="color: #D4AF37;">
                 LET'S TALK
-            </button>
+            </h2>
+            <div class="mt-8">
+                <button onclick="openContactModal()" class="w-full sm:w-auto font-mono text-base tracking-extreme text-neutral-ink px-10 py-4 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
+                    FREE CONSULTATION
+                </button>
+            </div>
         </div>
 
         <!-- Contact info pinned to bottom -->
@@ -430,7 +438,7 @@
 
             <!-- Heading -->
             <div class="mb-8">
-                <span class="font-mono text-xs tracking-extreme text-warm-ochre">GET IN TOUCH</span>
+                <span class="font-mono text-sm tracking-extreme text-warm-ochre">GET IN TOUCH</span>
                 <h3 class="font-display text-4xl text-neutral-ink mt-1">LET'S TALK</h3>
             </div>
 
@@ -497,13 +505,37 @@
                 notes ? `Notes: ${notes}` : null,
             ].filter(Boolean).join('\n');
 
-            window.location.href = `sms:2062954549?body=${encodeURIComponent(body)}`;
-            closeContactModal();
+            const btn = document.querySelector('#contactForm button[type="submit"]');
+            btn.textContent = 'Next: Text message to Jenn';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                window.location.href = `sms:2062954549?body=${encodeURIComponent(body)}`;
+                closeContactModal();
+                btn.textContent = 'TEXT JENN THIS INFO';
+                btn.disabled = false;
+                document.getElementById('contactForm').reset();
+            }, 800);
         }
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeContactModal();
         });
+
+        // Lazy-load gallery and about videos on scroll
+        const lazyVideos = document.querySelectorAll('video.lazy-video');
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    video.load();
+                    video.play();
+                    videoObserver.unobserve(video);
+                }
+            });
+        }, { rootMargin: '100px' });
+
+        lazyVideos.forEach(v => videoObserver.observe(v));
     </script>
 
 </body>
