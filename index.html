@@ -219,30 +219,15 @@
                 <div class="w-20 h-px bg-[#D4AF37]/60 mx-auto mb-8"></div>
 
                 <!-- Business name -->
-                <div class="mb-2">
+                <div class="mb-8">
                     <p class="font-mono text-2xl font-bold tracking-extreme text-white/90">WESTSIDE STYLE</p>
                 </div>
 
-                <!-- Tagline -->
-                <div class="mb-8">
-                    <p class="font-serif text-xl leading-snug text-white/80 max-w-sm mx-auto">
-                        Effortless, lasting style that looks and feels like your own
-                    </p>
-                </div>
-
-                <!-- Contact info -->
+                <!-- Contact CTA -->
                 <div class="text-center">
-                    <a href="sms:2062954549" class="inline-block">
-                        <span class="font-mono text-base tracking-wide text-white/70 hover:text-white transition-colors">
-                            TEXT 206.295.4549
-                        </span>
-                    </a>
-                    <span class="text-white/40 mx-2 text-base">·</span>
-                    <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block">
-                        <span class="font-mono text-base tracking-wide text-white/70 hover:text-white transition-colors">
-                            @_westside_style_
-                        </span>
-                    </a>
+                    <button onclick="openContactModal()" class="font-mono text-sm tracking-extreme text-white border border-white/40 px-8 py-3 hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300">
+                        CONTACT ME
+                    </button>
                 </div>
             </div>
         </div>
@@ -436,11 +421,95 @@
         </div>
     </section>
 
+<!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeContactModal()"></div>
+
+        <!-- Modal panel -->
+        <div class="relative bg-neutral-ink border border-white/10 w-full max-w-md p-8">
+            <!-- Close -->
+            <button onclick="closeContactModal()" class="absolute top-4 right-4 font-mono text-xs tracking-wide text-neutral-stone hover:text-white transition-colors">✕ CLOSE</button>
+
+            <!-- Heading -->
+            <div class="mb-8">
+                <span class="font-mono text-xs tracking-extreme text-warm-ochre">GET IN TOUCH</span>
+                <h3 class="font-display text-4xl text-white mt-1">LET'S TALK</h3>
+            </div>
+
+            <!-- Form -->
+            <form id="contactForm" onsubmit="submitContact(event)" class="space-y-5">
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-stone mb-1">NAME</label>
+                    <input type="text" id="cf-name" required
+                        class="w-full bg-transparent border-b border-white/20 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-white placeholder-white/20 transition-colors"
+                        placeholder="Your name">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-stone mb-1">PHONE</label>
+                    <input type="tel" id="cf-phone"
+                        class="w-full bg-transparent border-b border-white/20 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-white placeholder-white/20 transition-colors"
+                        placeholder="206.000.0000">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-stone mb-1">EMAIL</label>
+                    <input type="email" id="cf-email"
+                        class="w-full bg-transparent border-b border-white/20 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-white placeholder-white/20 transition-colors"
+                        placeholder="you@example.com">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-stone mb-1">NOTES</label>
+                    <textarea id="cf-notes" rows="3"
+                        class="w-full bg-transparent border-b border-white/20 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-white placeholder-white/20 transition-colors resize-none"
+                        placeholder="What are you looking for?"></textarea>
+                </div>
+                <div class="pt-4">
+                    <button type="submit"
+                        class="w-full font-mono text-sm tracking-extreme text-neutral-ink bg-[#D4AF37] py-4 hover:bg-warm-amber transition-colors">
+                        SEND MESSAGE
+                    </button>
+                </div>
+                <p class="font-mono text-xs text-neutral-stone text-center">
+                    Opens your SMS app with a pre-filled message to Jennifer
+                </p>
+            </form>
+        </div>
+    </div>
+
 <!-- Smooth scroll for sections -->
     <script>
-        // Removed parallax effect to prevent jumping
+        function openContactModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
 
-        // Removed scroll animations to prevent jumping
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function submitContact(e) {
+            e.preventDefault();
+            const name  = document.getElementById('cf-name').value.trim();
+            const phone = document.getElementById('cf-phone').value.trim();
+            const email = document.getElementById('cf-email').value.trim();
+            const notes = document.getElementById('cf-notes').value.trim();
+
+            const body = [
+                `New inquiry for Jenn at Westside Style`,
+                `Name: ${name}`,
+                phone ? `Phone: ${phone}` : null,
+                email ? `Email: ${email}` : null,
+                notes ? `Notes: ${notes}` : null,
+            ].filter(Boolean).join('\n');
+
+            window.location.href = `sms:2062954549?body=${encodeURIComponent(body)}`;
+            closeContactModal();
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeContactModal();
+        });
     </script>
 
 </body>
