@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You — Westside Style</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Bebas Neue', 'sans-serif'],
+                        'serif': ['Crimson Pro', 'serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'warm': { 'ochre': '#C17817', 'amber': '#E8A735' },
+                        'neutral': { 'ink': '#0A0908', 'ash': '#49463F', 'stone': '#8B8680', 'cloud': '#F7F5F2' }
+                    },
+                    letterSpacing: { 'extreme': '0.2em', 'wide': '0.1em' }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body class="bg-neutral-ink/50 min-h-screen flex flex-col items-center justify-center px-8 text-center" style="background: rgba(10,9,8,0.85);">
+
+    <div class="max-w-sm w-full bg-neutral-cloud border border-neutral-stone/20 p-12">
+        <p class="font-mono text-sm tracking-extreme mb-6" style="color: #D4AF37;">WESTSIDE STYLE</p>
+
+        <h1 class="font-display text-5xl text-neutral-ink mb-4">YOU'RE ALL SET</h1>
+
+        <p class="font-serif text-lg italic text-neutral-ash mb-10">
+            Jenn will be in touch soon.
+        </p>
+
+        <a href="/" class="font-mono text-sm tracking-extreme text-neutral-ink px-10 py-4 transition-opacity hover:opacity-80 inline-block" style="background-color: rgba(212,175,55,0.7);">
+            CLOSE
+        </a>
+    </div>
+
+</body>
+</html>
