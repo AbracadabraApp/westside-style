@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18371102793"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18371102793');
+      gtag('config', 'G-GW68Z12RN9');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Extensions Seattle | Westside Style Extensions Specialist</title>
+    <meta name="description" content="Professional hair extensions in Seattle. Keratin bond, hand tied, and tape-in extensions by specialist Jennifer Arges. Over 10 years experience. Free consultation.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hair Extensions Seattle | Westside Style">
+    <meta property="og:description" content="Professional hair extensions in Seattle. Keratin bond, hand tied, and tape-in extensions by specialist Jennifer Arges.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://westside.style/hair-extensions-seattle.html">
+    <link rel="canonical" href="https://westside.style/hair-extensions-seattle.html">
+    <meta property="og:image" content="https://westside.style/jennifer-headshot.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hair Extensions Seattle | Westside Style">
+    <meta name="twitter:description" content="Professional hair extensions in Seattle by specialist Jennifer Arges.">
+    <meta name="twitter:image" content="https://westside.style/jennifer-headshot.jpg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Bebas Neue', 'sans-serif'],
+                        'serif': ['Crimson Pro', 'serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'warm': {
+                            'ochre': '#C17817',
+                            'amber': '#E8A735',
+                            'sand': '#F4E8D0',
+                            'bone': '#FAF7F0',
+                        },
+                        'neutral': {
+                            'ink': '#0A0908',
+                            'ash': '#49463F',
+                            'stone': '#8B8680',
+                            'cloud': '#F7F5F2',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .image-reveal {
+            position: relative;
+            overflow: hidden;
+        }
+        .image-reveal::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 60%, rgba(193, 120, 23, 0.3));
+            opacity: 0;
+            transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .image-reveal:hover::after {
+            opacity: 1;
+        }
+        .service-card {
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .service-card:hover {
+            transform: translateY(-2px);
+        }
+        ::selection {
+            background: rgba(193, 120, 23, 0.2);
+            color: #0A0908;
+        }
+    </style>
+</head>
+<body class="bg-neutral-cloud text-neutral-ink">
+
+    <!-- HEADER NAV -->
+    <header class="bg-neutral-ink py-4 px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="/" class="font-display text-2xl tracking-wide" style="color: #D4AF37;">WESTSIDE STYLE</a>
+            <nav class="flex gap-6 items-center">
+                <a href="/#services" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">ALL SERVICES</a>
+                <a href="sms:2062954549" class="font-mono text-xs tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT · 206.295.4549</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-16 px-6 lg:px-16 bg-warm-bone">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="font-mono text-sm tracking-extreme text-warm-ochre">SEATTLE'S EXTENSION SPECIALIST</span>
+            <h1 class="font-display text-6xl lg:text-7xl mt-3 mb-6">HAIR EXTENSIONS IN SEATTLE</h1>
+            <p class="font-serif text-2xl lg:text-3xl text-neutral-ash italic max-w-2xl mx-auto mb-8">
+                Professional extension services specializing in keratin bond, hand tied rows, and tape-in methods
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <p class="font-mono text-xl tracking-wide text-warm-ochre">STARTING AT $800</p>
+                <button onclick="openContactModal()" class="font-mono text-sm tracking-extreme text-neutral-ink px-8 py-3 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
+                    FREE CONSULTATION
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXTENSION METHODS -->
+    <section class="py-12 px-6 lg:px-16 bg-neutral-cloud">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="font-mono text-sm tracking-extreme text-warm-ochre">EXTENSION METHODS</span>
+                <h2 class="font-display text-5xl mt-2">FIND YOUR PERFECT FIT</h2>
+                <p class="font-serif text-lg text-neutral-ash mt-4 max-w-2xl mx-auto">
+                    Every hair type and lifestyle is different. We specialize in three premium extension methods to give you the results you deserve.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <a href="/keratin-bond-extensions-seattle.html" class="service-card block bg-warm-bone p-8 border border-neutral-stone/20">
+                    <h3 class="font-display text-3xl mb-4">KERATIN BOND</h3>
+                    <p class="font-serif text-neutral-ash mb-4 leading-relaxed">
+                        Individual strand fusion for the most natural movement and longevity. The gold standard in hair extensions.
+                    </p>
+                    <ul class="font-serif text-sm text-neutral-ash space-y-2 mb-4">
+                        <li>• Most natural look and feel</li>
+                        <li>• Maximum styling versatility</li>
+                        <li>• Lasts 4-6 months</li>
+                        <li>• Perfect for all hair types</li>
+                    </ul>
+                    <p class="font-mono text-sm text-warm-ochre mb-3">FROM $1,200</p>
+                    <div class="font-mono text-xs tracking-wide text-neutral-ink">
+                        LEARN MORE →
+                    </div>
+                </a>
+
+                <a href="/hand-tied-extensions-seattle.html" class="service-card block bg-warm-bone p-8 border border-neutral-stone/20">
+                    <h3 class="font-display text-3xl mb-4">HAND TIED ROWS</h3>
+                    <p class="font-serif text-neutral-ash mb-4 leading-relaxed">
+                        Wefts sewn onto micro-beaded rows. Incredibly flat and ideal for fine to medium hair.
+                    </p>
+                    <ul class="font-serif text-sm text-neutral-ash space-y-2 mb-4">
+                        <li>• Incredibly flat application</li>
+                        <li>• Perfect for fine hair</li>
+                        <li>• Reusable wefts</li>
+                        <li>• Comfortable and lightweight</li>
+                    </ul>
+                    <p class="font-mono text-sm text-warm-ochre mb-3">FROM $1,000</p>
+                    <div class="font-mono text-xs tracking-wide text-neutral-ink">
+                        LEARN MORE →
+                    </div>
+                </a>
+
+                <a href="/tape-in-extensions-seattle.html" class="service-card block bg-warm-bone p-8 border border-neutral-stone/20">
+                    <h3 class="font-display text-3xl mb-4">TAPE-IN</h3>
+                    <p class="font-serif text-neutral-ash mb-4 leading-relaxed">
+                        Seamless, lightweight panels that blend beautifully and lay completely flat.
+                    </p>
+                    <ul class="font-serif text-sm text-neutral-ash space-y-2 mb-4">
+                        <li>• Quick application</li>
+                        <li>• Seamless blend</li>
+                        <li>• Lightweight comfort</li>
+                        <li>• Easy maintenance</li>
+                    </ul>
+                    <p class="font-mono text-sm text-warm-ochre mb-3">FROM $800</p>
+                    <div class="font-mono text-xs tracking-wide text-neutral-ink">
+                        LEARN MORE →
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY EXTENSIONS -->
+    <section class="py-12 px-6 lg:px-16 bg-warm-bone">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-display text-4xl mb-8 text-center">WHY CHOOSE HAIR EXTENSIONS?</h2>
+            <div class="space-y-6 font-serif text-lg leading-relaxed text-neutral-ash">
+                <p>
+                    Hair extensions aren't just about length or volume — they're about confidence. They give you the hair you've always wanted, every single day, without the wait or the guesswork.
+                </p>
+                <p>
+                    Whether you want to add thickness to fine hair, enjoy long hair without years of growth, or simply transform your look instantly, professionally applied extensions make it possible. With the right method and expert application, extensions look and feel completely natural.
+                </p>
+                <p>
+                    At Westside Style, we specialize exclusively in extensions. This focus means you get precision, expertise, and results that truly transform how you feel about your hair.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="py-12 px-6 lg:px-16 bg-neutral-cloud">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-display text-4xl mb-8 text-center">TRANSFORMATIONS</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="aspect-[9/16] bg-warm-bone image-reveal">
+                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
+                        <source src="gallery-video-1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="aspect-[9/16] bg-warm-bone image-reveal">
+                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
+                        <source src="gallery-video-2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="aspect-[9/16] bg-warm-bone image-reveal">
+                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
+                        <source src="gallery-video-3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT JENNIFER -->
+    <section class="py-12 px-6 lg:px-16 bg-warm-bone">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="font-mono text-sm tracking-extreme text-warm-ochre">YOUR SPECIALIST</span>
+                <h2 class="font-display text-5xl mt-2">JENNIFER ARGES</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="aspect-[9/16] max-w-xs mx-auto bg-neutral-cloud image-reveal">
+                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
+                        <source src="reel2_final.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="space-y-4">
+                    <p class="font-serif text-lg leading-relaxed text-neutral-ash">
+                        With over a decade specializing exclusively in hair extensions, Jennifer has mastered every major extension method. Her expertise ensures you get the most natural, comfortable, and long-lasting results possible.
+                    </p>
+                    <p class="font-serif text-lg leading-relaxed text-neutral-ash">
+                        Jennifer founded Westside Style around one conviction: you deserve hair that brings out your best self and makes each day easier. She works with a small number of clients to ensure every installation gets the time, precision, and attention it deserves.
+                    </p>
+                    <div class="pt-4">
+                        <a href="/" class="font-mono text-sm tracking-wide text-warm-ochre hover:text-warm-amber transition-colors">
+                            → LEARN MORE ABOUT WESTSIDE STYLE
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-6 bg-neutral-ink text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="font-display text-5xl mb-4" style="color: #D4AF37;">READY FOR YOUR TRANSFORMATION?</h2>
+            <p class="font-serif text-xl text-neutral-cloud mb-8 italic">
+                Book your free consultation and discover which extension method is perfect for you
+            </p>
+            <button onclick="openContactModal()" class="font-mono text-base tracking-extreme text-neutral-ink px-12 py-4 mb-6 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
+                FREE CONSULTATION
+            </button>
+            <div class="pt-4 border-t border-neutral-stone/30 mt-8">
+                <a href="sms:2062954549" class="block mb-2">
+                    <p class="font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT PREFERRED · 206.295.4549</p>
+                </a>
+                <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">
+                    @_westside_style_
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="px-8 py-6 bg-neutral-ink text-center">
+        <p class="font-mono text-xs tracking-wide text-neutral-stone mb-2">© 2025 WESTSIDE STYLE · SEATTLE, WA</p>
+        <nav class="flex gap-4 justify-center flex-wrap">
+            <a href="/" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">HOME</a>
+            <a href="/#services" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">SERVICES & PRICING</a>
+        </nav>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeContactModal()"></div>
+        <div class="relative bg-neutral-cloud border border-neutral-stone/20 w-full max-w-md p-8">
+            <button onclick="closeContactModal()" class="absolute top-4 right-4 font-mono text-base tracking-wide text-neutral-ash hover:text-neutral-ink transition-colors">✕ CLOSE</button>
+            <div class="mb-8">
+                <span class="font-mono text-sm tracking-extreme text-warm-ochre">GET IN TOUCH</span>
+                <h3 class="font-display text-4xl text-neutral-ink mt-1">LET'S TALK</h3>
+                <p class="font-serif text-sm text-neutral-ash mt-2">Interested in hair extensions</p>
+            </div>
+            <form id="contactForm" onsubmit="submitContact(event)" class="space-y-5">
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">NAME</label>
+                    <input type="text" id="cf-name" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">PHONE</label>
+                    <input type="tel" id="cf-phone" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="206.000.0000">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">EMAIL</label>
+                    <input type="email" id="cf-email" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="you@example.com">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">NOTES</label>
+                    <textarea id="cf-notes" rows="3" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none" placeholder="What are you looking for?"></textarea>
+                </div>
+                <div class="pt-4">
+                    <button type="submit" class="w-full font-mono text-sm tracking-extreme text-neutral-ink bg-[#D4AF37] py-4 hover:bg-warm-amber transition-colors">
+                        TEXT JENN THIS INFO
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openContactModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function submitContact(e) {
+            e.preventDefault();
+            const name  = document.getElementById('cf-name').value.trim();
+            const phone = document.getElementById('cf-phone').value.trim();
+            const email = document.getElementById('cf-email').value.trim();
+            const notes = document.getElementById('cf-notes').value.trim();
+
+            const body = [
+                `Hair extensions inquiry from westside.style`,
+                `Name: ${name}`,
+                phone ? `Phone: ${phone}` : null,
+                email ? `Email: ${email}` : null,
+                notes ? `Notes: ${notes}` : null,
+            ].filter(Boolean).join('\n');
+
+            const btn = document.querySelector('#contactForm button[type="submit"]');
+            btn.textContent = 'Opening text message...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                window.location.href = `sms:2062954549?body=${encodeURIComponent(body)}`;
+            }, 500);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeContactModal();
+        });
+
+        const lazyVideos = document.querySelectorAll('video.lazy-video');
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    video.load();
+                    video.play();
+                    videoObserver.unobserve(video);
+                }
+            });
+        }, { rootMargin: '100px' });
+
+        lazyVideos.forEach(v => videoObserver.observe(v));
+    </script>
+
+</body>
+</html>
