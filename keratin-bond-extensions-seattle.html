@@ -10,6 +10,28 @@
       gtag('js', new Date());
       gtag('config', 'AW-18371102793');
       gtag('config', 'G-GW68Z12RN9');
+
+      // Track UTM parameters for keyword tracking
+      (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmSource = urlParams.get('utm_source');
+        const utmMedium = urlParams.get('utm_medium');
+        const utmCampaign = urlParams.get('utm_campaign');
+        const utmTerm = urlParams.get('utm_term');
+        const utmContent = urlParams.get('utm_content');
+
+        if (utmSource || utmMedium || utmCampaign) {
+          gtag('event', 'page_view_with_utm', {
+            'event_category': 'Marketing',
+            'event_label': 'Keratin Bond Landing',
+            'utm_source': utmSource || 'direct',
+            'utm_medium': utmMedium || 'none',
+            'utm_campaign': utmCampaign || 'none',
+            'utm_term': utmTerm || 'none',
+            'utm_content': utmContent || 'none'
+          });
+        }
+      })();
     </script>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -143,7 +165,7 @@
             <a href="/" class="font-display text-2xl tracking-wide" style="color: #D4AF37;">WESTSIDE STYLE</a>
             <nav class="flex gap-6 items-center">
                 <a href="/#services" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">ALL SERVICES</a>
-                <a href="sms:2062954549" class="font-mono text-xs tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT · 206.295.4549</a>
+                <a href="sms:2062954549" onclick="trackPhoneClick('header')" class="font-mono text-xs tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT · 206.295.4549</a>
             </nav>
         </div>
     </header>
@@ -273,7 +295,7 @@
                 FREE CONSULTATION
             </button>
             <div class="pt-4 border-t border-neutral-stone/30 mt-8">
-                <a href="sms:2062954549" class="block mb-2">
+                <a href="sms:2062954549" onclick="trackPhoneClick('cta')" class="block mb-2">
                     <p class="font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT PREFERRED · 206.295.4549</p>
                 </a>
                 <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">
@@ -357,6 +379,16 @@
         function openContactModal() {
             document.getElementById('contactModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+
+            // Track consultation button click
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'consultation_button_click', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Keratin Bond',
+                    'service_type': 'keratin_bond',
+                    'value': 1200
+                });
+            }
         }
 
         function closeContactModal() {
@@ -370,6 +402,27 @@
             const phone = document.getElementById('cf-phone').value.trim();
             const email = document.getElementById('cf-email').value.trim();
             const notes = document.getElementById('cf-notes').value.trim();
+
+            // Track form submission
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18371102793/KERATIN_BOND_CONVERSION',
+                    'event_category': 'Lead',
+                    'event_label': 'Keratin Bond Consultation',
+                    'service_type': 'keratin_bond',
+                    'value': 1200,
+                    'currency': 'USD'
+                });
+
+                // Also send to GA4
+                gtag('event', 'generate_lead', {
+                    'event_category': 'Lead',
+                    'event_label': 'Keratin Bond',
+                    'service_type': 'keratin_bond',
+                    'value': 1200,
+                    'currency': 'USD'
+                });
+            }
 
             const body = [
                 `Inquiry for KERATIN BOND extensions from westside.style`,
@@ -386,6 +439,17 @@
             setTimeout(() => {
                 window.location.href = `sms:2062954549?body=${encodeURIComponent(body)}`;
             }, 500);
+        }
+
+        function trackPhoneClick(location) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'Keratin Bond - ' + location,
+                    'service_type': 'keratin_bond',
+                    'click_location': location
+                });
+            }
         }
 
         document.addEventListener('keydown', function(e) {
