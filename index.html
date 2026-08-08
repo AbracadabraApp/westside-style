@@ -90,6 +90,144 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Westside Style",
+      "description": "Seattle hair extensions specialist offering keratin bond, hand tied, and tape-in extensions with over 10 years of experience.",
+      "url": "https://westside.style",
+      "logo": "https://westside.style/jennifer-headshot.jpg",
+      "image": "https://westside.style/jennifer-headshot.jpg",
+      "telephone": "+1-206-295-4549",
+      "priceRange": "$800-$1,200",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seattle",
+        "addressRegion": "WA",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "47.6062",
+        "longitude": "-122.3321"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Seattle"
+        },
+        {
+          "@type": "State",
+          "name": "Washington"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Hair Extension Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Keratin Bond Hair Extensions",
+              "description": "Individual strand fusion for the most natural movement and longevity",
+              "provider": {
+                "@type": "HairSalon",
+                "name": "Westside Style"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "1200.00",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": "1200.00",
+                  "priceCurrency": "USD"
+                }
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hand Tied Hair Extensions",
+              "description": "Wefts sewn onto micro-beaded rows, incredibly flat and ideal for fine to medium hair",
+              "provider": {
+                "@type": "HairSalon",
+                "name": "Westside Style"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "1000.00",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": "1000.00",
+                  "priceCurrency": "USD"
+                }
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Tape-In Hair Extensions",
+              "description": "Seamless, lightweight panels that blend beautifully and lay completely flat",
+              "provider": {
+                "@type": "HairSalon",
+                "name": "Westside Style"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "800.00",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": "800.00",
+                  "priceCurrency": "USD"
+                }
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Extension Move-Up",
+              "description": "Maintenance for existing extensions, repositioned as your natural hair grows",
+              "provider": {
+                "@type": "HairSalon",
+                "name": "Westside Style"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "300.00",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": "300.00",
+                  "priceCurrency": "USD"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Jennifer Arges",
+        "jobTitle": "Extensions Specialist & Founder"
+      },
+      "sameAs": [
+        "https://www.instagram.com/_westside_style_"
+      ]
+    }
+    </script>
+
     <!-- Custom Styles -->
     <style>
         /* Smooth scroll without snapping */

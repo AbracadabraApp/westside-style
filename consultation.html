@@ -76,6 +76,94 @@
             color: #0A0908;
         }
     </style>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does a consultation take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually 20-30 minutes. Enough time to assess your hair, discuss options, and answer all your questions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to bring anything to my consultation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Just yourself and your questions. If you have inspiration photos, bring those too — they help me understand your vision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there really no obligation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zero. You're free to take time to think, get other quotes, or decide extensions aren't for you. I'm here to give honest advice, not pressure you into anything."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I book my installation right away?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. If you're ready after the consultation, we can schedule your installation appointment on the spot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Westside Style located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seattle area. Exact location provided when you book your consultation."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Service Schema for Free Consultation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Hair Extension Consultation",
+      "name": "Free Hair Extension Consultation Seattle",
+      "description": "Free consultation with no obligation. Honest advice on which extension method is right for your hair type, lifestyle, and goals.",
+      "provider": {
+        "@type": "HairSalon",
+        "name": "Westside Style",
+        "telephone": "+1-206-295-4549",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Seattle",
+          "addressRegion": "WA",
+          "addressCountry": "US"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Seattle"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://westside.style/consultation.html"
+      },
+      "category": "Hair Extension Services",
+      "areaServed": {
+        "@type": "City",
+        "name": "Seattle"
+      }
+    }
+    </script>
 </head>
 <body class="bg-neutral-cloud text-neutral-ink">
 
