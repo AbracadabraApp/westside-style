@@ -116,11 +116,59 @@
       "areaServed": [
         {
           "@type": "City",
-          "name": "Seattle"
+          "name": "Seattle",
+          "containedIn": {
+            "@type": "State",
+            "name": "Washington"
+          }
         },
         {
-          "@type": "State",
-          "name": "Washington"
+          "@type": "City",
+          "name": "Bellevue",
+          "containedIn": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Redmond",
+          "containedIn": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Kirkland",
+          "containedIn": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Renton",
+          "containedIn": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Shoreline",
+          "containedIn": {
+            "@type": "State",
+            "name": "Washington"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Mercer Island",
+          "containedIn": {
+            "@type": "State",
+            "name": "Washington"
+          }
         }
       ],
       "hasOfferCatalog": {
@@ -552,10 +600,17 @@
         <a href="sms:2062954549" class="block">
             <p class="font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT PREFERRED · 206.295.4549</p>
         </a>
-        <a href="https://www.instagram.com/_westside_style_" target="_blank"
-           class="inline-block mt-2 font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">
-            @_westside_style_
-        </a>
+        <div class="flex items-center justify-center gap-6 mt-2">
+            <a href="https://www.instagram.com/_westside_style_" target="_blank"
+               class="font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">
+                @_westside_style_
+            </a>
+            <span class="font-mono text-sm" style="color: #8B8680;">·</span>
+            <a href="https://g.page/r/YOUR_GOOGLE_PLACE_ID/review" target="_blank"
+               class="font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">
+                LEAVE A REVIEW
+            </a>
+        </div>
     </footer>
 
 <!-- Contact Modal -->
