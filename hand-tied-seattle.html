@@ -429,7 +429,7 @@
             btn.disabled = true;
 
             // Send directly to Netlify serverless function → Twilio → Jenn's phone
-            fetch('https://roaring-kulfi-cd788b.netlify.app/api/send-sms', {
+            fetch('/api/send-sms', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
