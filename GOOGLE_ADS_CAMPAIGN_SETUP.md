@@ -4,7 +4,7 @@
 **Last Updated:** August 2026
 **Business:** Westside Style (Jennifer Arges)
 **Location:** Seattle, WA
-**Website:** roaring-kulfi-cd788b.netlify.app
+**Website:** westside.style
 **Phone:** (206) 295-4549
 **Google Ads ID:** AW-18371102793
 
@@ -246,7 +246,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 2:** 4-6 month longevity. Perfect for updos & natural styling. Jennifer Arges, Westside Style.
 
 **Display URL:** westside.style/keratin
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/keratin-bond-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad1
+**Final URL:** https://westside.style/keratin-bond-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad1
 
 ---
 
@@ -257,7 +257,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Over a decade specializing exclusively in hair extensions. The gold standard method.
 **Description 2:** Small clientele, maximum attention. Natural results that last 4-6 months. (206) 295-4549
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/keratin-bond-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad2
+**Final URL:** https://westside.style/keratin-bond-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad2
 
 ---
 
@@ -268,7 +268,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Why choose keratin? Unmatched versatility. Wear updos, ponytails, braids. Invisible bonds.
 **Description 2:** Book your free consultation with Jennifer Arges. Westside Style, Seattle.
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/keratin-bond-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad3
+**Final URL:** https://westside.style/keratin-bond-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad3
 
 ---
 
@@ -279,7 +279,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Keratin bonds last 4-6 months with proper care. The longest-lasting extension method.
 **Description 2:** Custom placement for your unique hair pattern. Text preferred: (206) 295-4549
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/keratin-bond-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad4
+**Final URL:** https://westside.style/keratin-bond-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad4
 
 ---
 
@@ -290,7 +290,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Wake up with beautiful hair every day. Keratin bonds move naturally, feel weightless.
 **Description 2:** Small clientele. Personalized service. 10+ years experience. Westside Style.
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/keratin-bond-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad5
+**Final URL:** https://westside.style/keratin-bond-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad5
 
 ---
 
@@ -303,7 +303,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Beaded rows sewn flat against your scalp. Ideal for fine to medium hair. Book today.
 **Description 2:** Jennifer Arges, extension specialist. 10+ years experience. Westside Style, Seattle.
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/hand-tied-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=handtied_search&utm_term={keyword}&utm_content=ad1
+**Final URL:** https://westside.style/hand-tied-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=handtied_search&utm_term={keyword}&utm_content=ad1
 
 ---
 
@@ -314,7 +314,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Incredibly flat application. No bulk or heaviness. Wefts sewn onto micro beads.
 **Description 2:** Text (206) 295-4549 for your free consultation. Westside Style extension specialist.
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/hand-tied-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=handtied_search&utm_term={keyword}&utm_content=ad2
+**Final URL:** https://westside.style/hand-tied-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=handtied_search&utm_term={keyword}&utm_content=ad2
 
 ---
 
@@ -325,7 +325,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Not sure which method? Jennifer will guide you. Hand-tied offers natural volume.
 **Description 2:** Small clientele. Personalized consultations. Find your perfect extension method.
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/hand-tied-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=handtied_search&utm_term={keyword}&utm_content=ad3
+**Final URL:** https://westside.style/hand-tied-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=handtied_search&utm_term={keyword}&utm_content=ad3
 
 ---
 
@@ -336,7 +336,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** 8-10 week maintenance cycle. Reusable wefts. Excellent long-term value.
 **Description 2:** Book your free consultation today. Jennifer Arges, Westside Style.
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/hand-tied-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=handtied_search&utm_term={keyword}&utm_content=ad4
+**Final URL:** https://westside.style/hand-tied-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=handtied_search&utm_term={keyword}&utm_content=ad4
 
 ---
 
@@ -349,7 +349,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Tape-in panels that blend beautifully and lay completely flat. Quick application.
 **Description 2:** Jennifer Arges, extension specialist. 10+ years experience. Westside Style.
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/tape-in-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=tapein_search&utm_term={keyword}&utm_content=ad1
+**Final URL:** https://westside.style/tape-in-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=tapein_search&utm_term={keyword}&utm_content=ad1
 
 ---
 
@@ -360,7 +360,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Seamless panels installed quickly. Perfect for adding instant volume and length.
 **Description 2:** Text preferred: (206) 295-4549. Westside Style, Seattle extension specialist.
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/tape-in-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=tapein_search&utm_term={keyword}&utm_content=ad2
+**Final URL:** https://westside.style/tape-in-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=tapein_search&utm_term={keyword}&utm_content=ad2
 
 ---
 
@@ -371,7 +371,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Quality tape-in extensions that blend seamlessly. Reapplication every 6-8 weeks.
 **Description 2:** Get personalized service from a dedicated specialist. Book free consultation.
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/tape-in-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=tapein_search&utm_term={keyword}&utm_content=ad3
+**Final URL:** https://westside.style/tape-in-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=tapein_search&utm_term={keyword}&utm_content=ad3
 
 ---
 
@@ -382,7 +382,7 @@ This is critical to avoid wasting budget on irrelevant clicks:
 **Description 1:** Tape-in is perfect for first-timers. Easy maintenance, natural results, removable.
 **Description 2:** Free consultation to discuss your hair goals. Jennifer Arges, Westside Style.
 
-**Final URL:** https://roaring-kulfi-cd788b.netlify.app/tape-in-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=tapein_search&utm_term={keyword}&utm_content=ad4
+**Final URL:** https://westside.style/tape-in-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=tapein_search&utm_term={keyword}&utm_content=ad4
 
 ---
 
@@ -433,32 +433,32 @@ For ALL campaigns, add these extensions:
 ### Landing Page URLs by Service
 
 #### Keratin Bond
-**Base URL:** `https://roaring-kulfi-cd788b.netlify.app/keratin-bond-extensions-seattle.html`
+**Base URL:** `https://westside.style/keratin-bond-seattle.html`
 
 **Full Ad URL Example:**
 ```
-https://roaring-kulfi-cd788b.netlify.app/keratin-bond-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad1
+https://westside.style/keratin-bond-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=keratin_search&utm_term={keyword}&utm_content=ad1
 ```
 
 #### Hand-Tied
-**Base URL:** `https://roaring-kulfi-cd788b.netlify.app/hand-tied-extensions-seattle.html`
+**Base URL:** `https://westside.style/hand-tied-seattle.html`
 
 **Full Ad URL Example:**
 ```
-https://roaring-kulfi-cd788b.netlify.app/hand-tied-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=handtied_search&utm_term={keyword}&utm_content=ad2
+https://westside.style/hand-tied-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=handtied_search&utm_term={keyword}&utm_content=ad2
 ```
 
 #### Tape-In
-**Base URL:** `https://roaring-kulfi-cd788b.netlify.app/tape-in-extensions-seattle.html`
+**Base URL:** `https://westside.style/tape-in-seattle.html`
 
 **Full Ad URL Example:**
 ```
-https://roaring-kulfi-cd788b.netlify.app/tape-in-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=tapein_search&utm_term={keyword}&utm_content=ad3
+https://westside.style/tape-in-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=tapein_search&utm_term={keyword}&utm_content=ad3
 ```
 
 ### UTM Tracking Benefits
 
-Your landing pages already have UTM tracking built in (see lines 14-34 of keratin-bond-extensions-seattle.html). This means:
+Your landing pages already have UTM tracking built in (see lines 14-34 of keratin-bond-seattle.html). This means:
 - You can see which keywords convert in Google Analytics
 - GA4 will track page views with UTM parameters
 - You can optimize based on actual keyword performance
@@ -512,7 +512,7 @@ Create 3 separate conversion actions:
 
 #### 5. Update Landing Page Code
 
-**For keratin-bond-extensions-seattle.html:**
+**For keratin-bond-seattle.html:**
 
 Find line 408-410 (in the submitContact function):
 ```javascript
@@ -527,8 +527,8 @@ gtag('event', 'conversion', {
 ```
 
 **Repeat for:**
-- hand-tied-extensions-seattle.html
-- tape-in-extensions-seattle.html
+- hand-tied-seattle.html
+- tape-in-seattle.html
 
 #### 6. Test Conversions
 
@@ -536,7 +536,7 @@ gtag('event', 'conversion', {
 
 1. Open your landing page with UTM parameters:
    ```
-   https://roaring-kulfi-cd788b.netlify.app/keratin-bond-extensions-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=test
+   https://westside.style/keratin-bond-seattle.html?utm_source=google&utm_medium=cpc&utm_campaign=test
    ```
 
 2. Fill out the contact form and submit
