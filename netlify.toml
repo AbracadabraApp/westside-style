@@ -10,6 +10,22 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
+# Redirect old long URLs to new short URLs
+[[redirects]]
+  from = "/keratin-bond-extensions-seattle.html"
+  to = "/keratin-bond-seattle.html"
+  status = 301
+
+[[redirects]]
+  from = "/hand-tied-extensions-seattle.html"
+  to = "/hand-tied-seattle.html"
+  status = 301
+
+[[redirects]]
+  from = "/tape-in-extensions-seattle.html"
+  to = "/tape-in-seattle.html"
+  status = 301
+
 # Headers for security
 [[headers]]
   for = "/*"
