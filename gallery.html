@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18371102793"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18371102793');
+      gtag('config', 'G-GW68Z12RN9');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Extension Gallery Seattle | Westside Style Transformations</title>
+    <meta name="description" content="See real hair extension transformations in Seattle. Before & after gallery showcasing keratin bond, hand-tied, and tape-in extensions by Jennifer Arges.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hair Extension Gallery Seattle | Westside Style">
+    <meta property="og:description" content="See real hair extension transformations. Before & after gallery showcasing our work.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://westside.style/gallery.html">
+    <link rel="canonical" href="https://westside.style/gallery.html">
+    <meta property="og:image" content="https://westside.style/jennifer-headshot.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hair Extension Gallery Seattle">
+    <meta name="twitter:description" content="See real hair extension transformations by Jennifer Arges.">
+    <meta name="twitter:image" content="https://westside.style/jennifer-headshot.jpg">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Bebas Neue', 'sans-serif'],
+                        'serif': ['Crimson Pro', 'serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'warm': {
+                            'ochre': '#C17817',
+                            'amber': '#E8A735',
+                            'sand': '#F4E8D0',
+                            'bone': '#FAF7F0',
+                        },
+                        'neutral': {
+                            'ink': '#0A0908',
+                            'ash': '#49463F',
+                            'stone': '#8B8680',
+                            'cloud': '#F7F5F2',
+                        }
+                    },
+                    letterSpacing: {
+                        'extreme': '0.2em',
+                        'wide': '0.1em',
+                    },
+                    animation: {
+                        'reveal': 'reveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    },
+                    keyframes: {
+                        reveal: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        .lazy-video {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        .lazy-video.loaded {
+            opacity: 1;
+        }
+        .image-reveal {
+            animation: reveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+    </style>
+</head>
+<body class="bg-warm-bone text-neutral-ink">
+
+    <!-- Header -->
+    <header class="py-8 px-6 lg:px-16 bg-neutral-ink">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-display text-3xl tracking-wide" style="color: #D4AF37;">WESTSIDE STYLE</a>
+            <a href="index.html" class="font-mono text-sm tracking-extreme hover:opacity-70 transition-opacity" style="color: #D4AF37;">HOME</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-16 px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="font-mono text-sm tracking-extreme text-warm-ochre">RECENT WORK</span>
+            <h1 class="font-display text-6xl lg:text-8xl mt-4 mb-6">TRANSFORMATIONS</h1>
+            <p class="font-serif text-xl text-neutral-ash max-w-2xl mx-auto">
+                Real clients. Real results. See how hair extensions can transform your look.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-16 px-6 lg:px-16">
+        <div class="max-w-7xl mx-auto">
+            <!-- Video Grid - Expandable layout -->
+            <div class="grid md:grid-cols-3 gap-y-12 gap-x-6 md:gap-8">
+                <!-- Video 1 -->
+                <div class="image-reveal">
+                    <div class="aspect-[9/16] bg-neutral-cloud">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
+                            <source src="gallery-video-1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="image-reveal">
+                    <div class="aspect-[9/16] bg-neutral-cloud">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
+                            <source src="gallery-video-2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="image-reveal">
+                    <div class="aspect-[9/16] bg-neutral-cloud">
+                        <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
+                            <source src="gallery-video-3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Placeholder for future additions - you can add more videos here -->
+                <!-- Just copy the video div structure above and change the source -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 lg:px-16 bg-neutral-ink text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-display text-5xl lg:text-6xl mb-6" style="color: #D4AF37;">READY FOR YOUR TRANSFORMATION?</h2>
+            <p class="font-serif text-xl mb-8" style="color: #F7F5F2;">
+                Book a free consultation to discuss which extension method is right for you.
+            </p>
+            <a href="consultation.html" class="inline-block font-mono text-base tracking-extreme text-neutral-ink px-12 py-5 transition-all duration-300 hover:opacity-90" style="background-color: rgba(212,175,55,0.9);">
+                FREE CONSULTATION
+            </a>
+            <p class="mt-8 font-mono text-sm tracking-wide" style="color: #D4AF37;">
+                <a href="tel:+12062954549" class="hover:opacity-70 transition-opacity">TEXT OR CALL: 206.295.4549</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-8 py-8 bg-neutral-ink text-center border-t border-neutral-stone">
+        <a href="sms:2062954549" class="block">
+            <p class="font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT PREFERRED · 206.295.4549</p>
+        </a>
+        <a href="https://www.instagram.com/_westside_style_" target="_blank"
+           class="inline-block mt-2 font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">
+            @_westside_style_
+        </a>
+    </footer>
+
+    <!-- Lazy Load Videos Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('.lazy-video');
+
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const video = entry.target;
+                        video.load();
+                        video.play().catch(e => console.log('Autoplay prevented:', e));
+                        video.classList.add('loaded');
+                        videoObserver.unobserve(video);
+                    }
+                });
+            }, {
+                rootMargin: '50px'
+            });
+
+            videos.forEach(video => videoObserver.observe(video));
+        });
+    </script>
+
+</body>
+</html>
