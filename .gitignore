@@ -1,0 +1,83 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*-backup.html
+*-backup.*.html
+index-[0-9].html
+index-[0-9][0-9].html
+current-index*.html
+github-*.html
+index-final.html
+index-with-video.html
+
+# Python scripts (development only)
+*.py
+__pycache__/
+*.pyc
+
+# Base64 and temporary text files
+*base64.txt
+*.txt
+!requirements.txt
+!README.txt
+
+# Test files
+test-*.html
+*-temp-*.html
+playback-speed-options.html
+jennifer-video-update.html
+
+# Video backups and originals
+*-backup.mp4
+*-backup.mov
+*_noaudio.mp4
+*_noaudio.mov
+* copy.mov
+gallery_*.mov
+reel_noaudio*.mov
+reel_noaudio*.mp4
+
+# Keep only production videos
+!gallery-video-1.mp4
+!gallery-video-2.mp4
+!gallery-video-3.mp4
+!reel2_final.mp4
+!reel3.mp4
+!jennifer-background.mov
+
+# Temporary and cache files
+*.tmp
+*.temp
+*.cache
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if using any build tools)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Video backups and optimization scripts
+video-backups-original/
+cleanup.sh
+optimize-videos.sh
+# Local Netlify folder
+.netlify
