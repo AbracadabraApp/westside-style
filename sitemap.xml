@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://westside.style/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,31 +12,55 @@
   <!-- Free Consultation -->
   <url>
     <loc>https://westside.style/consultation.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- About Jennifer -->
+  <url>
+    <loc>https://westside.style/about.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Gallery -->
+  <url>
+    <loc>https://westside.style/gallery.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Inquiry Form -->
+  <url>
+    <loc>https://westside.style/inquiry.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Keratin Bond Extensions -->
   <url>
-    <loc>https://westside.style/keratin-bond-extensions-seattle.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://westside.style/keratin-bond-seattle.html</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Hand Tied Extensions -->
   <url>
-    <loc>https://westside.style/hand-tied-extensions-seattle.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://westside.style/hand-tied-seattle.html</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Tape-In Extensions -->
   <url>
-    <loc>https://westside.style/tape-in-extensions-seattle.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://westside.style/tape-in-seattle.html</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -44,7 +68,7 @@
   <!-- Extension Move-Up -->
   <url>
     <loc>https://westside.style/extension-move-up-seattle.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -52,7 +76,7 @@
   <!-- General Hair Extensions -->
   <url>
     <loc>https://westside.style/hair-extensions-seattle.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
