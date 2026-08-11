@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Westside Style hair extensions website with serverless SMS functionality",
   "dependencies": {
+    "puppeteer": "^25.5.0",
     "twilio": "^5.3.5"
   },
   "scripts": {
