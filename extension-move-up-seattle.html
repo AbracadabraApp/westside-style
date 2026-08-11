@@ -416,6 +416,27 @@
             const extensionType = document.getElementById('cf-extension-type').value.trim();
             const notes = document.getElementById('cf-notes').value.trim();
 
+            // Track form submission
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18371102793/MOVEUP_CONVERSION',
+                    'event_category': 'Lead',
+                    'event_label': 'Move-Up Appointment',
+                    'service_type': 'move_up',
+                    'value': 300,
+                    'currency': 'USD'
+                });
+
+                // Also send to GA4
+                gtag('event', 'generate_lead', {
+                    'event_category': 'Lead',
+                    'event_label': 'Move-Up',
+                    'service_type': 'move_up',
+                    'value': 300,
+                    'currency': 'USD'
+                });
+            }
+
             const body = [
                 `MOVE-UP appointment request from westside.style`,
                 `Name: ${name}`,

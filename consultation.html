@@ -363,6 +363,27 @@
             const email = document.getElementById('cf-email').value.trim();
             const notes = document.getElementById('cf-notes').value.trim();
 
+            // Track form submission
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18371102793/FREE_CONSULTATION_CONVERSION',
+                    'event_category': 'Lead',
+                    'event_label': 'Free Consultation',
+                    'service_type': 'consultation',
+                    'value': 1000,
+                    'currency': 'USD'
+                });
+
+                // Also send to GA4
+                gtag('event', 'generate_lead', {
+                    'event_category': 'Lead',
+                    'event_label': 'Free Consultation',
+                    'service_type': 'consultation',
+                    'value': 1000,
+                    'currency': 'USD'
+                });
+            }
+
             const body = [
                 `FREE CONSULTATION request from westside.style`,
                 `Name: ${name}`,
