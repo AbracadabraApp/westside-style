@@ -1,0 +1,42 @@
+Campaign,Keyword,Criterion Type
+GASP-Brand,jobs,Phrase match
+GASP-Brand,careers,Phrase match
+GASP-Brand,reviews,Phrase match
+GASP-Brand,complaints,Phrase match
+GASP-Nonbrand,wasters,Broad match
+GASP-Nonbrand,diy,Phrase match
+GASP-Nonbrand,cheap,Phrase match
+GASP-Nonbrand,free,Phrase match
+GASP-Nonbrand,training,Phrase match
+GASP-Nonbrand,school,Phrase match
+GASP-Nonbrand,course,Phrase match
+GASP-Nonbrand,wholesale,Phrase match
+GASP-Nonbrand,supplier,Phrase match
+GASP-Nonbrand,wigs,Phrase match
+GASP-Nonbrand,hair pieces,Phrase match
+GASP-Nonbrand,bellami mon bebe,Exact match
+GASP-Nonbrand,bellami hair extensions,Exact match
+GASP-Nonbrand,ashley james custom hair,Exact match
+GASP-Nonbrand,1630 hair artisans renton,Exact match
+GASP-Nonbrand,beauty salons seattle wa,Exact match
+GASP-Nonbrand,beauty parlor,Exact match
+GASP-Nonbrand,beauty with a twist,Exact match
+GASP-Nonbrand,beauty salons redmond wa,Exact match
+GASP-Nonbrand,beauty salons issaquah wa,Exact match
+GASP-Nonbrand,salon near me,Phrase match
+GASP-Nonbrand,hair salon,Phrase match
+GASP-Nonbrand,lash,Phrase match
+GASP-Nonbrand,how to,Phrase match
+GASP-Nonbrand,one piece,Phrase match
+GASP-Nonbrand,butterfly weft,Exact match
+GASP-Nonbrand,maeve and nash,Exact match
+GASP-Nonbrand,rubaiyat,Exact match
+GASP-Nonbrand,lux beauty bar,Exact match
+GASP-Nonbrand,salon 334,Exact match
+GASP-Nonbrand,salon nouveau,Exact match
+GASP-Nonbrand,bangz,Exact match
+GASP-Nonbrand,hair by lisa,Exact match
+GASP-Nonbrand,hair stylist,Phrase match
+GASP-Nonbrand,best hair salons,Phrase match
+GASP-Nonbrand,best beauty salons,Phrase match
+GASP-Nonbrand,tacoma,Exact match
