@@ -179,13 +179,16 @@
     <!-- CTA -->
     <section class="py-10 px-6 bg-neutral-ink text-center">
         <div class="max-w-2xl mx-auto">
-            <h2 class="font-sans text-2xl mb-3" style="color: #D4AF37;">MORE QUESTIONS?</h2>
-            <p class="font-serif text-lg text-neutral-cloud mb-6">
-                Text or call to discuss which extension method fits your lifestyle
+            <h2 class="font-display text-5xl mb-3" style="color: #D4AF37;">READY TO LEARN MORE?</h2>
+            <p class="font-serif text-xl text-neutral-cloud mb-6 italic">
+                Book your free consultation and discover which extension method fits your lifestyle
             </p>
-            <div class="pt-4">
-                <a href="sms:2062954549" class="block mb-2">
-                    <p class="font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT · 206.295.4549</p>
+            <button onclick="openContactModal()" class="font-mono text-base tracking-extreme text-neutral-ink px-12 py-4 mb-6 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
+                FREE CONSULTATION
+            </button>
+            <div class="pt-4 border-t border-neutral-stone/30 mt-8">
+                <a href="sms:2062954549" onclick="trackPhoneClick('cta')" class="block mb-2">
+                    <p class="font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT PREFERRED · 206.295.4549</p>
                 </a>
                 <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">
                     @_westside_style_
@@ -203,6 +206,148 @@
             <a href="/#services" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">SERVICES & PRICING</a>
         </nav>
     </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeContactModal()"></div>
+        <div class="relative bg-neutral-cloud border border-neutral-stone/20 w-full max-w-md p-8">
+            <button onclick="closeContactModal()" class="absolute top-4 right-4 font-mono text-base tracking-wide text-neutral-ash hover:text-neutral-ink transition-colors">✕ CLOSE</button>
+            <div class="mb-8">
+                <span class="font-mono text-base tracking-wide uppercase text-warm-ochre">GET IN TOUCH</span>
+                <h3 class="font-display text-4xl text-neutral-ink mt-1">LET'S TALK</h3>
+                <p class="font-serif text-sm text-neutral-ash mt-2">Questions about living with extensions</p>
+            </div>
+            <form id="contactForm" onsubmit="submitContact(event)" class="space-y-5">
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">NAME</label>
+                    <input type="text" id="cf-name" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">PHONE</label>
+                    <input type="tel" id="cf-phone" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="206.000.0000">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">EMAIL</label>
+                    <input type="email" id="cf-email" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="you@example.com">
+                </div>
+                <div>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">NOTES</label>
+                    <textarea id="cf-notes" rows="3" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none" placeholder="What are you looking for?"></textarea>
+                </div>
+                <div class="pt-4">
+                    <button type="submit" class="w-full font-mono text-sm tracking-extreme text-neutral-ink bg-[#D4AF37] py-4 hover:bg-warm-amber transition-colors">
+                        TEXT JENN THIS INFO
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openContactModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            // Track consultation button click
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'consultation_button_click', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Living With Extensions',
+                    'service_type': 'general_inquiry',
+                    'value': 900
+                });
+            }
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function submitContact(e) {
+            e.preventDefault();
+            const name  = document.getElementById('cf-name').value.trim();
+            const phone = document.getElementById('cf-phone').value.trim();
+            const email = document.getElementById('cf-email').value.trim();
+            const notes = document.getElementById('cf-notes').value.trim();
+
+            // Track form submission
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18371102793/E6Z5CLHHhOAcEMmQg7hE',
+                    'event_category': 'Lead',
+                    'event_label': 'Living With Extensions Inquiry',
+                    'service_type': 'general_inquiry',
+                    'value': 900,
+                    'currency': 'USD'
+                });
+
+                // Also send to GA4
+                gtag('event', 'generate_lead', {
+                    'event_category': 'Lead',
+                    'event_label': 'Living With Extensions',
+                    'service_type': 'general_inquiry',
+                    'value': 900,
+                    'currency': 'USD'
+                });
+            }
+
+            const btn = document.querySelector('#contactForm button[type="submit"]');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            // Send directly to Netlify serverless function → email → Jenn
+            fetch('https://roaring-kulfi-cd788b.netlify.app/.netlify/functions/send-sms', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    notes: notes,
+                    service_type: 'general_inquiry',
+                    page: 'Living With Extensions'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    btn.textContent = '✓ Message Sent to Jenn!';
+                    setTimeout(() => {
+                        closeContactModal();
+                        document.getElementById('contactForm').reset();
+                        btn.textContent = 'TEXT JENN THIS INFO';
+                        btn.disabled = false;
+                    }, 2000);
+                } else {
+                    throw new Error(data.error || 'Failed to send');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btn.textContent = 'Error - Please text 206-295-4549';
+                setTimeout(() => {
+                    btn.textContent = 'TEXT JENN THIS INFO';
+                    btn.disabled = false;
+                }, 3000);
+            });
+        }
+
+        function trackPhoneClick(location) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'Living With Extensions - ' + location,
+                    'service_type': 'general_inquiry',
+                    'click_location': location
+                });
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeContactModal();
+        });
+    </script>
 
 </body>
 </html>
