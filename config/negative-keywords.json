@@ -1,6 +1,11 @@
 {
   "globalNegativeKeywords": [
     {
+      "keyword": "wasters",
+      "matchType": "BROAD",
+      "reasoning": "Current negative - catches mistargeted/wasteful searches"
+    },
+    {
       "keyword": "diy",
       "matchType": "PHRASE",
       "reasoning": "DIY searchers are not looking for professional services"
@@ -39,9 +44,66 @@
       "keyword": "supplier",
       "matchType": "PHRASE",
       "reasoning": "B2B buyers, not retail clients"
+    },
+    {
+      "keyword": "wigs",
+      "matchType": "PHRASE",
+      "reasoning": "Different product category"
+    },
+    {
+      "keyword": "hair pieces",
+      "matchType": "PHRASE",
+      "reasoning": "Different product category"
     }
   ],
-  "brandNegativeKeywords": [
+  "competitorNegativeKeywords": [
+    {
+      "keyword": "bellami mon bebe",
+      "matchType": "EXACT",
+      "reasoning": "Current negative - competitor brand"
+    },
+    {
+      "keyword": "bellami hair extensions",
+      "matchType": "EXACT",
+      "reasoning": "Current negative - competitor brand"
+    },
+    {
+      "keyword": "ashley james custom hair",
+      "matchType": "EXACT",
+      "reasoning": "Current negative - competitor salon"
+    },
+    {
+      "keyword": "1630 hair artisans renton",
+      "matchType": "EXACT",
+      "reasoning": "Current negative - competitor salon"
+    }
+  ],
+  "genericSalonNegativeKeywords": [
+    {
+      "keyword": "beauty salons seattle wa",
+      "matchType": "EXACT",
+      "reasoning": "Current negative - generic salon search, not extensions-focused"
+    },
+    {
+      "keyword": "beauty parlor",
+      "matchType": "EXACT",
+      "reasoning": "Current negative - old-fashioned generic term"
+    },
+    {
+      "keyword": "beauty with a twist",
+      "matchType": "EXACT",
+      "reasoning": "Current negative - specific unrelated business name"
+    },
+    {
+      "keyword": "beauty salons redmond wa",
+      "matchType": "EXACT",
+      "reasoning": "Current negative - generic salon search"
+    },
+    {
+      "keyword": "beauty salons issaquah wa",
+      "matchType": "EXACT",
+      "reasoning": "Current negative - generic salon search"
+    },
     {
       "keyword": "salon near me",
       "matchType": "PHRASE",
@@ -53,16 +115,10 @@
       "reasoning": "Too generic, includes full-service salons"
     }
   ],
-  "nonBrandNegativeKeywords": [
-    {
-      "keyword": "wigs",
-      "matchType": "PHRASE",
-      "reasoning": "Different product category"
-    },
-    {
-      "keyword": "hair pieces",
-      "matchType": "PHRASE",
-      "reasoning": "Different product category"
-    }
-  ]
+  "notes": {
+    "lastUpdated": "2026-08-12",
+    "source": "Imported from current Google Ads negative keywords report + GASP template recommendations",
+    "totalNegativeKeywords": 22,
+    "categories": "Global (11), Competitors (4), Generic Salons (7)"
+  }
 }
