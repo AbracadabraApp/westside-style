@@ -304,7 +304,7 @@
                 BOOK MOVE-UP
             </button>
             <div class="pt-4 border-t border-neutral-stone/30 mt-8">
-                <a href="sms:2062954549" class="block mb-2">
+                <a href="sms:2062954549" onclick="trackPhoneClick('cta')" class="block mb-2">
                     <p class="font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT PREFERRED · 206.295.4549</p>
                 </a>
                 <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">
@@ -398,6 +398,16 @@
         function openContactModal() {
             document.getElementById('contactModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+
+            // Track consultation button click
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'consultation_button_click', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Move-Up',
+                    'service_type': 'move_up',
+                    'value': 300
+                });
+            }
         }
 
         function closeContactModal() {
@@ -434,22 +444,62 @@
                 });
             }
 
-            const body = [
-                `MOVE-UP appointment request from westside.style`,
-                `Name: ${name}`,
-                phone ? `Phone: ${phone}` : null,
-                email ? `Email: ${email}` : null,
-                extensionType ? `Extension type: ${extensionType}` : null,
-                notes ? `Notes: ${notes}` : null,
-            ].filter(Boolean).join('\n');
-
             const btn = document.querySelector('#contactForm button[type="submit"]');
-            btn.textContent = 'Opening text message...';
+            btn.textContent = 'Sending...';
             btn.disabled = true;
 
-            setTimeout(() => {
-                window.location.href = `sms:2062954549?body=${encodeURIComponent(body)}`;
-            }, 500);
+            // Build notes with extension type
+            const fullNotes = [
+                extensionType ? `Extension type: ${extensionType}` : null,
+                notes
+            ].filter(Boolean).join('\n');
+
+            // Send directly to Netlify serverless function → Twilio → Jenn's phone
+            fetch('https://roaring-kulfi-cd788b.netlify.app/api/send-sms', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    notes: fullNotes,
+                    service_type: 'move_up',
+                    page: 'Extension Move-Up'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    btn.textContent = '✓ Message Sent to Jenn!';
+                    setTimeout(() => {
+                        closeContactModal();
+                        document.getElementById('contactForm').reset();
+                        btn.textContent = 'TEXT JENN THIS INFO';
+                        btn.disabled = false;
+                    }, 2000);
+                } else {
+                    throw new Error(data.error || 'Failed to send');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btn.textContent = 'Error - Please text 206-295-4549';
+                setTimeout(() => {
+                    btn.textContent = 'TEXT JENN THIS INFO';
+                    btn.disabled = false;
+                }, 3000);
+            });
+        }
+
+        function trackPhoneClick(location) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'Move-Up - ' + location,
+                    'service_type': 'move_up',
+                    'click_location': location
+                });
+            }
         }
 
         document.addEventListener('keydown', function(e) {
