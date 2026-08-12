@@ -371,8 +371,8 @@
             <div class="card" id="pmax-card">
                 <h2>Performance Max</h2>
                 <div class="metric-row">
-                    <span class="metric-label">Cost per Booking</span>
-                    <span class="metric-value neutral" id="pmax-cpa">$--</span>
+                    <span class="metric-label">Cost per Lead</span>
+                    <span class="metric-value neutral" id="pmax-cpl">$--</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Conversion Rate</span>
@@ -387,16 +387,16 @@
                     <span class="metric-value neutral" id="pmax-spend-display">$--</span>
                 </div>
                 <div class="metric-row">
-                    <span class="metric-label">Bookings This Week</span>
-                    <span class="metric-value neutral" id="pmax-bookings">--</span>
+                    <span class="metric-label">Leads This Week</span>
+                    <span class="metric-value neutral" id="pmax-leads">--</span>
                 </div>
             </div>
 
             <div class="card" id="gasp-card">
                 <h2>GASP Combined</h2>
                 <div class="metric-row">
-                    <span class="metric-label">Cost per Booking</span>
-                    <span class="metric-value neutral" id="gasp-cpa">$--</span>
+                    <span class="metric-label">Cost per Lead</span>
+                    <span class="metric-value neutral" id="gasp-cpl">$--</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Conversion Rate</span>
@@ -411,8 +411,8 @@
                     <span class="metric-value neutral" id="gasp-spend-display">$--</span>
                 </div>
                 <div class="metric-row">
-                    <span class="metric-label">Bookings This Week</span>
-                    <span class="metric-value neutral" id="gasp-bookings">--</span>
+                    <span class="metric-label">Leads This Week</span>
+                    <span class="metric-value neutral" id="gasp-leads">--</span>
                 </div>
             </div>
         </div>
@@ -460,7 +460,7 @@
                     <span class="metric-value neutral" id="nonbrand-conversions">--</span>
                 </div>
                 <p style="color: #888; font-size: 0.85rem; margin-top: 1rem;">
-                    Target: $120-180 CPA, 3-5% conversion rate
+                    Target: $120-180 cost per lead, 3-5% conversion rate
                 </p>
             </div>
         </div>
@@ -478,10 +478,10 @@
                 </thead>
                 <tbody id="comparison-body">
                     <tr>
-                        <td>Cost per Booking (CPA)</td>
-                        <td id="comp-pmax-cpa">--</td>
-                        <td id="comp-gasp-cpa">--</td>
-                        <td id="comp-cpa-winner">--</td>
+                        <td>Cost per Lead (CPL)</td>
+                        <td id="comp-pmax-cpl">--</td>
+                        <td id="comp-gasp-cpl">--</td>
+                        <td id="comp-cpl-winner">--</td>
                     </tr>
                     <tr>
                         <td>Conversion Rate</td>
@@ -550,12 +550,12 @@
             const gaspImpressions = brandImpressions + nonbrandImpressions;
 
             // Calculate metrics
-            const pmaxCPA = pmaxConversions > 0 ? pmaxSpend / pmaxConversions : 0;
+            const pmaxCPL = pmaxConversions > 0 ? pmaxSpend / pmaxConversions : 0; // Cost per lead
             const pmaxCVR = pmaxClicks > 0 ? (pmaxConversions / pmaxClicks * 100) : 0;
             const pmaxCTR = pmaxImpressions > 0 ? (pmaxClicks / pmaxImpressions * 100) : 0;
             const pmaxCPC = pmaxClicks > 0 ? pmaxSpend / pmaxClicks : 0;
 
-            const gaspCPA = gaspConversions > 0 ? gaspSpend / gaspConversions : 0;
+            const gaspCPL = gaspConversions > 0 ? gaspSpend / gaspConversions : 0; // Cost per lead
             const gaspCVR = gaspClicks > 0 ? (gaspConversions / gaspClicks * 100) : 0;
             const gaspCTR = gaspImpressions > 0 ? (gaspClicks / gaspImpressions * 100) : 0;
             const gaspCPC = gaspClicks > 0 ? gaspSpend / gaspClicks : 0;
@@ -565,18 +565,18 @@
             const nonbrandCPC = nonbrandClicks > 0 ? nonbrandSpend / nonbrandClicks : 0;
 
             // Update Performance Max card
-            document.getElementById('pmax-cpa').textContent = pmaxConversions > 0 ? `$${pmaxCPA.toFixed(0)}` : 'No conversions';
+            document.getElementById('pmax-cpl').textContent = pmaxConversions > 0 ? `$${pmaxCPL.toFixed(0)}` : 'No conversions';
             document.getElementById('pmax-cvr').textContent = `${pmaxCVR.toFixed(1)}%`;
             document.getElementById('pmax-ctr').textContent = `${pmaxCTR.toFixed(2)}%`;
             document.getElementById('pmax-spend-display').textContent = `$${pmaxSpend.toFixed(0)}`;
-            document.getElementById('pmax-bookings').textContent = pmaxConversions;
+            document.getElementById('pmax-leads').textContent = pmaxConversions;
 
             // Update GASP card
-            document.getElementById('gasp-cpa').textContent = gaspConversions > 0 ? `$${gaspCPA.toFixed(0)}` : 'No conversions';
+            document.getElementById('gasp-cpl').textContent = gaspConversions > 0 ? `$${gaspCPL.toFixed(0)}` : 'No conversions';
             document.getElementById('gasp-cvr').textContent = `${gaspCVR.toFixed(1)}%`;
             document.getElementById('gasp-ctr').textContent = `${gaspCTR.toFixed(2)}%`;
             document.getElementById('gasp-spend-display').textContent = `$${gaspSpend.toFixed(0)}`;
-            document.getElementById('gasp-bookings').textContent = gaspConversions;
+            document.getElementById('gasp-leads').textContent = gaspConversions;
 
             // Update campaign breakdown
             document.getElementById('brand-spend').textContent = `$${brandSpend.toFixed(0)}`;
@@ -590,8 +590,8 @@
             document.getElementById('nonbrand-conversions').textContent = nonbrandConversions;
 
             // Update comparison table
-            document.getElementById('comp-pmax-cpa').textContent = pmaxConversions > 0 ? `$${pmaxCPA.toFixed(0)}` : 'No data';
-            document.getElementById('comp-gasp-cpa').textContent = gaspConversions > 0 ? `$${gaspCPA.toFixed(0)}` : 'No data';
+            document.getElementById('comp-pmax-cpl').textContent = pmaxConversions > 0 ? `$${pmaxCPL.toFixed(0)}` : 'No data';
+            document.getElementById('comp-gasp-cpl').textContent = gaspConversions > 0 ? `$${gaspCPL.toFixed(0)}` : 'No data';
 
             document.getElementById('comp-pmax-cvr').textContent = `${pmaxCVR.toFixed(1)}%`;
             document.getElementById('comp-gasp-cvr').textContent = `${gaspCVR.toFixed(1)}%`;
@@ -603,14 +603,14 @@
             document.getElementById('comp-gasp-cpc').textContent = gaspClicks > 0 ? `$${gaspCPC.toFixed(2)}` : '$--';
 
             // Determine winners
-            updateWinner('comp-cpa-winner', gaspCPA, pmaxCPA, true, gaspConversions > 0 && pmaxConversions > 0);
+            updateWinner('comp-cpl-winner', gaspCPL, pmaxCPL, true, gaspConversions > 0 && pmaxConversions > 0);
             updateWinner('comp-cvr-winner', gaspCVR, pmaxCVR, false, gaspClicks > 0 && pmaxClicks > 0);
             updateWinner('comp-ctr-winner', gaspCTR, pmaxCTR, false, gaspImpressions > 0 && pmaxImpressions > 0);
             updateWinner('comp-cpc-winner', gaspCPC, pmaxCPC, true, gaspClicks > 0 && pmaxClicks > 0);
 
             // Color code metrics
-            colorMetric('pmax-cpa', pmaxCPA, 180, true);
-            colorMetric('gasp-cpa', gaspCPA, 120, true);
+            colorMetric('pmax-cpl', pmaxCPL, 180, true);
+            colorMetric('gasp-cpl', gaspCPL, 120, true);
             colorMetric('pmax-cvr', pmaxCVR, 3, false);
             colorMetric('gasp-cvr', gaspCVR, 4, false);
             colorMetric('brand-is', brandIS, 80, false);
@@ -622,9 +622,9 @@
             gaspCard.classList.remove('winner');
 
             if (gaspConversions > 0 && pmaxConversions > 0) {
-                if (gaspCPA < pmaxCPA * 0.9) {
+                if (gaspCPL < pmaxCPL * 0.9) {
                     gaspCard.classList.add('winner');
-                } else if (pmaxCPA < gaspCPA * 0.9) {
+                } else if (pmaxCPL < gaspCPL * 0.9) {
                     pmaxCard.classList.add('winner');
                 }
             }
@@ -633,7 +633,7 @@
             updateProgress();
 
             // Generate recommendation
-            generateRecommendation(pmaxCPA, gaspCPA, pmaxConversions, gaspConversions, brandIS);
+            generateRecommendation(pmaxCPL, gaspCPL, pmaxConversions, gaspConversions, brandIS);
 
             // Save to localStorage
             saveData();
@@ -695,7 +695,7 @@
             document.getElementById('progress-fill').style.width = `${progress}%`;
         }
 
-        function generateRecommendation(pmaxCPA, gaspCPA, pmaxConv, gaspConv, brandIS) {
+        function generateRecommendation(pmaxCPL, gaspCPL, pmaxConv, gaspConv, brandIS) {
             const element = document.getElementById('recommendationText');
 
             if (gaspConv === 0 && pmaxConv === 0) {
@@ -706,9 +706,9 @@
             let recommendations = [];
 
             if (gaspConv > 0 && pmaxConv > 0) {
-                if (gaspCPA < pmaxCPA * 0.8) {
+                if (gaspCPL < pmaxCPL * 0.8) {
                     recommendations.push('GASP is significantly outperforming Performance Max. Consider shifting more budget to GASP.');
-                } else if (pmaxCPA < gaspCPA * 0.8) {
+                } else if (pmaxCPL < gaspCPL * 0.8) {
                     recommendations.push('Performance Max is outperforming GASP. Review GASP keyword targeting and negative keywords.');
                 }
             }
