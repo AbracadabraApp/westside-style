@@ -1,0 +1,68 @@
+{
+  "globalNegativeKeywords": [
+    {
+      "keyword": "diy",
+      "matchType": "PHRASE",
+      "reasoning": "DIY searchers are not looking for professional services"
+    },
+    {
+      "keyword": "cheap",
+      "matchType": "PHRASE",
+      "reasoning": "Budget-conscious searchers don't match premium service pricing"
+    },
+    {
+      "keyword": "free",
+      "matchType": "PHRASE",
+      "reasoning": "Not relevant to paid professional services"
+    },
+    {
+      "keyword": "training",
+      "matchType": "PHRASE",
+      "reasoning": "Looking to learn, not book a service"
+    },
+    {
+      "keyword": "school",
+      "matchType": "PHRASE",
+      "reasoning": "Educational intent, not service booking"
+    },
+    {
+      "keyword": "course",
+      "matchType": "PHRASE",
+      "reasoning": "Educational intent, not service booking"
+    },
+    {
+      "keyword": "wholesale",
+      "matchType": "PHRASE",
+      "reasoning": "B2B buyers, not retail clients"
+    },
+    {
+      "keyword": "supplier",
+      "matchType": "PHRASE",
+      "reasoning": "B2B buyers, not retail clients"
+    }
+  ],
+  "brandNegativeKeywords": [
+    {
+      "keyword": "salon near me",
+      "matchType": "PHRASE",
+      "reasoning": "Generic salon search, not extensions-focused"
+    },
+    {
+      "keyword": "hair salon",
+      "matchType": "PHRASE",
+      "reasoning": "Too generic, includes full-service salons"
+    }
+  ],
+  "nonBrandNegativeKeywords": [
+    {
+      "keyword": "wigs",
+      "matchType": "PHRASE",
+      "reasoning": "Different product category"
+    },
+    {
+      "keyword": "hair pieces",
+      "matchType": "PHRASE",
+      "reasoning": "Different product category"
+    }
+  ]
+}
