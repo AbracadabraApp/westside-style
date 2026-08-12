@@ -52,10 +52,10 @@ exports.handler = async (event, context) => {
       notes ? `Notes: ${notes}` : null
     ].filter(Boolean).join('\n');
 
-    // Send SMS via Twilio
+    // Send SMS via Twilio Messaging Service
     const message = await client.messages.create({
       body: smsBody,
-      from: process.env.TWILIO_PHONE_NUMBER,
+      messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
       to: process.env.RECIPIENT_PHONE // Jenn's phone: +12062954549
     });
 
