@@ -1,5 +1,3 @@
-const twilio = require('twilio');
-
 exports.handler = async (event, context) => {
   // Only allow POST requests
   if (event.httpMethod !== 'POST') {
@@ -36,30 +34,50 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // Initialize Twilio client
-    const client = twilio(
-      process.env.TWILIO_ACCOUNT_SID,
-      process.env.TWILIO_AUTH_TOKEN
-    );
+    // Format email content
+    const emailSubject = `New ${service_type || 'consultation'} inquiry - ${name}`;
 
-    // Format SMS message
-    const smsBody = [
-      `New ${service_type || 'consultation'} inquiry from westside.style`,
-      `Page: ${page || 'unknown'}`,
-      `Name: ${name}`,
-      phone ? `Phone: ${phone}` : null,
-      email ? `Email: ${email}` : null,
-      notes ? `Notes: ${notes}` : null
-    ].filter(Boolean).join('\n');
+    const emailBody = `
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+  <h2 style="color: #C17817;">New Inquiry from Westside Style</h2>
 
-    // Send SMS via Twilio Messaging Service
-    const message = await client.messages.create({
-      body: smsBody,
-      messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
-      to: process.env.RECIPIENT_PHONE // Jenn's phone: +12062954549
+  <div style="background: #FAF7F0; padding: 20px; border-radius: 8px; margin: 20px 0;">
+    <p style="margin: 8px 0;"><strong>Page:</strong> ${page || 'Unknown'}</p>
+    <p style="margin: 8px 0;"><strong>Service Type:</strong> ${service_type || 'consultation'}</p>
+    <p style="margin: 8px 0;"><strong>Name:</strong> ${name}</p>
+    ${phone ? `<p style="margin: 8px 0;"><strong>Phone:</strong> ${phone}</p>` : ''}
+    ${email ? `<p style="margin: 8px 0;"><strong>Email:</strong> ${email}</p>` : ''}
+    ${notes ? `<p style="margin: 8px 0;"><strong>Notes:</strong><br/>${notes.replace(/\n/g, '<br/>')}</p>` : ''}
+  </div>
+
+  <p style="color: #8B8680; font-size: 12px; margin-top: 30px;">
+    This inquiry was submitted from westside.style
+  </p>
+</div>
+    `.trim();
+
+    // Send email via Resend
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: 'Westside Style <onboarding@resend.dev>',
+        to: process.env.RECIPIENT_EMAIL,
+        subject: emailSubject,
+        html: emailBody
+      })
     });
 
-    console.log('SMS sent successfully:', message.sid);
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.message || 'Failed to send email');
+    }
+
+    console.log('Email sent successfully:', result.id);
 
     // Return success
     return {
@@ -68,12 +86,12 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({
         success: true,
         message: 'Consultation request sent!',
-        messageSid: message.sid
+        emailId: result.id
       })
     };
 
   } catch (error) {
-    console.error('Error sending SMS:', error);
+    console.error('Error sending email:', error);
 
     return {
       statusCode: 500,
