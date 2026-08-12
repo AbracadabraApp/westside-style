@@ -638,24 +638,42 @@
             const email = document.getElementById('cf-email').value.trim();
             const notes = document.getElementById('cf-notes').value.trim();
 
-            const body = [
-                `New inquiry for Jenn at Westside Style`,
-                `Name: ${name}`,
-                phone ? `Phone: ${phone}` : null,
-                email ? `Email: ${email}` : null,
-                notes ? `Notes: ${notes}` : null,
-            ].filter(Boolean).join('\n');
-
             const btn = document.querySelector('#contactForm button[type="submit"]');
-            btn.textContent = 'Next: Text message to Jenn';
+            btn.textContent = 'Sending...';
             btn.disabled = true;
 
-            setTimeout(() => {
-                window.location.href = `sms:2062954549?body=${encodeURIComponent(body)}`;
+            // Send directly to Netlify serverless function → Twilio → Jenn's phone
+            fetch('https://roaring-kulfi-cd788b.netlify.app/api/send-sms', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    notes: notes,
+                    service_type: 'general_inquiry',
+                    page: 'Homepage'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    btn.textContent = '✓ Message Sent to Jenn!';
+                    setTimeout(() => {
+                        window.location.href = '/inquiry.html';
+                    }, 1500);
+                } else {
+                    throw new Error(data.error || 'Failed to send');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btn.textContent = 'Error - Please text 206-295-4549';
                 setTimeout(() => {
-                    window.location.href = '/inquiry.html';
-                }, 300);
-            }, 800);
+                    btn.textContent = 'TEXT JENN THIS INFO';
+                    btn.disabled = false;
+                }, 3000);
+            });
         }
 
         document.addEventListener('keydown', function(e) {

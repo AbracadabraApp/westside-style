@@ -381,21 +381,44 @@
                 });
             }
 
-            const body = [
-                `FREE CONSULTATION request from westside.style`,
-                `Name: ${name}`,
-                phone ? `Phone: ${phone}` : null,
-                email ? `Email: ${email}` : null,
-                notes ? `Looking for: ${notes}` : null,
-            ].filter(Boolean).join('\n');
-
             const btn = document.querySelector('#consultForm button[type="submit"]');
-            btn.textContent = 'Opening text message...';
+            btn.textContent = 'Sending...';
             btn.disabled = true;
 
-            setTimeout(() => {
-                window.location.href = `sms:2062954549?body=${encodeURIComponent(body)}`;
-            }, 500);
+            // Send directly to Netlify serverless function → Twilio → Jenn's phone
+            fetch('https://roaring-kulfi-cd788b.netlify.app/api/send-sms', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    notes: notes,
+                    service_type: 'consultation',
+                    page: 'Free Consultation'
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    btn.textContent = '✓ Message Sent to Jenn!';
+                    setTimeout(() => {
+                        document.getElementById('consultForm').reset();
+                        btn.textContent = 'TEXT JENN THIS INFO';
+                        btn.disabled = false;
+                    }, 2000);
+                } else {
+                    throw new Error(data.error || 'Failed to send');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btn.textContent = 'Error - Please text 206-295-4549';
+                setTimeout(() => {
+                    btn.textContent = 'TEXT JENN THIS INFO';
+                    btn.disabled = false;
+                }, 3000);
+            });
         }
     </script>
 
