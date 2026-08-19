@@ -1,0 +1,64 @@
+Action,Keyword status,Campaign,Ad group,Keyword,Match type,Max CPC bid
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions seattle",Phrase match,$8.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions seattle wa",Phrase match,$7.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"best hair extensions seattle",Phrase match,$9.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extension specialist seattle",Phrase match,$10.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"natural looking hair extensions seattle",Phrase match,$9.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"seattle hair extensions",Phrase match,$7.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions specialist near me",Phrase match,$9.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions bellevue",Phrase match,$5.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions federal way",Phrase match,$3.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions burien",Phrase match,$3.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions mercer island",Phrase match,$4.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions renton",Phrase match,$3.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions kirkland",Phrase match,$4.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions redmond",Phrase match,$4.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions issaquah",Phrase match,$3.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions bothell",Phrase match,$3.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions woodinville",Phrase match,$3.00
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions tukwila",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions seatac",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions des moines",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 1,"hair extensions newcastle",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"keratin bond extensions seattle",Phrase match,$8.00
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"keratin extensions seattle",Phrase match,$8.00
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"keratin tip extensions seattle",Phrase match,$7.00
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"i tip extensions seattle",Phrase match,$7.00
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"keratin hair extensions",Phrase match,$6.00
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"keratin extensions bellevue",Phrase match,$4.00
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"keratin extensions federal way",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"keratin extensions burien",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"keratin extensions renton",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"keratin extensions kirkland",Phrase match,$3.50
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"keratin extensions redmond",Phrase match,$3.50
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"i tip extensions bellevue",Phrase match,$3.50
+Add,Enabled,GASP-1-NonBrand,Ad group 2,"i tip extensions near me",Phrase match,$5.00
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"hand tied extensions seattle",Phrase match,$7.00
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"hand tied hair extensions seattle",Phrase match,$7.00
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"beaded weft extensions seattle",Phrase match,$6.00
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"weft extensions seattle",Phrase match,$5.00
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"hand tied weft extensions",Phrase match,$6.00
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"hand tied extensions bellevue",Phrase match,$4.00
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"hand tied extensions federal way",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"hand tied extensions burien",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"hand tied extensions renton",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"hand tied extensions kirkland",Phrase match,$3.50
+Add,Enabled,GASP-1-NonBrand,Ad group 3,"beaded weft extensions near me",Phrase match,$5.00
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"tape in extensions seattle",Phrase match,$6.00
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"tape in hair extensions seattle",Phrase match,$6.00
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"tape extensions seattle",Phrase match,$5.00
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"tape in extensions near me",Phrase match,$7.00
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"best tape in extensions seattle",Phrase match,$7.00
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"tape in extensions bellevue",Phrase match,$4.00
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"tape in extensions federal way",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"tape in extensions burien",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"tape in extensions renton",Phrase match,$2.50
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"tape in extensions kirkland",Phrase match,$3.50
+Add,Enabled,GASP-1-NonBrand,Ad group 4,"tape in extensions redmond",Phrase match,$3.50
+Add,Enabled,GASP-1-NonBrand,Ad group 5,"hair extensions for thin hair",Phrase match,$8.00
+Add,Enabled,GASP-1-NonBrand,Ad group 5,"hair extensions for fine hair",Phrase match,$8.00
+Add,Enabled,GASP-1-NonBrand,Ad group 5,"extensions for thin hair seattle",Phrase match,$9.00
+Add,Enabled,GASP-1-NonBrand,Ad group 5,"hair extensions that look natural",Phrase match,$8.00
+Add,Enabled,GASP-1-NonBrand,Ad group 5,"natural hair extensions",Phrase match,$6.00
+Add,Enabled,GASP-1-NonBrand,Ad group 5,"extensions for thin hair",Phrase match,$7.00
+Add,Enabled,GASP-1-NonBrand,Ad group 5,"extensions for fine hair",Phrase match,$7.00
