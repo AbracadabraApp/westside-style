@@ -33,20 +33,18 @@
         }
       })();
     </script>
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keratin Bond Hair Extensions Seattle | Westside Style</title>
-    <meta name="description" content="Keratin bond hair extensions in Seattle. Individual strands fused at the root for natural movement. Starting at $1,200. Free consultation with Jennifer Arges.">
+    <meta name="description" content="Premium keratin bond hair extensions in Seattle. Individual strand fusion for natural movement and longevity. Starting at $1,200. Free consultation with Jennifer Arges.">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Keratin Bond Hair Extensions Seattle | Westside Style">
-    <meta property="og:description" content="Keratin bond hair extensions in Seattle. Individual strands fused at the root for natural movement. Starting at $1,200.">
+    <meta property="og:description" content="Premium keratin bond hair extensions in Seattle. Individual strand fusion for natural movement and longevity. Starting at $1,200.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://westside.style/keratin-bond-seattle.html">
     <link rel="canonical" href="https://westside.style/keratin-bond-seattle.html">
-    <meta property="og:image" content="https://westside.style/jennifer-headshot.jpg">
-
-    <!-- Tailwind CSS CDN -->
+    <meta property="og:image" content="https://westside.style/jennifer-headshot.jpg">    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Custom Tailwind Configuration -->
@@ -102,26 +100,9 @@
         .image-reveal:hover::after {
             opacity: 1;
         }
-        .lazy-video {
-            background: #FAF7F0;
-        }
-        .placeholder-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 10;
-            pointer-events: none;
-        }
-        .placeholder-text {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1rem;
-            color: #D4AF37;
-            text-align: center;
-            padding: 1rem;
-            letter-spacing: 0.1em;
+        ::selection {
+            background: rgba(193, 120, 23, 0.2);
+            color: #0A0908;
         }
     </style>
 
@@ -132,10 +113,9 @@
       "@type": "Service",
       "serviceType": "Keratin Bond Hair Extensions",
       "name": "Keratin Bond Hair Extensions Seattle",
-      "description": "Individual keratin bond extensions for the most natural movement and longevity. Custom application takes 3-6 hours.",
+      "description": "Individual strand fusion for the most natural movement and longevity. The gold standard in hair extensions with 4-6 month longevity.",
       "provider": {
-        "@type": "BeautySalon",
-        "knowsAbout": ["Keratin Bond Extensions", "K-Tips", "Fusion Extensions"],
+        "@type": "HairSalon",
         "name": "Westside Style",
         "telephone": "+1-206-295-4549",
         "address": {
@@ -143,6 +123,10 @@
           "addressLocality": "Seattle",
           "addressRegion": "WA",
           "addressCountry": "US"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Seattle"
         }
       },
       "offers": {
@@ -156,6 +140,11 @@
         },
         "availability": "https://schema.org/InStock",
         "url": "https://westside.style/keratin-bond-seattle.html"
+      },
+      "category": "Hair Extension Services",
+      "areaServed": {
+        "@type": "City",
+        "name": "Seattle"
       }
     }
     </script>
@@ -166,55 +155,44 @@
     <header class="py-8 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #1a1714 0%, #0f0d0b 50%, #0A0908 100%); clip-path: ellipse(120% 100% at 50% 0%); box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);">
         <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 30% 50%, #D4AF37 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, #C17817 0%, transparent 50%);"></div>
         <div class="max-w-7xl mx-auto text-center relative z-10">
-            <a href="/" class="block font-display text-4xl lg:text-5xl tracking-wide hover:opacity-90 transition-all duration-300" style="color: #E8B44D; text-shadow: 0 2px 20px rgba(232, 180, 77, 0.4), 0 1px 3px rgba(0, 0, 0, 0.9);">SEATTLE HAIR EXTENSIONS</a>
-            <a href="https://www.instagram.com/_westside_style_" target="_blank" class="block font-mono text-base tracking-wide mt-2 hover:opacity-70 transition-all duration-300" style="color: #F4E8D0;">@_westside_style_</a>
+            <a href="/" class="block font-display text-4xl lg:text-5xl tracking-wide hover:opacity-90 transition-all duration-300 hover:scale-[1.02]" style="color: #E8B44D; text-shadow: 0 2px 20px rgba(232, 180, 77, 0.4), 0 1px 3px rgba(0, 0, 0, 0.9);">SEATTLE HAIR EXTENSIONS</a>
+            <a href="https://www.instagram.com/_westside_style_" target="_blank" class="block font-mono text-base tracking-wide mt-2 hover:opacity-70 transition-all duration-300" style="color: #F4E8D0; text-shadow: 0 1px 10px rgba(232, 167, 53, 0.3), 0 1px 2px rgba(0, 0, 0, 0.8);">@_westside_style_</a>
         </div>
     </header>
 
     <!-- HERO -->
-    <section class="py-12 px-4 lg:px-16 bg-warm-bone">
+    <section class="py-10 px-6 lg:px-16 bg-warm-bone">
         <div class="max-w-4xl mx-auto text-center">
-            <h1 class="font-serif text-4xl lg:text-5xl mb-2">KERATIN BOND HAIR EXTENSIONS</h1>
-            <p class="font-mono text-xl tracking-wide text-warm-ochre mb-6">FROM $1,200</p>
-
-            <!-- CTA HIGH -->
-            <div class="mb-8">
-                <button onclick="openContactModal()" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-8 py-3 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
-                    FREE CONSULTATION
-                </button>
-            </div>
-
-            <!-- Hero Video -->
-            <div class="max-w-md mx-auto">
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal rounded-lg overflow-hidden">
-                    <video muted loop playsinline preload="metadata" class="lazy-video w-full h-full object-cover">
-                        <source src="/videos/keratin-result-1.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
+            <span class="font-mono text-base tracking-extreme text-warm-ochre">PREMIUM EXTENSIONS</span>
+            <h1 class="font-serif text-4xl lg:text-5xl mt-2 mb-4">WHAT ARE KERATIN BOND EXTENSIONS?</h1>
+            <p class="font-serif text-2xl lg:text-3xl text-neutral-ash italic max-w-2xl mx-auto mb-0">
+                Individual strands fused to your hair for movement that actually looks real
+            </p>
         </div>
     </section>
 
-    <!-- WHAT ARE KERATIN BONDS -->
-    <section class="py-6 px-4 lg:px-16 bg-neutral-cloud">
+    <!-- BODY CONTENT -->
+    <section class="pt-4 pb-8 px-6 lg:px-16 bg-neutral-cloud">
         <div class="max-w-3xl mx-auto">
-            <h2 class="font-display text-4xl mb-6 text-center">WHAT ARE KERATIN BOND EXTENSIONS?</h2>
             <div class="space-y-4 font-serif text-xl leading-relaxed text-neutral-ash">
                 <p>
-                    Keratin bond extensions are individual extension strands fused to small sections of your natural hair using a keratin-based bond. This creates a secure, flexible attachment point that moves naturally with your hair.
+                    Each keratin bond extension is fused to your natural hair using a protein-based bond that's heated and molded around small sections — typically 10-15 strands per bond.
                 </p>
                 <p>
-                    Each bond is small, smooth, and virtually undetectable. Because they're applied strand by strand, keratin bonds offer the most natural movement and the most customizable placement of any extension method.
+                    This creates tiny bonds (about 3mm wide) that move with your hair. Unlike tape-ins or wefts, individual bonds let you wear high ponytails, updos, or part your hair anywhere without visible tracks.
                 </p>
                 <p>
-                    Keratin bonds are the longest-lasting extension option. Application takes 3-6 hours depending on volume. They typically last 3-4 months before requiring a move-up, where bonds are removed and extensions are reapplied.
+                    They last 4-6 months before needing a move-up. That's roughly $200-300 per month if you're doing full volume, similar to what you'd spend on good highlights, but you're getting length and thickness instead.
+                </p>
+                <p class="text-lg italic">
+                    (Yes, they take longer to install than tape-ins. 3-5 hours vs 90 minutes. But you're also not back in the chair every 6 weeks.)
                 </p>
             </div>
         </div>
     </section>
 
     <!-- Visual divider -->
-    <div class="py-4 px-4">
+    <div class="py-6 px-6">
         <div class="max-w-4xl mx-auto flex items-center justify-center">
             <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
             <div class="mx-6 text-warm-ochre/40 text-xl">✦</div>
@@ -223,32 +201,32 @@
     </div>
 
     <!-- BENEFITS -->
-    <section class="py-6 px-4 lg:px-16 bg-warm-bone">
+    <section class="py-8 px-6 lg:px-16 bg-warm-bone">
         <div class="max-w-3xl mx-auto">
-            <h2 class="font-sans text-2xl mb-6 text-neutral-ink" style="font-weight: 600;">WHY PEOPLE CHOOSE KERATIN BOND EXTENSIONS</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+            <h2 class="font-sans text-2xl mb-3 text-neutral-ink" style="font-weight: 600;">WHY PEOPLE CHOOSE KERATIN BONDS</h2>
+            <div class="grid md:grid-cols-2 gap-6">
                 <div class="border-l-2 border-warm-ochre pl-4">
-                    <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">MOST NATURAL MOVEMENT</h3>
-                    <p class="font-serif text-xl text-neutral-ash leading-relaxed">Individual strand application allows hair to move and flow exactly like your natural hair.</p>
+                    <h3 class="font-display text-xl mb-2">HAIR MOVES NATURALLY</h3>
+                    <p class="font-serif text-lg text-neutral-ash">Individual bonds move independently. No stiff rows of hair that flip up when you turn your head.</p>
                 </div>
                 <div class="border-l-2 border-warm-ochre pl-4">
-                    <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">MAXIMUM LONGEVITY</h3>
-                    <p class="font-serif text-xl text-neutral-ash leading-relaxed">Keratin bonds last 3-4 months, the longest-lasting extension method available.</p>
+                    <h3 class="font-display text-xl mb-2">STYLE FLEXIBILITY</h3>
+                    <p class="font-serif text-lg text-neutral-ash">Updos, ponytails, braids work without worrying about visible attachment points.</p>
                 </div>
                 <div class="border-l-2 border-warm-ochre pl-4">
-                    <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">UNDETECTABLE BONDS</h3>
-                    <p class="font-serif text-xl text-neutral-ash leading-relaxed">Small, smooth bonds are virtually invisible and completely comfortable to wear.</p>
+                    <h3 class="font-display text-xl mb-2">LASTS 4-6 MONTHS</h3>
+                    <p class="font-serif text-lg text-neutral-ash">Longer wear time than tape-ins (6-8 weeks) or hand-tied (8-10 weeks).</p>
                 </div>
                 <div class="border-l-2 border-warm-ochre pl-4">
-                    <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">CUSTOM PLACEMENT</h3>
-                    <p class="font-serif text-xl text-neutral-ash leading-relaxed">Strand-by-strand application allows precise customization for your unique hair goals.</p>
+                    <h3 class="font-display text-xl mb-2">CUSTOM PLACEMENT</h3>
+                    <p class="font-serif text-lg text-neutral-ash">We can add density exactly where you need it — temple recession, part width, nape volume.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Visual divider -->
-    <div class="py-4 px-4">
+    <div class="py-6 px-6">
         <div class="max-w-4xl mx-auto flex items-center justify-center">
             <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
             <div class="mx-6 text-warm-ochre/40 text-xl">✦</div>
@@ -256,195 +234,128 @@
         </div>
     </div>
 
-    <!-- GALLERY - Keratin Bond Examples -->
-    <section class="py-8 px-4 lg:px-16 bg-neutral-cloud">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-10 text-center">
-                <h2 class="font-display text-5xl">SEE THE DIFFERENCE</h2>
-                <p class="font-serif text-xl text-neutral-ash mt-4 max-w-2xl mx-auto">
-                    Keratin bonds move naturally and blend seamlessly. Here's what they look like installed.
-                </p>
-            </div>
-
-            <!-- Video Grid - Keratin Results -->
+    <!-- GALLERY -->
+    <section class="py-8 px-6 lg:px-16 bg-neutral-cloud">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-sans text-2xl mb-6 text-center">KERATIN BOND TRANSFORMATIONS</h2>
             <div class="grid md:grid-cols-3 gap-6">
-                <!-- Video 1 - PLACEHOLDER -->
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                    <div class="placeholder-overlay">
-                        <div class="placeholder-text">PLACEHOLDER<br/>VIDEO NEEDED</div>
-                    </div>
+                <div class="aspect-[9/16] bg-warm-bone image-reveal">
                     <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
-                        <source src="/videos/tape-in-result-1.mp4" type="video/mp4">
+                        <source src="gallery-video-1.mp4" type="video/mp4">
                     </video>
                 </div>
-
-                <!-- Video 2 - PLACEHOLDER -->
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                    <div class="placeholder-overlay">
-                        <div class="placeholder-text">PLACEHOLDER<br/>VIDEO NEEDED</div>
-                    </div>
+                <div class="aspect-[9/16] bg-warm-bone image-reveal">
                     <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
-                        <source src="/videos/tape-in-result-2.mp4" type="video/mp4">
+                        <source src="gallery-video-2.mp4" type="video/mp4">
                     </video>
                 </div>
-
-                <!-- Video 3 - PLACEHOLDER -->
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                    <div class="placeholder-overlay">
-                        <div class="placeholder-text">PLACEHOLDER<br/>VIDEO NEEDED</div>
-                    </div>
+                <div class="aspect-[9/16] bg-warm-bone image-reveal">
                     <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
-                        <source src="/videos/tape-in-result-3.mp4" type="video/mp4">
+                        <source src="gallery-video-3.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA MIDDLE -->
-    <section class="py-12 px-4 lg:px-16 bg-warm-bone text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="font-display text-5xl text-neutral-ink mb-4">BOOK YOUR FREE CONSULTATION</h2>
-            <p class="font-serif text-xl text-neutral-ash mb-6 max-w-2xl mx-auto">
-                We'll assess your hair type, discuss your goals, and create a plan that works for you.
+    <!-- More Questions -->
+    <section class="pt-4 pb-8 px-6 lg:px-16 bg-neutral-cloud">
+        <div class="max-w-4xl mx-auto">
+            <div class="pt-8 border-t-2 border-warm-ochre/20">
+                <h3 class="font-display text-4xl mb-4 text-neutral-stone">More questions</h3>
+                <div class="space-y-3">
+                    <a href="/keratin-tips-results.html" class="flex items-center justify-between px-6 py-4 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
+                        <span class="font-serif text-xl text-neutral-ash">What do keratin bonds look like once they're in?</span>
+                        <span class="text-warm-ochre text-xl ml-4 group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="/keratin-tips-care.html" class="flex items-center justify-between px-6 py-4 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
+                        <span class="font-serif text-xl text-neutral-ash">How do I care for keratin bond extensions?</span>
+                        <span class="text-warm-ochre text-xl ml-4 group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="/keratin-tips-hair-type.html" class="flex items-center justify-between px-6 py-4 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
+                        <span class="font-serif text-xl text-neutral-ash">Are keratin bonds right for my hair type?</span>
+                        <span class="text-warm-ochre text-xl ml-4 group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="/keratin-tips-lifespan.html" class="flex items-center justify-between px-6 py-4 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
+                        <span class="font-serif text-xl text-neutral-ash">How long do keratin bonds last?</span>
+                        <span class="text-warm-ochre text-xl ml-4 group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="/keratin-tips-removal.html" class="flex items-center justify-between px-6 py-4 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
+                        <span class="font-serif text-xl text-neutral-ash">How are keratin bonds removed?</span>
+                        <span class="text-warm-ochre text-xl ml-4 group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="/keratin-tips-install-time.html" class="flex items-center justify-between px-6 py-4 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
+                        <span class="font-serif text-xl text-neutral-ash">How long does installation take?</span>
+                        <span class="text-warm-ochre text-xl ml-4 group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-10 px-6 relative overflow-hidden text-center" style="background: linear-gradient(135deg, #1a1714 0%, #0f0d0b 50%, #0A0908 100%); clip-path: ellipse(120% 100% at 50% 100%); box-shadow: 0 -6px 30px rgba(0, 0, 0, 0.5);">
+        <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 30% 50%, #D4AF37 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, #C17817 0%, transparent 50%);"></div>
+        <div class="max-w-2xl mx-auto relative z-10">
+            <h2 class="font-display text-5xl mb-3" style="color: #D4AF37;">WANT TO SEE IF THEY'RE RIGHT FOR YOU?</h2>
+            <p class="font-serif text-xl text-neutral-cloud mb-6 italic">
+                Free consultation to look at your hair, talk about what you want, and see if keratin bonds make sense
             </p>
-            <button onclick="openContactModal()" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-8 py-3 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
+            <button onclick="openContactModal()" class="font-mono text-base tracking-extreme text-neutral-ink px-12 py-4 mb-6 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
                 FREE CONSULTATION
             </button>
-        </div>
-    </section>
-
-    <!-- KERATIN BOND SPECIFIC FAQ -->
-    <section class="py-12 px-4 lg:px-16 bg-neutral-cloud">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="font-display text-5xl">COMMON QUESTIONS</h2>
-            </div>
-
-            <div class="space-y-4">
-                <a href="/keratin-tips-care.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">How do I care for keratin bond extensions?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
+            <div class="pt-4 border-t border-neutral-stone/30 mt-8">
+                <a href="sms:2062954549" onclick="trackPhoneClick('cta')" class="block mb-2">
+                    <p class="font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">TEXT PREFERRED · 206.295.4549</p>
                 </a>
-
-                <a href="/keratin-tips-hair-type.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">Are keratin bonds right for my hair type?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </a>
-
-                <a href="/keratin-tips-removal.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">How are keratin bonds removed?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </a>
-
-                <a href="/keratin-tips-lifespan.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">How long do keratin bonds last?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </a>
-
-                <a href="/keratin-tips-install-time.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">How long does keratin bond installation take?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
+                <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm tracking-wide hover:opacity-70 transition-opacity" style="color: #D4AF37;">
+                    @_westside_style_
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- CTA + JENN BIO -->
-    <section class="py-12 px-4 lg:px-16 bg-warm-bone">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="font-display text-5xl mb-8 text-center">A DEDICATED HAIR EXTENSIONS SALON</h2>
-
-            <div class="flex flex-col md:flex-row gap-8 items-center mb-8">
-                <div class="flex-shrink-0">
-                    <img src="/jenn-bio.jpg" alt="Jennifer Arges" class="w-48 h-48 md:w-56 md:h-56 rounded-lg object-cover shadow-lg">
-                </div>
-                <div>
-                    <p class="font-serif text-xl leading-relaxed text-neutral-ash mb-4">
-                        I'm Jenn, and extensions are what I do! I am passionate about helping women achieve the beauty and confidence they desire through longer, fuller, beautiful hair. I've spent 10 years working with extensions and have been trained and certified by leading industry professionals. Many salons offer extensions as just one option on a menu. Westside Style is unique in our exclusive focus on hair extensions—offering multiple styles and blended solutions to get just the right look for you.
-                    </p>
-                    <p class="font-serif text-xl leading-relaxed text-neutral-ash">
-                        I'm confident I can help you. When we meet we'll assess your hair type, discuss your goals, and create a plan that works for you. If extensions aren't right for you, our consultation can at least save you future frustration and leave you better educated about your options.
-                    </p>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <button onclick="openContactModal()" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-8 py-3 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
-                    FREE CONSULTATION
-                </button>
-            </div>
-
-            <!-- Menu Bar -->
-            <nav class="mt-8 pt-6 border-t border-neutral-ash/20">
-                <div class="flex flex-wrap justify-center items-center gap-2 font-mono text-sm text-neutral-ash">
-                    <a href="/" class="hover:text-neutral-ink transition-colors">Home</a>
-                    <span class="text-neutral-stone">|</span>
-                    <a href="/keratin-bond-seattle.html" class="hover:text-neutral-ink transition-colors">K-Tips</a>
-                    <span class="text-neutral-stone">|</span>
-                    <a href="/hand-sewn-weft-seattle.html" class="hover:text-neutral-ink transition-colors">Hand-Sewn Weft</a>
-                    <span class="text-neutral-stone">|</span>
-                    <a href="/tape-in-seattle.html" class="hover:text-neutral-ink transition-colors">Tape-Ins</a>
-                </div>
-            </nav>
-        </div>
-    </section>
 
     <!-- FOOTER -->
-    <footer class="py-6 px-4 lg:px-16 bg-warm-bone text-neutral-ash">
-        <div class="max-w-7xl mx-auto text-center">
-            <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm text-warm-ochre hover:text-neutral-ink transition-colors mb-3">@_westside_style_</a>
-
-            <div class="text-xs text-neutral-stone">
-                <a href="/privacy-policy.html" class="hover:text-neutral-ink transition-colors">Privacy Policy</a>
-            </div>
-        </div>
+    <footer class="px-8 py-6 bg-neutral-ink text-center">
+        <p class="font-mono text-xs tracking-wide text-neutral-stone mb-2">© 2025 WESTSIDE STYLE · SEATTLE, WA</p>
+        <nav class="flex gap-4 justify-center flex-wrap">
+            <a href="/" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">HOME</a>
+            <a href="/hair-extensions-seattle.html" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">ALL EXTENSIONS</a>
+            <a href="/#services" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">SERVICES & PRICING</a>
+            <a href="/privacy-policy.html" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">PRIVACY POLICY</a>
+        </nav>
     </footer>
 
     <!-- Contact Modal -->
     <div id="contactModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
-        <!-- Backdrop -->
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeContactModal()"></div>
-
-        <!-- Modal panel -->
-        <div class="relative bg-neutral-cloud border border-neutral-stone/20 w-full max-w-sm p-6">
-            <!-- Close -->
+        <div class="relative bg-neutral-cloud border border-neutral-stone/20 w-full max-w-md p-8">
             <button onclick="closeContactModal()" class="absolute top-4 right-4 font-mono text-base tracking-wide text-neutral-ash hover:text-neutral-ink transition-colors">✕ CLOSE</button>
-
-            <!-- Heading -->
             <div class="mb-8">
-                <h3 class="font-display text-5xl text-neutral-ink">LET'S TALK</h3>
+                <span class="font-mono text-base tracking-wide uppercase text-warm-ochre">GET IN TOUCH</span>
+                <h3 class="font-display text-4xl text-neutral-ink mt-1">LET'S TALK</h3>
+                <p class="font-serif text-sm text-neutral-ash mt-2">Interested in keratin bond extensions</p>
             </div>
-
-            <!-- Form -->
             <form id="contactForm" onsubmit="submitContact(event)" class="space-y-5">
                 <div>
-                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NAME</label>
-                    <input type="text" id="cf-name"
-                        class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors"
-                        placeholder="Your name">
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">NAME</label>
+                    <input type="text" id="cf-name" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
                 </div>
                 <div>
-                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">PHONE</label>
-                    <input type="tel" id="cf-phone"
-                        class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors"
-                        placeholder="206.000.0000">
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">PHONE</label>
+                    <input type="tel" id="cf-phone" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="206.000.0000">
                 </div>
                 <div>
-                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">EMAIL</label>
-                    <input type="email" id="cf-email" required
-                        class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors"
-                        placeholder="you@example.com">
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">EMAIL</label>
+                    <input type="email" id="cf-email" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="you@example.com">
                 </div>
                 <div>
-                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NOTES</label>
-                    <textarea id="cf-notes" rows="3"
-                        class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none"
-                        placeholder="What are you looking for?"></textarea>
+                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">NOTES</label>
+                    <textarea id="cf-notes" rows="3" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none" placeholder="What are you looking for?"></textarea>
                 </div>
                 <div class="pt-4">
-                    <button type="submit"
-                        class="w-full font-mono text-base tracking-extreme text-neutral-ink bg-[#D4AF37] py-4 hover:bg-warm-amber transition-colors">
+                    <button type="submit" class="w-full font-mono text-sm tracking-extreme text-neutral-ink bg-[#D4AF37] py-4 hover:bg-warm-amber transition-colors">
                         TEXT JENN THIS INFO
                     </button>
                 </div>
@@ -452,11 +363,20 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script>
         function openContactModal() {
             document.getElementById('contactModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+
+            // Track consultation button click
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'consultation_button_click', {
+                    'event_category': 'Engagement',
+                    'event_label': 'Keratin Bond',
+                    'service_type': 'keratin_bond',
+                    'value': 1200
+                });
+            }
         }
 
         function closeContactModal() {
@@ -471,6 +391,27 @@
             const email = document.getElementById('cf-email').value.trim();
             const notes = document.getElementById('cf-notes').value.trim();
 
+            // Track form submission
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18371102793/Mii6CKnKyd8cEMmQg7hE',
+                    'event_category': 'Lead',
+                    'event_label': 'Keratin Bond Consultation',
+                    'service_type': 'keratin_bond',
+                    'value': 1200,
+                    'currency': 'USD'
+                });
+
+                // Also send to GA4
+                gtag('event', 'generate_lead', {
+                    'event_category': 'Lead',
+                    'event_label': 'Keratin Bond',
+                    'service_type': 'keratin_bond',
+                    'value': 1200,
+                    'currency': 'USD'
+                });
+            }
+
             const btn = document.querySelector('#contactForm button[type="submit"]');
             btn.textContent = 'Sending...';
             btn.disabled = true;
@@ -484,8 +425,8 @@
                     phone: phone,
                     email: email,
                     notes: notes,
-                    service_type: 'keratin_bond_extensions',
-                    page: 'Keratin Bond Seattle'
+                    service_type: 'keratin_bond',
+                    page: 'Keratin Bond Extensions'
                 })
             })
             .then(response => response.json())
@@ -493,8 +434,11 @@
                 if (data.success) {
                     btn.textContent = '✓ Message Sent to Jenn!';
                     setTimeout(() => {
-                        window.location.href = '/inquiry.html';
-                    }, 1500);
+                        closeContactModal();
+                        document.getElementById('contactForm').reset();
+                        btn.textContent = 'TEXT JENN THIS INFO';
+                        btn.disabled = false;
+                    }, 2000);
                 } else {
                     throw new Error(data.error || 'Failed to send');
                 }
@@ -509,26 +453,34 @@
             });
         }
 
+        function trackPhoneClick(location) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'Keratin Bond - ' + location,
+                    'service_type': 'keratin_bond',
+                    'click_location': location
+                });
+            }
+        }
+
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeContactModal();
         });
 
-        // Lazy load videos when they enter viewport
-        document.addEventListener('DOMContentLoaded', function() {
-            const videos = document.querySelectorAll('.lazy-video');
+        const lazyVideos = document.querySelectorAll('video.lazy-video');
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    video.load();
+                    video.play();
+                    videoObserver.unobserve(video);
+                }
+            });
+        }, { rootMargin: '100px' });
 
-            const videoObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const video = entry.target;
-                        video.play();
-                        videoObserver.unobserve(video);
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: '200px' });
-
-            videos.forEach(video => videoObserver.observe(video));
-        });
+        lazyVideos.forEach(v => videoObserver.observe(v));
     </script>
 
 </body>

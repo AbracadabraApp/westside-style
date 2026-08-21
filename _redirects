@@ -1,0 +1,8 @@
+# Netlify Redirects File
+# Consolidate duplicate pages for SEO
+
+# Redirect hand-tied-seattle.html to hand-sewn-weft-seattle.html (canonical)
+/hand-tied-seattle.html    /hand-sewn-weft-seattle.html    301
+
+# Redirect keratin2.html to keratin-bond-seattle.html (canonical)
+/keratin2.html    /keratin-bond-seattle.html    301
