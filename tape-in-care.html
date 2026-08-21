@@ -166,8 +166,8 @@
             <p class="font-serif text-xl text-neutral-cloud mb-6 italic">
                 Book your free consultation and get expert answers to all your questions
             </p>
-            <button onclick="openContactModal()" class="font-mono text-base tracking-extreme text-neutral-ink px-12 py-4 mb-6 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
-                FREE CONSULTATION
+            <button onclick="openContactModal()" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-12 py-4 mb-6 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
+                Free Consultation
             </button>
             <div class="pt-4 border-t border-neutral-stone/30 mt-8">
                 <a href="sms:2062954549" onclick="trackPhoneClick('cta')" class="block mb-2">
@@ -180,46 +180,44 @@
         </div>
     </section>
 
-<footer class="px-8 py-6 bg-neutral-ink text-center">
-        <p class="font-mono text-xs tracking-wide text-neutral-stone mb-2">© 2025 WESTSIDE STYLE · SEATTLE, WA</p>
-        <nav class="flex gap-4 justify-center flex-wrap">
-            <a href="/" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">HOME</a>
-            <a href="/hair-extensions-seattle.html" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">ALL EXTENSIONS</a>
-            <a href="/#services" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">SERVICES & PRICING</a>
-            <a href="/privacy-policy.html" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">PRIVACY POLICY</a>
-        </nav>
+<footer class="py-6 px-4 lg:px-16 bg-warm-bone text-neutral-ash">
+        <div class="max-w-7xl mx-auto text-center">
+            <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm text-warm-ochre hover:text-neutral-ink transition-colors mb-3">@_westside_style_</a>
+
+            <div class="text-xs text-neutral-stone">
+                <a href="/privacy-policy.html" class="hover:text-neutral-ink transition-colors">Privacy Policy</a>
+            </div>
+        </div>
     </footer>
 
     <!-- Contact Modal -->
     <div id="contactModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeContactModal()"></div>
-        <div class="relative bg-neutral-cloud border border-neutral-stone/20 w-full max-w-md p-8">
+        <div class="relative bg-neutral-cloud border border-neutral-stone/20 w-full max-w-sm p-6">
             <button onclick="closeContactModal()" class="absolute top-4 right-4 font-mono text-base tracking-wide text-neutral-ash hover:text-neutral-ink transition-colors">✕ CLOSE</button>
             <div class="mb-8">
-                <span class="font-mono text-base tracking-wide uppercase text-warm-ochre">GET IN TOUCH</span>
-                <h3 class="font-display text-4xl text-neutral-ink mt-1">LET'S TALK</h3>
-                <p class="font-serif text-sm text-neutral-ash mt-2">Questions about extensions</p>
+                <h3 class="font-display text-5xl text-neutral-ink">LET'S TALK</h3>
             </div>
             <form id="contactForm" onsubmit="submitContact(event)" class="space-y-5">
                 <div>
-                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">NAME</label>
-                    <input type="text" id="cf-name" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
+                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NAME</label>
+                    <input type="text" id="cf-name" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
                 </div>
                 <div>
-                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">PHONE</label>
-                    <input type="tel" id="cf-phone" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="206.000.0000">
+                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">EMAIL</label>
+                    <input type="email" id="cf-email" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="you@example.com">
                 </div>
                 <div>
-                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">EMAIL</label>
-                    <input type="email" id="cf-email" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="you@example.com">
+                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">PHONE</label>
+                    <input type="tel" id="cf-phone" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="(555) 555-5555">
                 </div>
                 <div>
-                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">NOTES</label>
-                    <textarea id="cf-notes" rows="3" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none" placeholder="What are you looking for?"></textarea>
+                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">MESSAGE</label>
+                    <textarea id="cf-notes" rows="3" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none" placeholder="Tell me about your hair goals..."></textarea>
                 </div>
-                <div class="pt-4">
-                    <button type="submit" class="w-full font-mono text-sm tracking-extreme text-neutral-ink bg-[#D4AF37] py-4 hover:bg-warm-amber transition-colors">
-                        TEXT JENN THIS INFO
+                <div class="pt-2">
+                    <button type="submit" class="w-full font-mono text-base tracking-wide uppercase text-neutral-ink px-6 py-3 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
+                        SEND MESSAGE
                     </button>
                 </div>
             </form>
@@ -276,7 +274,7 @@
             }
 
             const btn = document.querySelector('#contactForm button[type="submit"]');
-            btn.textContent = 'Sending...';
+            btn.textContent = 'SENDING...';
             btn.disabled = true;
 
             // Send directly to Netlify serverless function
@@ -295,11 +293,11 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    btn.textContent = '✓ Message Sent to Jenn!';
+                    btn.textContent = '✓ SENT!';
                     setTimeout(() => {
                         closeContactModal();
                         document.getElementById('contactForm').reset();
-                        btn.textContent = 'TEXT JENN THIS INFO';
+                        btn.textContent = 'SEND MESSAGE';
                         btn.disabled = false;
                     }, 2000);
                 } else {
@@ -308,9 +306,9 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                btn.textContent = 'Error - Please text 206-295-4549';
+                btn.textContent = 'ERROR - TRY AGAIN';
                 setTimeout(() => {
-                    btn.textContent = 'TEXT JENN THIS INFO';
+                    btn.textContent = 'SEND MESSAGE';
                     btn.disabled = false;
                 }, 3000);
             });
