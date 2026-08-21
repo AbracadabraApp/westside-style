@@ -10,6 +10,28 @@
       gtag('js', new Date());
       gtag('config', 'AW-18371102793');
       gtag('config', 'G-GW68Z12RN9');
+
+      // Track UTM parameters for keyword tracking
+      (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmSource = urlParams.get('utm_source');
+        const utmMedium = urlParams.get('utm_medium');
+        const utmCampaign = urlParams.get('utm_campaign');
+        const utmTerm = urlParams.get('utm_term');
+        const utmContent = urlParams.get('utm_content');
+
+        if (utmSource || utmMedium || utmCampaign) {
+          gtag('event', 'page_view_with_utm', {
+            'event_category': 'Marketing',
+            'event_label': 'Hand-Sewn Weft Landing',
+            'utm_source': utmSource || 'direct',
+            'utm_medium': utmMedium || 'none',
+            'utm_campaign': utmCampaign || 'none',
+            'utm_term': utmTerm || 'none',
+            'utm_content': utmContent || 'none'
+          });
+        }
+      })();
     </script>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -198,8 +220,51 @@
         </div>
     </section>
 
+    <!-- Visual divider -->
+    <div class="py-6 px-6">
+        <div class="max-w-4xl mx-auto flex items-center justify-center">
+            <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
+            <div class="mx-6 text-warm-ochre/40 text-xl">✦</div>
+            <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
+        </div>
+    </div>
+
+    <!-- BENEFITS -->
+    <section class="py-8 px-6 lg:px-16 bg-warm-bone">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-sans text-2xl mb-3 text-neutral-ink" style="font-weight: 600;">WHY PEOPLE CHOOSE HAND-SEWN WEFT EXTENSIONS</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="border-l-2 border-warm-ochre pl-4">
+                    <h3 class="font-display text-xl mb-2">INCREDIBLY FLAT</h3>
+                    <p class="font-serif text-lg text-neutral-ash">Wefts sewn onto beaded rows lay completely flat against your scalp for maximum comfort.</p>
+                </div>
+                <div class="border-l-2 border-warm-ochre pl-4">
+                    <h3 class="font-display text-xl mb-2">IDEAL FOR FINE HAIR</h3>
+                    <p class="font-serif text-lg text-neutral-ash">Lightweight and gentle application makes them perfect for fine to medium hair types.</p>
+                </div>
+                <div class="border-l-2 border-warm-ochre pl-4">
+                    <h3 class="font-display text-xl mb-2">EVEN WEIGHT DISTRIBUTION</h3>
+                    <p class="font-serif text-lg text-neutral-ash">Rows distribute weight evenly across your scalp, reducing stress on individual hair strands.</p>
+                </div>
+                <div class="border-l-2 border-warm-ochre pl-4">
+                    <h3 class="font-display text-xl mb-2">VOLUME WITHOUT BULK</h3>
+                    <p class="font-serif text-lg text-neutral-ash">Add fullness and length without the heaviness of other extension methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual divider -->
+    <div class="py-6 px-6">
+        <div class="max-w-4xl mx-auto flex items-center justify-center">
+            <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
+            <div class="mx-6 text-warm-ochre/40 text-xl">✦</div>
+            <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
+        </div>
+    </div>
+
     <!-- GALLERY - Hand-Sewn Weft Examples -->
-    <section class="py-16 px-6 lg:px-16 bg-warm-bone">
+    <section class="py-8 px-6 lg:px-16 bg-neutral-cloud">
         <div class="max-w-7xl mx-auto">
             <div class="mb-10 text-center">
                 <span class="font-mono text-base tracking-extreme text-warm-ochre">HAND-SEWN WEFT RESULTS</span>
