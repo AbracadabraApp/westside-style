@@ -1,520 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18371102793"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-18371102793');
-      gtag('config', 'G-GW68Z12RN9');
-
-      // Track UTM parameters for keyword tracking
-      (function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const utmSource = urlParams.get('utm_source');
-        const utmMedium = urlParams.get('utm_medium');
-        const utmCampaign = urlParams.get('utm_campaign');
-        const utmTerm = urlParams.get('utm_term');
-        const utmContent = urlParams.get('utm_content');
-
-        if (utmSource || utmMedium || utmCampaign) {
-          gtag('event', 'page_view_with_utm', {
-            'event_category': 'Marketing',
-            'event_label': 'Tape-In Landing',
-            'utm_source': utmSource || 'direct',
-            'utm_medium': utmMedium || 'none',
-            'utm_campaign': utmCampaign || 'none',
-            'utm_term': utmTerm || 'none',
-            'utm_content': utmContent || 'none'
-          });
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18371102793"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18371102793'); gtag('config', 'G-GW68Z12RN9'); // Track UTM parameters for keyword tracking (function() { const urlParams = new URLSearchParams(window.location.search); const utmSource = urlParams.get('utm_source'); const utmMedium = urlParams.get('utm_medium'); const utmCampaign = urlParams.get('utm_campaign'); const utmTerm = urlParams.get('utm_term'); const utmContent = urlParams.get('utm_content'); if (utmSource || utmMedium || utmCampaign) { gtag('event', 'page_view_with_utm', { 'event_category': 'Marketing', 'event_label': 'Tape-In Landing', 'utm_source': utmSource || 'direct', 'utm_medium': utmMedium || 'none', 'utm_campaign': utmCampaign || 'none', 'utm_term': utmTerm || 'none', 'utm_content': utmContent || 'none' }); } })(); </script> <link rel="icon" type="image/svg+xml" href="../favicon.svg"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Tape-In Hair Extensions Seattle | Westside Style</title> <meta name="description" content="Tape-in hair extensions in Seattle. Seamless, lightweight panels that blend beautifully. Starting at $800. Free consultation with Jennifer Arges."> <!-- Open Graph --> <meta property="og:title" content="Tape-In Hair Extensions Seattle | Westside Style"> <meta property="og:description" content="Tape-in hair extensions in Seattle. Seamless, lightweight panels that blend beautifully. Starting at $800."> <meta property="og:type" content="website"> <meta property="og:url" content="https://westside.style/tape-in-seattle.html"> <link rel="canonical" href="https://westside.style/tape-in-seattle.html"> <meta property="og:image" content="https://westside.style/jennifer-headshot.jpg"> <!-- Tailwind CSS CDN --> <script src="https://cdn.tailwindcss.com"></script> <!-- Custom Tailwind Configuration --> <script> tailwind.config = { theme: { extend: { fontFamily: { 'display': ['Bebas Neue', 'sans-serif'], 'serif': ['Crimson Pro', 'serif'], 'mono': ['JetBrains Mono', 'monospace'], }, colors: { 'warm': { 'ochre': '#C17817', 'amber': '#E8A735', 'sand': '#F4E8D0', 'bone': '#FAF7F0', }, 'neutral': { 'ink': '#0A0908', 'ash': '#49463F', 'stone': '#8B8680', 'cloud': '#F7F5F2', } } } } } </script> <!-- Google Fonts --> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"> <style> html { scroll-behavior: smooth; } .image-reveal { position: relative; overflow: hidden; } .image-reveal::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(193, 120, 23, 0.3)); opacity: 0; transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); } .image-reveal:hover::after { opacity: 1; } .lazy-video { background: #FAF7F0; }         .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
         }
-      })();
-    </script>
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tape-In Hair Extensions Seattle | Westside Style</title>
-    <meta name="description" content="Tape-in hair extensions in Seattle. Seamless, lightweight panels that blend beautifully. Starting at $800. Free consultation with Jennifer Arges.">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Tape-In Hair Extensions Seattle | Westside Style">
-    <meta property="og:description" content="Tape-in hair extensions in Seattle. Seamless, lightweight panels that blend beautifully. Starting at $800.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://westside.style/tape-in-seattle.html">
-    <link rel="canonical" href="https://westside.style/tape-in-seattle.html">
-    <meta property="og:image" content="https://westside.style/jennifer-headshot.jpg">
+    </style> <!-- Service Schema for Tape-In Extensions --> <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Service", "serviceType": "Tape-In Hair Extensions", "name": "Tape-In Hair Extensions Seattle", "description": "Seamless, lightweight panels that blend beautifully and lay completely flat. Quick 45-90 minute application with 6-8 week maintenance.", "provider": { "@type": "BeautySalon", "knowsAbout": ["Tape-In Hair Extensions", "Tape Extensions", "Panel Extensions"], "name": "Westside Style", "telephone": "+1-206-295-4549", "address": { "@type": "PostalAddress", "addressLocality": "Seattle", "addressRegion": "WA", "addressCountry": "US" } }, "offers": { "@type": "Offer", "price": "800.00", "priceCurrency": "USD", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "800.00", "priceCurrency": "USD" }, "availability": "https://schema.org/InStock", "url": "https://westside.style/tape-in-seattle.html" } } </script> </head> <body class="bg-neutral-cloud text-neutral-ink"> <!-- HEADER NAV --> <header class="py-8 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #1a1714 0%, #0f0d0b 50%, #0A0908 100%); clip-path: ellipse(120% 100% at 50% 0%); box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);"> <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 30% 50%, #D4AF37 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, #C17817 0%, transparent 50%);"></div> <div class="max-w-7xl mx-auto text-center relative z-10"> <a href="/" class="block font-display text-4xl lg:text-5xl tracking-wide hover:opacity-90 transition-all duration-300" style="color: #E8B44D; text-shadow: 0 2px 20px rgba(232, 180, 77, 0.4), 0 1px 3px rgba(0, 0, 0, 0.9);">SEATTLE HAIR EXTENSIONS</a> <a href="https://www.instagram.com/_westside_style_" target="_blank" class="block font-mono text-base tracking-wide mt-2 hover:opacity-70 transition-all duration-300" style="color: #F4E8D0;">@_westside_style_</a> </div> </header> <!-- HERO --> <section class="py-12 px-4 lg:px-16 bg-warm-bone"> <div class="max-w-4xl mx-auto text-center"> <h1 class="font-serif text-4xl lg:text-5xl mb-2">TAPE-IN HAIR EXTENSIONS</h1> <p class="font-mono text-xl tracking-wide text-warm-ochre mb-6">FROM $800</p> <!-- CTA HIGH --> <div class="mb-8"> <button onclick="openContactModal()" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-8 py-3 transition-all duration-300" style="background-color: #D4AF37;"> FREE CONSULTATION </button> </div> <!-- Hero Video --> <div class="max-w-md mx-auto"> <div class="aspect-[9/16] bg-neutral-cloud image-reveal rounded-lg overflow-hidden"> <video muted loop playsinline preload="metadata" class="lazy-video w-full h-full object-cover"> <source src="/videos/tape-in-result-1.mp4" type="video/mp4"> </video> </div> </div> </div> </section> <!-- WHAT ARE TAPE-INS --> <section class="py-6 px-4 lg:px-16 bg-neutral-cloud"> <div class="max-w-3xl mx-auto"> <h2 class="font-display text-4xl mb-6 text-center">WHAT ARE TAPE-IN EXTENSIONS?</h2> <div class="space-y-4 font-serif text-xl leading-relaxed text-neutral-ash"> <p> Tape-in extensions consist of pre-taped wefts that are sandwiched between thin sections of your natural hair. The medical-grade adhesive tape creates a secure, flat bond that's nearly invisible and very comfortable. </p> <p> Each tape-in panel is thin and lightweight, allowing them to blend naturally with your natural hair. The flat application means no bumps or ridges — just smooth, natural-looking volume and length. </p> <p> Tape-ins are ideal for adding volume and length quickly. Application takes 45-90 minutes. They typically last 6-8 weeks before requiring a move-up, where the tapes are replaced and the extensions are repositioned. </p> </div> </div> </section> <!-- Visual divider --> <div class="py-6 px-4"> <div class="max-w-4xl mx-auto flex items-center justify-center"> <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div> <div class="mx-6 text-warm-ochre/40 text-xl">✦</div> <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div> </div> </div> <!-- BENEFITS --> <section class="py-6 px-4 lg:px-16 bg-warm-bone"> <div class="max-w-3xl mx-auto"> <h2 class="font-sans text-2xl mb-6 text-neutral-ink" style="font-weight: 600;">WHY PEOPLE CHOOSE TAPE-IN EXTENSIONS</h2> <div class="grid md:grid-cols-2 gap-8"> <div class="border-l-2 border-warm-ochre pl-4"> <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">QUICK APPLICATION</h3> <p class="font-serif text-xl text-neutral-ash leading-relaxed">Tape-ins can be installed in 45-90 minutes, making them ideal for those who want beautiful hair fast.</p> </div> <div class="border-l-2 border-warm-ochre pl-4"> <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">SEAMLESS BLEND</h3> <p class="font-serif text-xl text-neutral-ash leading-relaxed">Ultra-thin panels lay completely flat against your scalp for an invisible, natural look.</p> </div> <div class="border-l-2 border-warm-ochre pl-4"> <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">LIGHTWEIGHT COMFORT</h3> <p class="font-serif text-xl text-neutral-ash leading-relaxed">Thin wefts distribute weight evenly, so you barely feel them while wearing.</p> </div> <div class="border-l-2 border-warm-ochre pl-4"> <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">EASY MAINTENANCE</h3> <p class="font-serif text-xl text-neutral-ash leading-relaxed">Simple care routine and quick move-up appointments make tape-ins convenient for busy lifestyles.</p> </div> </div> </div> </section> <!-- Visual divider --> <div class="py-4 px-4"> <div class="max-w-4xl mx-auto flex items-center justify-center"> <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div> <div class="mx-6 text-warm-ochre/40 text-xl">✦</div> <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div> </div> </div> <!-- GALLERY - Tape-In Examples Only --> <section class="py-6 px-4 lg:px-16 bg-neutral-cloud"> <div class="max-w-7xl mx-auto"> <div class="mb-10 text-center"> <h2 class="font-display text-5xl">SEE THE DIFFERENCE</h2> <p class="font-serif text-xl text-neutral-ash mt-4 max-w-2xl mx-auto"> Tape-ins blend seamlessly and lay flat. Here's what they look like installed. </p> </div> <!-- Video Grid - Tape-In Results --> <div class="grid md:grid-cols-3 gap-6"> <!-- Video 1 --> <div class="aspect-[9/16] bg-neutral-cloud image-reveal"> <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover"> <source src="/videos/tape-in-result-3.mp4" type="video/mp4"> </video> </div> <!-- Video 2 --> <div class="aspect-[9/16] bg-neutral-cloud image-reveal"> <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover"> <source src="/videos/tape-in-result-2.mp4" type="video/mp4"> </video> </div> <!-- Video 3 --> <div class="aspect-[9/16] bg-neutral-cloud image-reveal"> <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover"> <source src="/videos/tape-in-result-4.mp4" type="video/mp4"> </video> </div> </div> </div> </section> <!-- CTA MIDDLE --> <section class="py-12 px-4 lg:px-16 bg-warm-bone text-center"> <div class="max-w-3xl mx-auto"> <h2 class="font-display text-5xl text-neutral-ink mb-4">BOOK YOUR FREE CONSULTATION</h2> <p class="font-serif text-xl text-neutral-ash mb-6 max-w-2xl mx-auto"> We'll assess your hair type, discuss your goals, and create a plan that works for you. </p> <button onclick="openContactModal()" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-8 py-3 transition-all duration-300" style="background-color: #D4AF37;"> FREE CONSULTATION </button> </div> </section> <!-- TAPE-IN SPECIFIC FAQ --> <section class="py-12 px-4 lg:px-16 bg-neutral-cloud"> <div class="max-w-4xl mx-auto"> <div class="text-center mb-12"> <h2 class="font-display text-5xl">COMMON QUESTIONS</h2> </div> <div class="space-y-4"> <a href="/tape-in-results.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;"> <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">What results can I expect from tape-ins?</span> <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span> </a> <a href="/tape-in-care.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;"> <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">How do I care for tape-in extensions?</span> <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span> </a> <a href="/tape-in-hair-type.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;"> <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">Are tape-ins right for my hair type?</span> <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span> </a> <a href="/tape-in-retape-schedule.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;"> <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">How often do tape-ins need to be retaped?</span> <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span> </a> <a href="/tape-in-visibility.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;"> <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">Can people see tape-in extensions?</span> <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span> </a> <a href="/tape-in-products.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;"> <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">What products can I use with tape-ins?</span> <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span> </a> <a href="/tape-in-install-speed.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;"> <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">How long does tape-in installation take?</span> <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span> </a> </div> </div> </section> <!-- CTA + JENN BIO --> <section class="py-12 px-4 lg:px-16 bg-warm-bone"> <div class="max-w-3xl mx-auto"> <h2 class="font-display text-5xl mb-8 text-center">A DEDICATED HAIR EXTENSIONS SALON</h2> <div class="flex flex-col md:flex-row gap-8 items-center mb-8"> <div class="flex-shrink-0"> <img src="/jenn-bio.jpg" alt="Jennifer Arges" class="w-48 h-48 md:w-56 md:h-56 rounded-lg object-cover shadow-lg"> </div> <div> <p class="font-serif text-xl leading-relaxed text-neutral-ash mb-4"> I'm Jenn, and extensions are what I do! I am passionate about helping women achieve the beauty and confidence they desire through longer, fuller, beautiful hair. I've spent 10 years working with extensions and have been trained and certified by leading industry professionals. Many salons offer extensions as just one option on a menu. Westside Style is unique in our exclusive focus on hair extensions—offering multiple styles and blended solutions to get just the right look for you. </p> <p class="font-serif text-xl leading-relaxed text-neutral-ash"> I'm confident I can help you. When we meet we'll assess your hair type, discuss your goals, and create a plan that works for you. If extensions aren't right for you, our consultation can at least save you future frustration and leave you better educated about your options. </p> </div> </div> <div class="text-center"> <button onclick="openContactModal()" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-8 py-3 transition-all duration-300" style="background-color: #D4AF37;"> FREE CONSULTATION </button> </div> </div> </section> <!-- FOOTER --> <footer class="py-8 px-4 lg:px-16 bg-warm-bone text-neutral-ash"> <div class="max-w-4xl mx-auto text-center"> <!-- Navigation Menu --> <nav class="mb-6"> <div class="flex flex-wrap justify-center items-center gap-2 font-mono text-sm text-neutral-ash"> <a href="/" class="hover:text-neutral-ink transition-colors">Home</a> <span class="text-neutral-stone">|</span> <a href="/keratin-bond-seattle.html" class="hover:text-neutral-ink transition-colors">K-Tips</a> <span class="text-neutral-stone">|</span> <a href="/hand-sewn-weft-seattle.html" class="hover:text-neutral-ink transition-colors">Hand-Sewn Weft</a> <span class="text-neutral-stone">|</span> <a href="/tape-in-seattle.html" class="hover:text-neutral-ink transition-colors">Tape-Ins</a> </div> </nav> <!-- Instagram & Privacy --> <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm text-warm-ochre hover:text-neutral-ink transition-colors mb-3">@_westside_style_</a> <div class="text-xs text-neutral-stone"> <a href="/privacy-policy.html" class="hover:text-neutral-ink transition-colors">Privacy Policy</a> </div> </div> </footer> <!-- Contact Modal -->
+<div id="contactModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/85" onclick="closeContactModal()"></div>
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Modal panel -->
+    <div class="relative bg-neutral-cloud border border-neutral-stone/20 w-full max-w-sm p-6">
+        <!-- Close -->
+        <button onclick="closeContactModal()" class="absolute top-4 right-4 font-mono text-base tracking-wide text-neutral-ash hover:text-neutral-ink transition-colors">
+            <span class="sr-only">Close contact form</span>
+            <span aria-hidden="true">✕ CLOSE</span>
+        </button>
 
-    <!-- Custom Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'display': ['Bebas Neue', 'sans-serif'],
-                        'serif': ['Crimson Pro', 'serif'],
-                        'mono': ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        'warm': {
-                            'ochre': '#C17817',
-                            'amber': '#E8A735',
-                            'sand': '#F4E8D0',
-                            'bone': '#FAF7F0',
-                        },
-                        'neutral': {
-                            'ink': '#0A0908',
-                            'ash': '#49463F',
-                            'stone': '#8B8680',
-                            'cloud': '#F7F5F2',
-                        }
-                    }
+        <!-- Heading -->
+        <div class="mb-8">
+            <h3 class="font-display text-5xl text-neutral-ink">LET'S TALK</h3>
+        </div>
+
+                <!-- Form -->
+        <form id="contactForm" onsubmit="submitContact(event)" class="space-y-5">
+            <div>
+                <label for="cf-phone" class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">PHONE</label>
+                <input type="tel" id="cf-phone" name="phone" required inputmode="tel" pattern="[0-9]{3}[.\-\s]?[0-9]{3}[.\-\s]?[0-9]{4}" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="206.000.0000">
+            </div>
+
+            <div>
+                <label for="cf-name" class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NAME</label>
+                <input type="text" id="cf-name" name="name" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
+            </div>
+
+            <div class="pt-4">
+                <button type="submit" class="w-full font-mono text-base tracking-extreme text-neutral-ink bg-[#D4AF37] py-4 hover:bg-warm-amber transition-colors">
+                    FREE CONSULTATION
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+ <!-- Scripts --> <script>
+// Get service type from page URL
+function getServiceType() {
+    const path = window.location.pathname;
+    if (path.includes('keratin') || path.includes('k-tip')) return 'keratin_bond_extensions';
+    if (path.includes('hand-tied') || path.includes('hand-sewn') || path.includes('weft')) return 'hand_tied_extensions';
+    if (path.includes('tape-in')) return 'tape_in_extensions';
+    return 'general_inquiry';
+}
+
+function openContactModal() {
+    document.getElementById('contactModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+        const firstInput = document.getElementById('cf-phone');
+        if (firstInput) firstInput.focus();
+    }, 100);
+}
+
+function closeContactModal() {
+    document.getElementById('contactModal').classList.add('hidden');
+    document.body.style.overflow = '';
+}
+
+function submitContact(e) {
+    e.preventDefault();
+
+    const phone = document.getElementById('cf-phone').value.trim();
+    const name = document.getElementById('cf-name').value.trim();
+
+    const btn = document.querySelector('#contactForm button[type="submit"]');
+    btn.textContent = 'SENDING...';
+    btn.disabled = true;
+
+    // Send directly to Netlify serverless function
+    fetch('https://roaring-kulfi-cd788b.netlify.app/.netlify/functions/send-sms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            phone: phone,
+            name: name,
+            email: '',
+            notes: '',
+            service_type: getServiceType(),
+            page: document.title
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Track conversion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18371102793/E6Z5CLHHhOAcEMmQg7hE',
+                    'event_category': 'Lead',
+                    'event_label': getServiceType(),
+                    'value': 1000,
+                    'currency': 'USD'
+                });
+            }
+            btn.textContent = '✓ TEXT SENT TO JENN!';
+            setTimeout(() => {
+                window.location.href = '/inquiry.html';
+            }, 1500);
+        } else {
+            throw new Error(data.error || 'Failed to send');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        btn.textContent = 'ERROR - TEXT 206.295.4549';
+        setTimeout(() => {
+            btn.textContent = 'FREE CONSULTATION';
+            btn.disabled = false;
+        }, 3000);
+    });
+}
+
+// Focus trap inside modal
+function trapFocus(modal) {
+    const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    modal.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+            if (e.shiftKey) {
+                if (document.activeElement === firstElement) {
+                    lastElement.focus();
+                    e.preventDefault();
+                }
+            } else {
+                if (document.activeElement === lastElement) {
+                    firstElement.focus();
+                    e.preventDefault();
                 }
             }
         }
-    </script>
+    });
+}
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeContactModal();
+});
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .image-reveal {
-            position: relative;
-            overflow: hidden;
-        }
-        .image-reveal::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, transparent 60%, rgba(193, 120, 23, 0.3));
-            opacity: 0;
-            transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .image-reveal:hover::after {
-            opacity: 1;
-        }
-        .lazy-video {
-            background: #FAF7F0;
-        }
-    </style>
+// Initialize focus trap when modal opens
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('contactModal');
+    if (modal) trapFocus(modal);
+});
 
-    <!-- Service Schema for Tape-In Extensions -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Tape-In Hair Extensions",
-      "name": "Tape-In Hair Extensions Seattle",
-      "description": "Seamless, lightweight panels that blend beautifully and lay completely flat. Quick 45-90 minute application with 6-8 week maintenance.",
-      "provider": {
-        "@type": "BeautySalon",
-        "knowsAbout": ["Tape-In Hair Extensions", "Tape Extensions", "Panel Extensions"],
-        "name": "Westside Style",
-        "telephone": "+1-206-295-4549",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Seattle",
-          "addressRegion": "WA",
-          "addressCountry": "US"
-        }
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "800.00",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "800.00",
-          "priceCurrency": "USD"
-        },
-        "availability": "https://schema.org/InStock",
-        "url": "https://westside.style/tape-in-seattle.html"
-      }
-    }
-    </script>
-</head>
-<body class="bg-neutral-cloud text-neutral-ink">
-
-    <!-- HEADER NAV -->
-    <header class="py-8 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #1a1714 0%, #0f0d0b 50%, #0A0908 100%); clip-path: ellipse(120% 100% at 50% 0%); box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);">
-        <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 30% 50%, #D4AF37 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, #C17817 0%, transparent 50%);"></div>
-        <div class="max-w-7xl mx-auto text-center relative z-10">
-            <a href="/" class="block font-display text-4xl lg:text-5xl tracking-wide hover:opacity-90 transition-all duration-300" style="color: #E8B44D; text-shadow: 0 2px 20px rgba(232, 180, 77, 0.4), 0 1px 3px rgba(0, 0, 0, 0.9);">SEATTLE HAIR EXTENSIONS</a>
-            <a href="https://www.instagram.com/_westside_style_" target="_blank" class="block font-mono text-base tracking-wide mt-2 hover:opacity-70 transition-all duration-300" style="color: #F4E8D0;">@_westside_style_</a>
-        </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="py-12 px-4 lg:px-16 bg-warm-bone">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="font-serif text-4xl lg:text-5xl mb-2">TAPE-IN HAIR EXTENSIONS</h1>
-            <p class="font-mono text-xl tracking-wide text-warm-ochre mb-6">FROM $800</p>
-
-            <!-- CTA HIGH -->
-            <div class="mb-8">
-                <button onclick="openContactModal()" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-8 py-3 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
-                    FREE CONSULTATION
-                </button>
-            </div>
-
-            <!-- Hero Video -->
-            <div class="max-w-md mx-auto">
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal rounded-lg overflow-hidden">
-                    <video muted loop playsinline preload="metadata" class="lazy-video w-full h-full object-cover">
-                        <source src="/videos/tape-in-result-1.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT ARE TAPE-INS -->
-    <section class="py-6 px-4 lg:px-16 bg-neutral-cloud">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="font-display text-4xl mb-6 text-center">WHAT ARE TAPE-IN EXTENSIONS?</h2>
-            <div class="space-y-4 font-serif text-xl leading-relaxed text-neutral-ash">
-                <p>
-                    Tape-in extensions consist of pre-taped wefts that are sandwiched between thin sections of your natural hair. The medical-grade adhesive tape creates a secure, flat bond that's nearly invisible and very comfortable.
-                </p>
-                <p>
-                    Each tape-in panel is thin and lightweight, allowing them to blend naturally with your natural hair. The flat application means no bumps or ridges — just smooth, natural-looking volume and length.
-                </p>
-                <p>
-                    Tape-ins are ideal for adding volume and length quickly. Application takes 45-90 minutes. They typically last 6-8 weeks before requiring a move-up, where the tapes are replaced and the extensions are repositioned.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Visual divider -->
-    <div class="py-6 px-4">
-        <div class="max-w-4xl mx-auto flex items-center justify-center">
-            <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
-            <div class="mx-6 text-warm-ochre/40 text-xl">✦</div>
-            <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
-        </div>
-    </div>
-
-    <!-- BENEFITS -->
-    <section class="py-6 px-4 lg:px-16 bg-warm-bone">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="font-sans text-2xl mb-6 text-neutral-ink" style="font-weight: 600;">WHY PEOPLE CHOOSE TAPE-IN EXTENSIONS</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="border-l-2 border-warm-ochre pl-4">
-                    <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">QUICK APPLICATION</h3>
-                    <p class="font-serif text-xl text-neutral-ash leading-relaxed">Tape-ins can be installed in 45-90 minutes, making them ideal for those who want beautiful hair fast.</p>
-                </div>
-                <div class="border-l-2 border-warm-ochre pl-4">
-                    <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">SEAMLESS BLEND</h3>
-                    <p class="font-serif text-xl text-neutral-ash leading-relaxed">Ultra-thin panels lay completely flat against your scalp for an invisible, natural look.</p>
-                </div>
-                <div class="border-l-2 border-warm-ochre pl-4">
-                    <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">LIGHTWEIGHT COMFORT</h3>
-                    <p class="font-serif text-xl text-neutral-ash leading-relaxed">Thin wefts distribute weight evenly, so you barely feel them while wearing.</p>
-                </div>
-                <div class="border-l-2 border-warm-ochre pl-4">
-                    <h3 class="font-mono text-xl tracking-wide mb-3 text-neutral-ink">EASY MAINTENANCE</h3>
-                    <p class="font-serif text-xl text-neutral-ash leading-relaxed">Simple care routine and quick move-up appointments make tape-ins convenient for busy lifestyles.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Visual divider -->
-    <div class="py-4 px-4">
-        <div class="max-w-4xl mx-auto flex items-center justify-center">
-            <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
-            <div class="mx-6 text-warm-ochre/40 text-xl">✦</div>
-            <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
-        </div>
-    </div>
-
-    <!-- GALLERY - Tape-In Examples Only -->
-    <section class="py-6 px-4 lg:px-16 bg-neutral-cloud">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-10 text-center">
-                <h2 class="font-display text-5xl">SEE THE DIFFERENCE</h2>
-                <p class="font-serif text-xl text-neutral-ash mt-4 max-w-2xl mx-auto">
-                    Tape-ins blend seamlessly and lay flat. Here's what they look like installed.
-                </p>
-            </div>
-
-            <!-- Video Grid - Tape-In Results -->
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Video 1 -->
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
-                        <source src="/videos/tape-in-result-3.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <!-- Video 2 -->
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
-                        <source src="/videos/tape-in-result-2.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <!-- Video 3 -->
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
-                        <source src="/videos/tape-in-result-4.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA MIDDLE -->
-    <section class="py-12 px-4 lg:px-16 bg-warm-bone text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="font-display text-5xl text-neutral-ink mb-4">BOOK YOUR FREE CONSULTATION</h2>
-            <p class="font-serif text-xl text-neutral-ash mb-6 max-w-2xl mx-auto">
-                We'll assess your hair type, discuss your goals, and create a plan that works for you.
-            </p>
-            <button onclick="openContactModal()" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-8 py-3 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
-                FREE CONSULTATION
-            </button>
-        </div>
-    </section>
-
-    <!-- TAPE-IN SPECIFIC FAQ -->
-    <section class="py-12 px-4 lg:px-16 bg-neutral-cloud">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="font-display text-5xl">COMMON QUESTIONS</h2>
-            </div>
-
-            <div class="space-y-4">
-                <a href="/tape-in-results.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">What results can I expect from tape-ins?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </a>
-
-                <a href="/tape-in-care.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">How do I care for tape-in extensions?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </a>
-
-                <a href="/tape-in-hair-type.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">Are tape-ins right for my hair type?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </a>
-
-                <a href="/tape-in-retape-schedule.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">How often do tape-ins need to be retaped?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </a>
-
-                <a href="/tape-in-visibility.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">Can people see tape-in extensions?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </a>
-
-                <a href="/tape-in-products.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">What products can I use with tape-ins?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </a>
-
-                <a href="/tape-in-install-speed.html" class="flex items-center justify-between px-6 py-5 bg-warm-bone hover:bg-warm-sand transition-all duration-200 shadow-sm hover:shadow-md group" style="border-radius: 50px;">
-                    <span class="font-serif text-xl text-neutral-ash group-hover:text-neutral-ink">How long does tape-in installation take?</span>
-                    <span class="font-mono text-xs text-warm-ochre group-hover:translate-x-1 transition-transform duration-200">→</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA + JENN BIO -->
-    <section class="py-12 px-4 lg:px-16 bg-warm-bone">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="font-display text-5xl mb-8 text-center">A DEDICATED HAIR EXTENSIONS SALON</h2>
-
-            <div class="flex flex-col md:flex-row gap-8 items-center mb-8">
-                <div class="flex-shrink-0">
-                    <img src="/jenn-bio.jpg" alt="Jennifer Arges" class="w-48 h-48 md:w-56 md:h-56 rounded-lg object-cover shadow-lg">
-                </div>
-                <div>
-                    <p class="font-serif text-xl leading-relaxed text-neutral-ash mb-4">
-                        I'm Jenn, and extensions are what I do! I am passionate about helping women achieve the beauty and confidence they desire through longer, fuller, beautiful hair. I've spent 10 years working with extensions and have been trained and certified by leading industry professionals. Many salons offer extensions as just one option on a menu. Westside Style is unique in our exclusive focus on hair extensions—offering multiple styles and blended solutions to get just the right look for you.
-                    </p>
-                    <p class="font-serif text-xl leading-relaxed text-neutral-ash">
-                        I'm confident I can help you. When we meet we'll assess your hair type, discuss your goals, and create a plan that works for you. If extensions aren't right for you, our consultation can at least save you future frustration and leave you better educated about your options.
-                    </p>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <button onclick="openContactModal()" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-8 py-3 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
-                    FREE CONSULTATION
-                </button>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-8 px-4 lg:px-16 bg-warm-bone text-neutral-ash">
-        <div class="max-w-4xl mx-auto text-center">
-            <!-- Navigation Menu -->
-            <nav class="mb-6">
-                <div class="flex flex-wrap justify-center items-center gap-2 font-mono text-sm text-neutral-ash">
-                    <a href="/" class="hover:text-neutral-ink transition-colors">Home</a>
-                    <span class="text-neutral-stone">|</span>
-                    <a href="/keratin-bond-seattle.html" class="hover:text-neutral-ink transition-colors">K-Tips</a>
-                    <span class="text-neutral-stone">|</span>
-                    <a href="/hand-sewn-weft-seattle.html" class="hover:text-neutral-ink transition-colors">Hand-Sewn Weft</a>
-                    <span class="text-neutral-stone">|</span>
-                    <a href="/tape-in-seattle.html" class="hover:text-neutral-ink transition-colors">Tape-Ins</a>
-                </div>
-            </nav>
-
-            <!-- Instagram & Privacy -->
-            <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm text-warm-ochre hover:text-neutral-ink transition-colors mb-3">@_westside_style_</a>
-
-            <div class="text-xs text-neutral-stone">
-                <a href="/privacy-policy.html" class="hover:text-neutral-ink transition-colors">Privacy Policy</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Contact Modal -->
-    <div id="contactModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeContactModal()"></div>
-
-        <!-- Modal panel -->
-        <div class="relative bg-neutral-cloud border border-neutral-stone/20 w-full max-w-sm p-6">
-            <!-- Close -->
-            <button onclick="closeContactModal()" class="absolute top-4 right-4 font-mono text-base tracking-wide text-neutral-ash hover:text-neutral-ink transition-colors">✕ CLOSE</button>
-
-            <!-- Heading -->
-            <div class="mb-8">
-                <h3 class="font-display text-5xl text-neutral-ink">LET'S TALK</h3>
-            </div>
-
-            <!-- Form -->
-            <form id="contactForm" onsubmit="submitContact(event)" class="space-y-5">
-                <div>
-                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NAME</label>
-                    <input type="text" id="cf-name"
-                        class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors"
-                        placeholder="Your name">
-                </div>
-                <div>
-                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">PHONE</label>
-                    <input type="tel" id="cf-phone"
-                        class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors"
-                        placeholder="206.000.0000">
-                </div>
-                <div>
-                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">EMAIL</label>
-                    <input type="email" id="cf-email" required
-                        class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors"
-                        placeholder="you@example.com">
-                </div>
-                <div>
-                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NOTES</label>
-                    <textarea id="cf-notes" rows="3"
-                        class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none"
-                        placeholder="What are you looking for?"></textarea>
-                </div>
-                <div class="pt-4">
-                    <button type="submit"
-                        class="w-full font-mono text-base tracking-extreme text-neutral-ink bg-[#D4AF37] py-4 hover:bg-warm-amber transition-colors">
-                        TEXT JENN THIS INFO
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script>
-        function openContactModal() {
-            document.getElementById('contactModal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeContactModal() {
-            document.getElementById('contactModal').classList.add('hidden');
-            document.body.style.overflow = '';
-        }
-
-        function submitContact(e) {
-            e.preventDefault();
-            const name  = document.getElementById('cf-name').value.trim();
-            const phone = document.getElementById('cf-phone').value.trim();
-            const email = document.getElementById('cf-email').value.trim();
-            const notes = document.getElementById('cf-notes').value.trim();
-
-            const btn = document.querySelector('#contactForm button[type="submit"]');
-            btn.textContent = 'Sending...';
-            btn.disabled = true;
-
-            // Send directly to Netlify serverless function → Twilio → Jenn's phone
-            fetch('https://roaring-kulfi-cd788b.netlify.app/.netlify/functions/send-sms', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    notes: notes,
-                    service_type: 'tape_in_extensions',
-                    page: 'Tape-In Seattle'
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    btn.textContent = '✓ Message Sent to Jenn!';
-                    setTimeout(() => {
-                        window.location.href = '/inquiry.html';
-                    }, 1500);
-                } else {
-                    throw new Error(data.error || 'Failed to send');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                btn.textContent = 'Error - Please text 206-295-4549';
-                setTimeout(() => {
-                    btn.textContent = 'TEXT JENN THIS INFO';
-                    btn.disabled = false;
-                }, 3000);
-            });
-        }
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeContactModal();
-        });
-
-        // Lazy load videos when they enter viewport
-        document.addEventListener('DOMContentLoaded', function() {
-            const videos = document.querySelectorAll('.lazy-video');
-
-            const videoObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const video = entry.target;
-                        video.play();
-                        videoObserver.unobserve(video);
-                    }
-                });
-            }, { threshold: 0.1, rootMargin: '200px' });
-
-            videos.forEach(video => videoObserver.observe(video));
-        });
-    </script>
-
-</body>
-</html>
+</script> </body> </html> 

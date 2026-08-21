@@ -33,8 +33,18 @@
                         'mono': ['JetBrains Mono', 'monospace'],
                     },
                     colors: {
-                        'warm': { 'ochre': '#C17817', 'amber': '#E8A735' },
-                        'neutral': { 'ink': '#0A0908', 'ash': '#49463F', 'stone': '#8B8680', 'cloud': '#F7F5F2' }
+                        'warm': {
+                            'ochre': '#C17817',
+                            'amber': '#E8A735',
+                            'sand': '#F4E8D0',
+                            'bone': '#FAF7F0',
+                        },
+                        'neutral': {
+                            'ink': '#0A0908',
+                            'ash': '#49463F',
+                            'stone': '#8B8680',
+                            'cloud': '#F7F5F2',
+                        }
                     },
                     letterSpacing: { 'extreme': '0.2em', 'wide': '0.1em' }
                 }
@@ -44,22 +54,155 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        ::selection {
+            background: rgba(193, 120, 23, 0.2);
+            color: #0A0908;
+        }
+    </style>
 </head>
-<body class="bg-neutral-ink/50 min-h-screen flex flex-col items-center justify-center px-8 text-center" style="background: rgba(10,9,8,0.85);">
+<body class="bg-neutral-cloud text-neutral-ink">
 
-    <div class="max-w-sm w-full bg-neutral-cloud border border-neutral-stone/20 p-12">
-        <p class="font-mono text-base tracking-wide uppercase mb-6" style="color: #D4AF37;">WESTSIDE STYLE</p>
+    <!-- HEADER NAV -->
+    <header class="py-8 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #1a1714 0%, #0f0d0b 50%, #0A0908 100%); clip-path: ellipse(120% 100% at 50% 0%); box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);">
+        <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 30% 50%, #D4AF37 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, #C17817 0%, transparent 50%);"></div>
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <a href="/" class="block font-display text-4xl lg:text-5xl tracking-wide hover:opacity-90 transition-all duration-300 hover:scale-[1.02]" style="color: #E8B44D; text-shadow: 0 2px 20px rgba(232, 180, 77, 0.4), 0 1px 3px rgba(0, 0, 0, 0.9);">SEATTLE HAIR EXTENSIONS</a>
+            <a href="https://www.instagram.com/_westside_style_" target="_blank" class="block font-mono text-base tracking-wide mt-2 hover:opacity-70 transition-all duration-300" style="color: #F4E8D0; text-shadow: 0 1px 10px rgba(232, 167, 53, 0.3), 0 1px 2px rgba(0, 0, 0, 0.8);">@_westside_style_</a>
+        </div>
+    </header>
 
-        <h1 class="font-display text-5xl text-neutral-ink mb-4">YOU'RE ALL SET</h1>
+    <!-- MAIN CONTENT -->
+    <section class="py-16 px-6 lg:px-16 bg-warm-bone">
+        <div class="max-w-3xl mx-auto">
+            <!-- Success Indicator -->
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-full mb-6" style="background: rgba(193, 120, 23, 0.15);">
+                    <span class="font-display text-5xl text-warm-ochre">✓</span>
+                </div>
+                <h1 class="font-display text-5xl lg:text-6xl mb-4">MESSAGE SENT TO JENN!</h1>
+                <p class="font-serif text-2xl text-neutral-ash italic max-w-2xl mx-auto">
+                    Thanks for reaching out. Jennifer will text you within 2-4 hours during business hours (typically same-day).
+                </p>
+            </div>
 
-        <p class="font-serif text-lg italic text-neutral-ash mb-10">
-            Jenn will be in touch soon.
-        </p>
+            <!-- What Happens Next -->
+            <div class="bg-neutral-cloud border border-neutral-stone/20 p-8 mb-10">
+                <h2 class="font-display text-3xl mb-6 text-neutral-ink">WHAT HAPPENS NEXT</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <span class="font-display text-2xl text-warm-ochre flex-shrink-0">1.</span>
+                        <div>
+                            <p class="font-serif text-xl text-neutral-ash">Jennifer will text you from <span class="font-mono text-warm-ochre tracking-wide">206.295.4549</span></p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <span class="font-display text-2xl text-warm-ochre flex-shrink-0">2.</span>
+                        <div>
+                            <p class="font-serif text-xl text-neutral-ash">You'll discuss your hair goals and which extension method fits best</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <span class="font-display text-2xl text-warm-ochre flex-shrink-0">3.</span>
+                        <div>
+                            <p class="font-serif text-xl text-neutral-ash">If it's a good match, you'll schedule your free in-person consultation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <a href="/" class="font-mono text-base tracking-wide uppercase text-neutral-ink px-10 py-4 transition-opacity hover:opacity-80 inline-block" style="background-color: rgba(212,175,55,0.7);">
-            CLOSE
-        </a>
+            <!-- While You Wait -->
+            <div class="mb-10">
+                <h2 class="font-display text-3xl mb-6 text-neutral-ink">WHILE YOU WAIT</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <a href="https://www.instagram.com/_westside_style_" target="_blank"
+                       class="flex items-center justify-between px-6 py-5 bg-neutral-cloud border border-neutral-stone/20 hover:border-warm-ochre/40 hover:bg-white transition-all duration-300 group">
+                        <span class="font-serif text-xl text-neutral-ash">See Recent Transformations</span>
+                        <span class="text-warm-ochre text-xl group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                    <a href="/#gallery"
+                       class="flex items-center justify-between px-6 py-5 bg-neutral-cloud border border-neutral-stone/20 hover:border-warm-ochre/40 hover:bg-white transition-all duration-300 group">
+                        <span class="font-serif text-xl text-neutral-ash">Browse Full Gallery</span>
+                        <span class="text-warm-ochre text-xl group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="text-center py-8 border-t border-b border-neutral-stone/20 mb-10">
+                <p class="font-mono text-base tracking-wide text-warm-ochre mb-2">ESTABLISHED 2015</p>
+                <p class="font-serif text-xl text-neutral-ash">10+ years specializing exclusively in extensions</p>
+                <p class="font-serif text-lg text-neutral-stone italic mt-2">Seattle-based, small focused clientele</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Links -->
+    <section class="py-12 px-6 lg:px-16 bg-neutral-cloud">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-display text-3xl mb-6 text-center">LEARN MORE ABOUT EXTENSIONS</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/keratin-bond-seattle.html"
+                   class="bg-warm-bone border border-neutral-stone/20 p-6 hover:border-warm-ochre/40 hover:shadow-lg transition-all duration-300 group">
+                    <h3 class="font-display text-2xl mb-2 text-neutral-ink">KERATIN BONDS</h3>
+                    <div class="w-12 h-0.5 bg-warm-ochre mb-3"></div>
+                    <p class="font-serif text-lg text-neutral-ash mb-3">Individual strand fusion for natural movement</p>
+                    <p class="font-mono text-sm text-warm-ochre">FROM $1,200 →</p>
+                </a>
+                <a href="/hand-sewn-weft-seattle.html"
+                   class="bg-warm-bone border border-neutral-stone/20 p-6 hover:border-warm-ochre/40 hover:shadow-lg transition-all duration-300 group">
+                    <h3 class="font-display text-2xl mb-2 text-neutral-ink">HAND TIED ROWS</h3>
+                    <div class="w-12 h-0.5 bg-warm-ochre mb-3"></div>
+                    <p class="font-serif text-lg text-neutral-ash mb-3">Wefts sewn onto micro-beaded rows</p>
+                    <p class="font-mono text-sm text-warm-ochre">FROM $1,000 →</p>
+                </a>
+                <a href="/tape-in-seattle.html"
+                   class="bg-warm-bone border border-neutral-stone/20 p-6 hover:border-warm-ochre/40 hover:shadow-lg transition-all duration-300 group">
+                    <h3 class="font-display text-2xl mb-2 text-neutral-ink">TAPE-INS</h3>
+                    <div class="w-12 h-0.5 bg-warm-ochre mb-3"></div>
+                    <p class="font-serif text-lg text-neutral-ash mb-3">Seamless, lightweight panels that blend beautifully</p>
+                    <p class="font-mono text-sm text-warm-ochre">FROM $800 →</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="py-4 px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-center">
+            <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
+            <div class="mx-6 text-warm-ochre/40 text-xl">✦</div>
+            <div class="h-px bg-gradient-to-r from-transparent via-warm-ochre/30 to-transparent flex-1 max-w-xs"></div>
+        </div>
     </div>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-4 lg:px-16 bg-warm-bone text-neutral-ash">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Navigation Menu -->
+            <nav class="mb-6">
+                <div class="flex flex-wrap justify-center items-center gap-2 font-mono text-sm text-neutral-ash">
+                    <a href="/" class="hover:text-neutral-ink transition-colors">Home</a>
+                    <span class="text-neutral-stone">|</span>
+                    <a href="/keratin-bond-seattle.html" class="hover:text-neutral-ink transition-colors">K-Tips</a>
+                    <span class="text-neutral-stone">|</span>
+                    <a href="/hand-sewn-weft-seattle.html" class="hover:text-neutral-ink transition-colors">Hand-Sewn Weft</a>
+                    <span class="text-neutral-stone">|</span>
+                    <a href="/tape-in-seattle.html" class="hover:text-neutral-ink transition-colors">Tape-Ins</a>
+                </div>
+            </nav>
+
+            <!-- Instagram & Privacy -->
+            <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm text-warm-ochre hover:text-neutral-ink transition-colors mb-3">@_westside_style_</a>
+
+            <div class="text-xs text-neutral-stone">
+                <a href="/privacy-policy.html" class="hover:text-neutral-ink transition-colors">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
