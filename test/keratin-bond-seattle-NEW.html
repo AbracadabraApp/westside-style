@@ -460,7 +460,7 @@
                         videoObserver.unobserve(video);
                     }
                 });
-            }, { threshold: 0.5 });
+            }, { threshold: 0.1, rootMargin: '200px' });
 
             videos.forEach(video => videoObserver.observe(video));
         });
