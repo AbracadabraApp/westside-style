@@ -18,12 +18,52 @@
 
 [[redirects]]
   from = "/hand-tied-extensions-seattle.html"
-  to = "/hand-tied-seattle.html"
+  to = "/hand-sewn-weft-seattle.html"
+  status = 301
+
+[[redirects]]
+  from = "/hand-tied-seattle.html"
+  to = "/hand-sewn-weft-seattle.html"
   status = 301
 
 [[redirects]]
   from = "/tape-in-extensions-seattle.html"
   to = "/tape-in-seattle.html"
+  status = 301
+
+[[redirects]]
+  from = "/hand-tied-care.html"
+  to = "/hand-sewn-weft-care.html"
+  status = 301
+
+[[redirects]]
+  from = "/hand-tied-fine-hair.html"
+  to = "/hand-sewn-weft-fine-hair.html"
+  status = 301
+
+[[redirects]]
+  from = "/hand-tied-hair-type.html"
+  to = "/hand-sewn-weft-hair-type.html"
+  status = 301
+
+[[redirects]]
+  from = "/hand-tied-move-up-schedule.html"
+  to = "/hand-sewn-weft-move-up-schedule.html"
+  status = 301
+
+[[redirects]]
+  from = "/hand-tied-results.html"
+  to = "/hand-sewn-weft-results.html"
+  status = 301
+
+[[redirects]]
+  from = "/hand-tied-styling.html"
+  to = "/hand-sewn-weft-styling.html"
+  status = 301
+
+[[redirects]]
+  from = "/hand-tied-tightening.html"
+  to = "/hand-sewn-weft-tightening.html"
   status = 301
 
 # Headers for security
