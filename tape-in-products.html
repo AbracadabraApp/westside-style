@@ -162,14 +162,28 @@
         </div>
     </section>
 
-<footer class="px-8 py-6 bg-neutral-ink text-center">
-        <p class="font-mono text-xs tracking-wide text-neutral-stone mb-2">© 2025 WESTSIDE STYLE · SEATTLE, WA</p>
-        <nav class="flex gap-4 justify-center flex-wrap">
-            <a href="/" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">HOME</a>
-            <a href="/hair-extensions-seattle.html" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">ALL EXTENSIONS</a>
-            <a href="/#services" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">SERVICES & PRICING</a>
-            <a href="/privacy-policy.html" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">PRIVACY POLICY</a>
-        </nav>
+    <footer class="py-8 px-4 lg:px-16 bg-warm-bone text-neutral-ash">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Navigation Menu -->
+            <nav class="mb-6">
+                <div class="flex flex-wrap justify-center items-center gap-2 font-mono text-sm text-neutral-ash">
+                    <a href="/" class="hover:text-neutral-ink transition-colors">Home</a>
+                    <span class="text-neutral-stone">|</span>
+                    <a href="/keratin-bond-seattle.html" class="hover:text-neutral-ink transition-colors">K-Tips</a>
+                    <span class="text-neutral-stone">|</span>
+                    <a href="/hand-sewn-weft-seattle.html" class="hover:text-neutral-ink transition-colors">Hand-Sewn Weft</a>
+                    <span class="text-neutral-stone">|</span>
+                    <a href="/tape-in-seattle.html" class="hover:text-neutral-ink transition-colors">Tape-Ins</a>
+                </div>
+            </nav>
+
+            <!-- Instagram & Privacy -->
+            <a href="https://www.instagram.com/_westside_style_" target="_blank" class="inline-block font-mono text-sm text-warm-ochre hover:text-neutral-ink transition-colors mb-3">@_westside_style_</a>
+
+            <div class="text-xs text-neutral-stone">
+                <a href="/privacy-policy.html" class="hover:text-neutral-ink transition-colors">Privacy Policy</a>
+            </div>
+        </div>
     </footer>
 
     <!-- Contact Modal -->
@@ -184,21 +198,15 @@
             </div>
             <form id="contactForm" onsubmit="submitContact(event)" class="space-y-5">
                 <div>
-                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">NAME</label>
-                    <input type="text" id="cf-name" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
+                    <label for="cf-phone" class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">PHONE</label>
+                    <input type="tel" id="cf-phone" name="phone" required inputmode="tel" pattern="[0-9]{3}[.\-\s]?[0-9]{3}[.\-\s]?[0-9]{4}" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="206.000.0000">
                 </div>
+
                 <div>
-                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">PHONE</label>
-                    <input type="tel" id="cf-phone" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="206.000.0000">
+                    <label for="cf-name" class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NAME</label>
+                    <input type="text" id="cf-name" name="name" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
                 </div>
-                <div>
-                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">EMAIL</label>
-                    <input type="email" id="cf-email" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="you@example.com">
-                </div>
-                <div>
-                    <label class="block font-mono text-xs tracking-wide text-neutral-ash mb-1">NOTES</label>
-                    <textarea id="cf-notes" rows="3" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-lg text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none" placeholder="What are you looking for?"></textarea>
-                </div>
+
                 <div class="pt-4">
                     <button type="submit" class="w-full font-mono text-sm tracking-extreme text-neutral-ink bg-[#D4AF37] py-4 hover:bg-warm-amber transition-colors">
                         TEXT JENN THIS INFO
