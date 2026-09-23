@@ -105,24 +105,6 @@
         .lazy-video {
             background: #FAF7F0;
         }
-        .placeholder-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 10;
-            pointer-events: none;
-        }
-        .placeholder-text {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1rem;
-            color: #D4AF37;
-            text-align: center;
-            padding: 1rem;
-            letter-spacing: 0.1em;
-        }
     </style>
 
     <!-- Service Schema for Hand-Sewn Weft Extensions -->
@@ -256,50 +238,6 @@
         </div>
     </div>
 
-    <!-- GALLERY - Hand-Sewn Weft Examples -->
-    <section class="py-8 px-4 lg:px-16 bg-neutral-cloud">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-10 text-center">
-                <h2 class="font-display text-5xl mt-2">SEE THE DIFFERENCE</h2>
-                <p class="font-serif text-xl text-neutral-ash mt-4 max-w-2xl mx-auto">
-                    Hand-sewn wefts lay flat and feel lightweight. Here's what they look like installed.
-                </p>
-            </div>
-
-            <!-- Video Grid - Hand-Sewn Weft Results -->
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Video 1 - PLACEHOLDER -->
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                    <div class="placeholder-overlay">
-                        <div class="placeholder-text">PLACEHOLDER<br/>VIDEO NEEDED</div>
-                    </div>
-                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
-                        <source src="videos/hand-tied-result-1.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <!-- Video 2 - PLACEHOLDER -->
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                    <div class="placeholder-overlay">
-                        <div class="placeholder-text">PLACEHOLDER<br/>VIDEO NEEDED</div>
-                    </div>
-                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
-                        <source src="videos/hand-tied-result-1.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <!-- Video 3 - PLACEHOLDER -->
-                <div class="aspect-[9/16] bg-neutral-cloud image-reveal">
-                    <div class="placeholder-overlay">
-                        <div class="placeholder-text">PLACEHOLDER<br/>VIDEO NEEDED</div>
-                    </div>
-                    <video muted loop playsinline preload="none" class="lazy-video w-full h-full object-cover">
-                        <source src="videos/hand-tied-result-1.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- CTA MIDDLE -->
     <section class="py-12 px-4 lg:px-16 bg-warm-bone text-center">
@@ -467,8 +405,8 @@
             e.preventDefault();
             const name  = document.getElementById('cf-name').value.trim();
             const phone = document.getElementById('cf-phone').value.trim();
-            const email = document.getElementById('cf-email').value.trim();
-            const notes = document.getElementById('cf-notes').value.trim();
+            const email = '';
+            const notes = '';
 
             const btn = document.querySelector('#contactForm button[type="submit"]');
             btn.textContent = 'SENDING...';

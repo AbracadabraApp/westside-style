@@ -105,24 +105,6 @@
         .lazy-video {
             background: #FAF7F0;
         }
-        .placeholder-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 10;
-            pointer-events: none;
-        }
-        .placeholder-text {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1rem;
-            color: #D4AF37;
-            text-align: center;
-            padding: 1rem;
-            letter-spacing: 0.1em;
-        }
     </style>
 
     <!-- Service Schema for Tape-In Extensions -->
@@ -457,8 +439,8 @@
             e.preventDefault();
             const name  = document.getElementById('cf-name').value.trim();
             const phone = document.getElementById('cf-phone').value.trim();
-            const email = document.getElementById('cf-email').value.trim();
-            const notes = document.getElementById('cf-notes').value.trim();
+            const email = '';
+            const notes = '';
 
             const btn = document.querySelector('#contactForm button[type="submit"]');
             btn.textContent = 'Sending...';
