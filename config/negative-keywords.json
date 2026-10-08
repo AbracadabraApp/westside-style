@@ -115,10 +115,117 @@
       "reasoning": "Too generic, includes full-service salons"
     }
   ],
+  "outOfAreaNegativeKeywords": [
+    {
+      "keyword": "nyc",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "new york",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "brooklyn",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "manhattan",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "queens",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "los angeles",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "chicago",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "miami",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "houston",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "dallas",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "atlanta",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "boston",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "san francisco",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "san diego",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "denver",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "phoenix",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "las vegas",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "austin",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "portland",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "vancouver",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    },
+    {
+      "keyword": "spokane",
+      "matchType": "PHRASE",
+      "reasoning": "Out-of-area city - searcher wants a salon there, not in Seattle (e.g. 'k tip extensions nyc')"
+    }
+  ],
   "notes": {
-    "lastUpdated": "2026-08-12",
+    "lastUpdated": "2026-10-08",
     "source": "Imported from current Google Ads negative keywords report + GASP template recommendations",
-    "totalNegativeKeywords": 22,
-    "categories": "Global (11), Competitors (4), Generic Salons (7)"
+    "totalNegativeKeywords": 43,
+    "categories": "Global (11), Competitors (4), Generic Salons (7), Out-of-Area Cities (21)"
   }
 }
