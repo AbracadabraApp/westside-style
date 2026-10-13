@@ -6,3 +6,20 @@
 
 # Redirect keratin2.html to keratin-bond-seattle.html (canonical)
 /keratin2.html    /keratin-bond-seattle.html    301
+
+# Common URL variations (prevent 404s from Google Ads traffic)
+/contact           /consultation                301
+/booking           /consultation                301
+/book              /consultation                301
+/schedule          /consultation                301
+/appointments      /consultation                301
+
+# Service pages
+/services          /keratin-bond-seattle        301
+/extensions        /keratin-bond-seattle        301
+
+# Info pages
+/pricing           /annual-upkeep-cost          301
+/prices            /annual-upkeep-cost          301
+/about-us          /about                       301
+/locations         /consultation                301
