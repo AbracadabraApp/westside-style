@@ -22,6 +22,9 @@ index-with-video.html
 __pycache__/
 *.pyc
 
+# Google Ads development tools (not part of website)
+google-ads-write-mcp/
+
 # Base64 and temporary text files
 *base64.txt
 *.txt
