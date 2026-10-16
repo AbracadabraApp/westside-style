@@ -8,18 +8,18 @@
 /keratin2.html    /keratin-bond-seattle.html    301
 
 # Common URL variations (prevent 404s from Google Ads traffic)
-/contact           /consultation                301
-/booking           /consultation                301
-/book              /consultation                301
-/schedule          /consultation                301
-/appointments      /consultation                301
+/contact           /consultation.html           301
+/booking           /consultation.html           301
+/book              /consultation.html           301
+/schedule          /consultation.html           301
+/appointments      /consultation.html           301
 
 # Service pages
-/services          /keratin-bond-seattle        301
-/extensions        /keratin-bond-seattle        301
+/services          /keratin-bond-seattle.html   301
+/extensions        /keratin-bond-seattle.html   301
 
 # Info pages
-/pricing           /annual-upkeep-cost          301
-/prices            /annual-upkeep-cost          301
-/about-us          /about                       301
-/locations         /consultation                301
+/pricing           /annual-upkeep-cost.html     301
+/prices            /annual-upkeep-cost.html     301
+/about-us          /about.html                  301
+/locations         /consultation.html           301
