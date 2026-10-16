@@ -197,13 +197,18 @@
             </div>
             <form id="contactForm" onsubmit="submitContact(event)" class="space-y-5">
                 <div>
+                    <label for="cf-name" class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NAME</label>
+                    <input type="text" id="cf-name" name="name" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
+                </div>
+
+                <div>
                     <label for="cf-phone" class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">PHONE</label>
                     <input type="tel" id="cf-phone" name="phone" required inputmode="tel" pattern="[0-9]{3}[.\-\s]?[0-9]{3}[.\-\s]?[0-9]{4}" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="206.000.0000">
                 </div>
 
                 <div>
-                    <label for="cf-name" class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NAME</label>
-                    <input type="text" id="cf-name" name="name" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
+                    <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NOTES <span class="text-neutral-stone/60">(OPTIONAL)</span></label>
+                    <textarea id="cf-notes" rows="3" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none" placeholder="What are you looking for?"></textarea>
                 </div>
 
                 <div class="pt-4">
@@ -241,7 +246,7 @@
             const name  = document.getElementById('cf-name').value.trim();
             const phone = document.getElementById('cf-phone').value.trim();
             const email = '';
-            const notes = '';
+            const notes = document.getElementById('cf-notes').value.trim();
 
             // Track form submission
             if (typeof gtag !== 'undefined') {
