@@ -417,6 +417,10 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
+                    // Store user data for enhanced conversions
+                    sessionStorage.setItem('ec_name', name);
+                    sessionStorage.setItem('ec_phone', phone);
+
                     btn.textContent = '✓ Message Sent to Jenn!';
                     setTimeout(() => {
                         window.location.href = '/inquiry.html';

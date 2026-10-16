@@ -11,13 +11,59 @@
       gtag('config', 'AW-18371102793');
       gtag('config', 'G-GW68Z12RN9');
     </script>
-    <!-- Event snippet for Submit lead form conversion page -->
+    <!-- Event snippet for Submit lead form conversion page with Enhanced Conversions -->
     <script>
-      gtag('event', 'conversion', {
-          'send_to': 'AW-18371102793/v5YdCJ3LldwcEMmQg7hE',
-          'value': 1.0,
-          'currency': 'USD'
-      });
+      // Get user data from sessionStorage (set by contact form)
+      const ecName = sessionStorage.getItem('ec_name') || '';
+      const ecPhone = sessionStorage.getItem('ec_phone') || '';
+
+      // Format phone to E.164 format (+1XXXXXXXXXX) - remove all non-digits, add +1
+      function formatPhoneE164(phone) {
+        if (!phone) return undefined;
+        const digits = phone.replace(/\D/g, '');
+        // If 10 digits, add +1. If 11 digits starting with 1, add +. Otherwise return as-is with +
+        if (digits.length === 10) return '+1' + digits;
+        if (digits.length === 11 && digits.startsWith('1')) return '+' + digits;
+        return '+' + digits;
+      }
+
+      // Split name into first and last (best effort)
+      function splitName(fullName) {
+        if (!fullName) return { first_name: undefined, last_name: undefined };
+        const parts = fullName.trim().split(/\s+/);
+        if (parts.length === 1) return { first_name: parts[0], last_name: undefined };
+        return { first_name: parts[0], last_name: parts.slice(1).join(' ') };
+      }
+
+      const formattedPhone = formatPhoneE164(ecPhone);
+      const nameParts = splitName(ecName);
+
+      // Build enhanced conversion data
+      const conversionData = {
+        'send_to': 'AW-18371102793/v5YdCJ3LldwcEMmQg7hE',
+        'value': 1.0,
+        'currency': 'USD'
+      };
+
+      // Add user_data if we have any data
+      if (formattedPhone || nameParts.first_name) {
+        conversionData.user_data = {};
+        if (formattedPhone) {
+          conversionData.user_data.phone_number = formattedPhone;
+        }
+        if (nameParts.first_name || nameParts.last_name) {
+          conversionData.user_data.address = {};
+          if (nameParts.first_name) conversionData.user_data.address.first_name = nameParts.first_name;
+          if (nameParts.last_name) conversionData.user_data.address.last_name = nameParts.last_name;
+        }
+      }
+
+      // Fire enhanced conversion
+      gtag('event', 'conversion', conversionData);
+
+      // Clear sessionStorage after sending
+      sessionStorage.removeItem('ec_name');
+      sessionStorage.removeItem('ec_phone');
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You — Westside Style</title>
