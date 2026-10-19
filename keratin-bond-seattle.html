@@ -169,8 +169,8 @@
             <!-- Hero Video -->
             <div class="max-w-md mx-auto">
                 <div class="aspect-[9/16] bg-neutral-cloud image-reveal rounded-lg overflow-hidden">
-                    <video muted loop playsinline preload="metadata" class="lazy-video w-full h-full object-cover" aria-label="Long, wavy auburn keratin bond hair extensions by Westside Style in Seattle">
-                        <source src="videos/keratin-hero.mp4" type="video/mp4">
+                    <video autoplay muted loop playsinline preload="auto" class="w-full h-full object-cover" aria-label="Long, wavy auburn keratin bond hair extensions by Westside Style in Seattle">
+                        <source src="videos/keratin-auburn.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -463,5 +463,12 @@
         });
     </script>
 
+    <script>
+        // If the browser blocks autoplay (e.g. iPhone Low Power Mode), show play controls instead of a still frame
+        document.querySelectorAll('video[autoplay]').forEach(function(v) {
+            var p = v.play();
+            if (p) p.catch(function() { v.controls = true; });
+        });
+    </script>
 </body>
 </html>
