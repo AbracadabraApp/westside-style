@@ -1,3 +1,5 @@
+const twilio = require('twilio');
+
 exports.handler = async (event, context) => {
   // Enable CORS for your domain
   const headers = {
@@ -57,8 +59,25 @@ exports.handler = async (event, context) => {
 </div>
     `.trim();
 
-    // Send email via Resend
-    const response = await fetch('https://api.resend.com/emails', {
+    // Text Jenn via Twilio (primary)
+    const smsBody = [
+      `New ${service_type || 'consultation'} inquiry from westside.style`,
+      `Page: ${page || 'unknown'}`,
+      `Name: ${name}`,
+      phone ? `Phone: ${phone}` : null,
+      email ? `Email: ${email}` : null,
+      notes ? `Notes: ${notes}` : null
+    ].filter(Boolean).join('\n');
+
+    const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+    const smsSend = client.messages.create({
+      body: smsBody,
+      messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
+      to: process.env.RECIPIENT_PHONE
+    });
+
+    // Email via Resend (backup, so a lead is never lost if the text fails)
+    const emailSend = fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
@@ -70,15 +89,22 @@ exports.handler = async (event, context) => {
         subject: emailSubject,
         html: emailBody
       })
+    }).then(async response => {
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.message || 'Failed to send email');
+      return result;
     });
 
-    const result = await response.json();
+    const [sms, mail] = await Promise.allSettled([smsSend, emailSend]);
 
-    if (!response.ok) {
-      throw new Error(result.message || 'Failed to send email');
+    if (sms.status === 'fulfilled') console.log('SMS sent successfully:', sms.value.sid);
+    else console.error('SMS failed:', sms.reason);
+    if (mail.status === 'fulfilled') console.log('Email sent successfully:', mail.value.id);
+    else console.error('Email failed:', mail.reason);
+
+    if (sms.status === 'rejected' && mail.status === 'rejected') {
+      throw new Error(`SMS: ${sms.reason.message}; Email: ${mail.reason.message}`);
     }
-
-    console.log('Email sent successfully:', result.id);
 
     // Return success
     return {
@@ -87,12 +113,14 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({
         success: true,
         message: 'Consultation request sent!',
-        emailId: result.id
+        sms: sms.status === 'fulfilled',
+        messageSid: sms.status === 'fulfilled' ? sms.value.sid : null,
+        emailId: mail.status === 'fulfilled' ? mail.value.id : null
       })
     };
 
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error sending message:', error);
 
     return {
       statusCode: 500,
