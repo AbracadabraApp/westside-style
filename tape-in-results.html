@@ -334,5 +334,12 @@
         });
     </script>
 
+    <script>
+        // If the browser blocks autoplay (e.g. iPhone Low Power Mode), show play controls instead of a still frame
+        document.querySelectorAll('video[autoplay]').forEach(function(v) {
+            var p = v.play();
+            if (p) p.catch(function() { v.controls = true; });
+        });
+    </script>
 </body>
 </html>
