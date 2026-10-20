@@ -2,11 +2,9 @@ const twilio = require('twilio');
 const querystring = require('querystring');
 
 // Twilio voice webhook for the Local Services Ads phone line.
-// Jenn doesn't take calls: answer with a short greeting, text the caller
-// so the conversation moves to text, and alert Jenn with the caller's number.
+// Jenn doesn't take calls: answer with a short greeting and alert Jenn with the
+// caller's number. Customers are only ever texted by Jenn, from her own phone.
 
-const JENN_DISPLAY = '(206) 295-4549';
-const DEDUPE_HOURS = 12;
 
 // Callers with caller ID: we capture their number and Jenn texts them back from her own phone
 const GREETING =
@@ -17,10 +15,6 @@ const GREETING_NO_TEXT =
   "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients and doesn't take phone calls, " +
   "and your caller ID is blocked, so we can't text you back. " +
   'Please visit westside dot style to send Jenn a message or book a free consultation. Thank you!';
-
-const CALLER_TEXT =
-  "Hi! Thanks for calling Westside Style Hair Extensions. We got your number and Jenn will text you shortly " +
-  `from ${JENN_DISPLAY}. You can also book a free consultation: westside.style/consultation`;
 
 const twiml = (say) => ({
   statusCode: 200,
@@ -52,22 +46,7 @@ exports.handler = async (event) => {
   const when = new Date().toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', minute: '2-digit' });
   const textable = isTextable(caller);
 
-  let texted = false;
   try {
-    if (textable) {
-      // Callers often redial several times in a row; only text them once
-      const since = new Date(Date.now() - DEDUPE_HOURS * 3600 * 1000);
-      const recent = await client.messages.list({ to: caller, dateSentAfter: since, limit: 1 });
-      if (recent.length === 0) {
-        await client.messages.create({
-          body: CALLER_TEXT,
-          messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
-          to: caller
-        });
-        texted = true;
-      }
-    }
-
     const alert = [
       `Local Services call from ${formatPhone(caller)} at ${when}.`,
       textable ? 'They were told you will text them shortly.' : 'Caller ID was blocked; they were sent to westside.style.',

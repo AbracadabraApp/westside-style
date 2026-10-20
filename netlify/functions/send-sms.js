@@ -95,20 +95,7 @@ exports.handler = async (event, context) => {
       return result;
     });
 
-    // Confirm to the customer by text that Jenn got their message
-    const digits = (phone || '').replace(/\D/g, '');
-    const customerPhone = digits.length === 10 ? `+1${digits}` : digits.length === 11 && digits[0] === '1' ? `+${digits}` : null;
-    const firstName = name.trim().split(/\s+/)[0];
-    const confirmSend = customerPhone && customerPhone !== process.env.RECIPIENT_PHONE
-      ? client.messages.create({
-          body: `Hi ${firstName}! It's Westside Style Hair Extensions. Jenn got your message and will text you shortly from (206) 295-4549.`,
-          messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
-          to: customerPhone
-        })
-      : Promise.resolve(null);
-
-    const [sms, mail, confirm] = await Promise.allSettled([smsSend, emailSend, confirmSend]);
-    if (confirm.status === 'rejected') console.error('Customer confirmation text failed:', confirm.reason);
+    const [sms, mail] = await Promise.allSettled([smsSend, emailSend]);
 
     if (sms.status === 'fulfilled') console.log('SMS sent successfully:', sms.value.sid);
     else console.error('SMS failed:', sms.reason);
@@ -128,8 +115,7 @@ exports.handler = async (event, context) => {
         message: 'Consultation request sent!',
         sms: sms.status === 'fulfilled',
         messageSid: sms.status === 'fulfilled' ? sms.value.sid : null,
-        emailId: mail.status === 'fulfilled' ? mail.value.id : null,
-        confirmed: confirm.status === 'fulfilled' && !!confirm.value
+        emailId: mail.status === 'fulfilled' ? mail.value.id : null
       })
     };
 
