@@ -39,10 +39,11 @@ exports.handler = async (event) => {
     const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
     await client.messages.create({
       body: [
-        `Text from ${formatPhone(from)}:`,
+        `Westside Style Lead Alert: text from ${formatPhone(from)}:`,
         body || '(no text)',
         media > 0 ? `[+${media} photo${media > 1 ? 's' : ''} — view in Twilio]` : null,
-        `Reply to them directly at ${formatPhone(from)}.`
+        `Reply to them directly at ${formatPhone(from)}.`,
+        'Reply STOP to opt out.'
       ].filter(Boolean).join('\n'),
       messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
       to: process.env.RECIPIENT_PHONE
