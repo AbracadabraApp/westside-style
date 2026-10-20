@@ -66,7 +66,9 @@ exports.handler = async (event, context) => {
       `Name: ${name}`,
       phone ? `Phone: ${phone}` : null,
       email ? `Email: ${email}` : null,
-      notes ? `Notes: ${notes}` : null
+      notes ? `Notes: ${notes}` : null,
+      // Marker for Jenn's iPhone Shortcut, which auto-texts the customer from her own number
+      phone ? `TEXT THEM NOW: ${phone}` : null
     ].filter(Boolean).join('\n');
 
     const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
