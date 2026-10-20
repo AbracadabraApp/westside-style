@@ -61,14 +61,15 @@ exports.handler = async (event, context) => {
 
     // Text Jenn via Twilio (primary)
     const smsBody = [
-      `New ${service_type || 'consultation'} inquiry from westside.style`,
+      `Westside Style Lead Alert: new ${service_type || 'consultation'} inquiry from westside.style`,
       `Page: ${page || 'unknown'}`,
       `Name: ${name}`,
       phone ? `Phone: ${phone}` : null,
       email ? `Email: ${email}` : null,
       notes ? `Notes: ${notes}` : null,
       // Marker for Jenn's iPhone Shortcut, which auto-texts the customer from her own number
-      phone ? `TEXT THEM NOW: ${phone}` : null
+      phone ? `TEXT THEM NOW: ${phone}` : null,
+      'Reply STOP to opt out.'
     ].filter(Boolean).join('\n');
 
     const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);

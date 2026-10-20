@@ -48,9 +48,10 @@ exports.handler = async (event) => {
 
   try {
     const alert = [
-      `Local Services call from ${formatPhone(caller)} at ${when}.`,
+      `Westside Style Lead Alert: Google ad call from ${formatPhone(caller)} at ${when}.`,
       textable ? 'They were told you will text them shortly.' : 'Caller ID was blocked; they were sent to westside.style.',
-      textable ? `TEXT THEM NOW: ${formatPhone(caller)}` : null
+      textable ? `TEXT THEM NOW: ${formatPhone(caller)}` : null,
+      'Reply STOP to opt out.'
     ].filter(Boolean).join('\n');
 
     // Email is the alert that actually arrives until the Twilio number is A2P registered (texts fail with 30034)
