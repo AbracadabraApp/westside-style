@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18371102793"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18371102793');
+      gtag('config', 'G-GW68Z12RN9');
+    </script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Alerts Sign-Up</title>
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Sign up for Westside Style Lead Alerts text messages.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Privacy Policy | Westside Style">
+    <meta property="og:description" content="Privacy policy for Westside Style hair extensions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://westside.style/privacy-policy.html">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Bebas Neue', 'sans-serif'],
+                        'serif': ['Crimson Pro', 'serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        'warm': {
+                            'ochre': '#C17817',
+                            'amber': '#E8A735',
+                            'sand': '#F4E8D0',
+                            'bone': '#FAF7F0',
+                        },
+                        'neutral': {
+                            'ink': '#0A0908',
+                            'ash': '#49463F',
+                            'stone': '#8B8680',
+                            'cloud': '#F7F5F2',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        ::selection {
+            background: rgba(193, 120, 23, 0.2);
+            color: #0A0908;
+        }
+    </style>
+</head>
+<body class="bg-neutral-cloud text-neutral-ink">
+
+    <!-- HEADER NAV -->
+    <header class="py-8 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #1a1714 0%, #0f0d0b 50%, #0A0908 100%); clip-path: ellipse(120% 100% at 50% 0%); box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);">
+        <div class="absolute inset-0 opacity-15" style="background: radial-gradient(ellipse at 30% 50%, #D4AF37 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, #C17817 0%, transparent 50%);"></div>
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <a href="/" class="block font-display text-4xl lg:text-5xl tracking-wide hover:opacity-90 transition-all duration-300 hover:scale-[1.02]" style="color: #E8B44D; text-shadow: 0 2px 20px rgba(232, 180, 77, 0.4), 0 1px 3px rgba(0, 0, 0, 0.9);">SEATTLE HAIR EXTENSIONS</a>
+            <a href="https://www.instagram.com/_westside_style_" target="_blank" class="block font-mono text-base tracking-wide mt-2 hover:opacity-70 transition-all duration-300" style="color: #F4E8D0; text-shadow: 0 1px 10px rgba(232, 167, 53, 0.3), 0 1px 2px rgba(0, 0, 0, 0.8);">@_westside_style_</a>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-16 px-6 lg:px-16 bg-warm-bone">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="font-serif text-4xl lg:text-5xl mb-4">LEAD ALERTS SIGN-UP</h1>
+            <p class="font-mono text-sm text-neutral-stone">For Westside Style staff</p>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 lg:px-16 bg-neutral-cloud">
+        <div class="max-w-xl mx-auto">
+            <p class="font-serif text-lg leading-relaxed text-neutral-ash mb-8">Sign up to get a text message each time a customer submits an inquiry on westside.style or calls Westside Style, so you can follow up quickly.</p>
+            <form id="optinForm" onsubmit="submitOptin(event)" class="space-y-5">
+                <div>
+                    <label for="oi-name" class="block font-mono text-sm tracking-wide mb-2">NAME</label>
+                    <input id="oi-name" type="text" required class="w-full px-4 py-3 border border-neutral-stone/30 bg-white font-serif text-lg">
+                </div>
+                <div>
+                    <label for="oi-phone" class="block font-mono text-sm tracking-wide mb-2">MOBILE PHONE NUMBER</label>
+                    <input id="oi-phone" type="tel" required class="w-full px-4 py-3 border border-neutral-stone/30 bg-white font-serif text-lg">
+                </div>
+                <label class="flex gap-3 items-start">
+                    <input id="oi-sms" type="checkbox" required class="mt-1.5 w-5 h-5 flex-shrink-0">
+                    <span class="font-serif text-base text-neutral-ash">I agree to receive Westside Style Lead Alerts: text messages with new customer inquiry details from Westside Style at the number above. Message frequency varies (about 1 to 10 per week). Msg &amp; data rates may apply. Reply HELP for help, reply STOP to opt out. Consent is not a condition of any purchase.</span>
+                </label>
+                <label class="flex gap-3 items-start">
+                    <input id="oi-terms" type="checkbox" required class="mt-1.5 w-5 h-5 flex-shrink-0">
+                    <span class="font-serif text-base text-neutral-ash">I have read and agree to the <a href="/sms-terms.html" class="text-warm-ochre underline">SMS Terms</a> and <a href="/privacy-policy.html" class="text-warm-ochre underline">Privacy Policy</a>.</span>
+                </label>
+                <button type="submit" class="w-full font-mono text-base tracking-extreme text-neutral-ink bg-[#D4AF37] py-4 hover:bg-warm-amber transition-colors">SIGN UP FOR LEAD ALERTS</button>
+            </form>
+            <div id="optinDone" class="hidden p-6 bg-warm-bone border border-neutral-stone/20">
+                <p class="font-serif text-lg leading-relaxed text-neutral-ash">You're signed up for Westside Style Lead Alerts. You'll receive a confirmation text shortly. Reply STOP at any time to opt out.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function submitOptin(e) {
+            e.preventDefault();
+            fetch('https://roaring-kulfi-cd788b.netlify.app/.netlify/functions/send-sms', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: document.getElementById('oi-name').value,
+                    phone: document.getElementById('oi-phone').value,
+                    service_type: 'lead-alerts-optin',
+                    sms_consent: document.getElementById('oi-sms').checked,
+                    page: 'lead-alerts.html'
+                })
+            }).finally(() => {
+                document.getElementById('optinForm').classList.add('hidden');
+                document.getElementById('optinDone').classList.remove('hidden');
+            });
+        }
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="px-8 py-6 bg-neutral-ink text-center">
+        <p class="font-mono text-xs tracking-wide text-neutral-stone mb-2">© 2025 WESTSIDE STYLE · SEATTLE, WA</p>
+        <nav class="flex gap-4 justify-center flex-wrap">
+            <a href="/" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">HOME</a>
+            <a href="/hair-extensions-seattle.html" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">ALL EXTENSIONS</a>
+            <a href="/#services" class="font-mono text-xs tracking-wide text-neutral-cloud hover:text-warm-amber transition-colors">SERVICES & PRICING</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

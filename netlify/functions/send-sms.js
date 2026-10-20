@@ -72,10 +72,21 @@ exports.handler = async (event, context) => {
     ].filter(Boolean).join('\n');
 
     const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+
+    // Lead Alerts sign-up (westside.style/lead-alerts.html): confirm the opt-in to the person who signed up
+    const digits = (phone || '').replace(/\D/g, '');
+    const optinPhone = digits.length === 10 ? `+1${digits}` : digits.length === 11 && digits[0] === '1' ? `+${digits}` : null;
+    const isOptin = service_type === 'lead-alerts-optin';
+    if (isOptin && (!data.sms_consent || !optinPhone)) {
+      return { statusCode: 400, headers, body: JSON.stringify({ error: 'SMS consent and a valid mobile number are required' }) };
+    }
+
     const smsSend = client.messages.create({
-      body: smsBody,
+      body: isOptin
+        ? "Westside Style Lead Alerts: you're signed up for new customer inquiry alerts. Msg frequency varies (about 1-10/week). Msg & data rates may apply. Reply HELP for help, STOP to cancel."
+        : smsBody,
       messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
-      to: process.env.RECIPIENT_PHONE
+      to: isOptin ? optinPhone : process.env.RECIPIENT_PHONE
     });
 
     // Email via Resend (backup, so a lead is never lost if the text fails)
