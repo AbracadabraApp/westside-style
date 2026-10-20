@@ -8,9 +8,11 @@ const querystring = require('querystring');
 const JENN_DISPLAY = '(206) 295-4549';
 const DEDUPE_HOURS = 12;
 
+// Always read Jenn's number aloud: the auto-text can be carrier-blocked until A2P registration is approved
 const GREETING =
   "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients and doesn't take phone calls, " +
-  "so we've just sent you a text. Please text Jenn and she'll get right back to you. Thank you!";
+  'but she would love to help by text. Please text Jenn at 2 0 6, 2 9 5, 4 5 4 9. Again, that is 2 0 6, 2 9 5, 4 5 4 9. ' +
+  "We're also sending you a text with her number. Thank you!";
 const GREETING_NO_TEXT =
   "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients and doesn't take phone calls. " +
   'Please text Jenn at 2 0 6, 2 9 5, 4 5 4 9, and she will get right back to you. Again, that is 2 0 6, 2 9 5, 4 5 4 9. Thank you!';
@@ -66,15 +68,31 @@ exports.handler = async (event) => {
       }
     }
 
-    await client.messages.create({
-      body: [
-        `Local Services call from ${formatPhone(caller)} at ${when}.`,
-        texted ? 'We auto-texted them to text you.' : textable ? 'They called again (already texted).' : 'Caller ID was blocked, so we could not text them.',
-        textable ? 'Text them first to win the booking!' : null
-      ].filter(Boolean).join('\n'),
-      messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
-      to: process.env.RECIPIENT_PHONE
-    });
+    const alert = [
+      `Local Services call from ${formatPhone(caller)} at ${when}.`,
+      texted ? 'We auto-texted them to text you.' : textable ? 'They called again (already texted).' : 'Caller ID was blocked, so we could not text them.',
+      textable ? 'Text them first to win the booking!' : null
+    ].filter(Boolean).join('\n');
+
+    const [sms, mail] = await Promise.allSettled([
+      client.messages.create({
+        body: alert,
+        messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
+        to: process.env.RECIPIENT_PHONE
+      }),
+      fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: 'Westside Style <onboarding@resend.dev>',
+          to: process.env.RECIPIENT_EMAIL,
+          subject: `Local Services call from ${formatPhone(caller)} - text them back`,
+          text: alert
+        })
+      }).then(r => { if (!r.ok) throw new Error(`Resend ${r.status}`); })
+    ]);
+    if (sms.status === 'rejected') console.error('Alert text failed:', sms.reason);
+    if (mail.status === 'rejected') console.error('Alert email failed:', mail.reason);
   } catch (error) {
     // Never leave the caller on a dead line because a text failed
     console.error('Text failed:', error);
