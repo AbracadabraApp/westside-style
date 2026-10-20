@@ -12,11 +12,11 @@ const DEDUPE_HOURS = 12;
 const GREETING =
   "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients and doesn't take phone calls, " +
   "but we've got your number, and Jenn will text you shortly. Talk soon!";
-// Blocked caller ID: we can't capture the number, so ask them to text Jenn
+// Blocked caller ID: we can't capture the number, so point them to the website
 const GREETING_NO_TEXT =
   "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients and doesn't take phone calls, " +
-  "and your number came through as blocked, so we can't text you back. " +
-  'Please text Jenn at 2 0 6, 2 9 5, 4 5 4 9, and she will get right back to you. Again, that is 2 0 6, 2 9 5, 4 5 4 9. Thank you!';
+  "and your caller ID is blocked, so we can't text you back. " +
+  'Please visit westside dot style to send Jenn a message or book a free consultation. Thank you!';
 
 const CALLER_TEXT =
   "Hi! Thanks for calling Westside Style Hair Extensions. We got your number and Jenn will text you shortly " +
@@ -70,7 +70,7 @@ exports.handler = async (event) => {
 
     const alert = [
       `Local Services call from ${formatPhone(caller)} at ${when}.`,
-      textable ? 'They were told you will text them shortly.' : 'Caller ID was blocked; they were asked to text you.',
+      textable ? 'They were told you will text them shortly.' : 'Caller ID was blocked; they were sent to westside.style.',
       textable ? `TEXT THEM NOW: ${formatPhone(caller)}` : null
     ].filter(Boolean).join('\n');
 
