@@ -53,25 +53,11 @@ exports.handler = async (event) => {
       textable ? `TEXT THEM NOW: ${formatPhone(caller)}` : null
     ].filter(Boolean).join('\n');
 
-    const [sms, mail] = await Promise.allSettled([
-      client.messages.create({
-        body: alert,
-        messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
-        to: process.env.RECIPIENT_PHONE
-      }),
-      fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: { 'Authorization': `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          from: 'Westside Style <onboarding@resend.dev>',
-          to: process.env.RECIPIENT_EMAIL,
-          subject: `Local Services call from ${formatPhone(caller)} - text them back`,
-          text: alert
-        })
-      }).then(r => { if (!r.ok) throw new Error(`Resend ${r.status}`); })
-    ]);
-    if (sms.status === 'rejected') console.error('Alert text failed:', sms.reason);
-    if (mail.status === 'rejected') console.error('Alert email failed:', mail.reason);
+    await client.messages.create({
+      body: alert,
+      messagingServiceSid: process.env.TWILIO_MESSAGING_SERVICE_SID,
+      to: process.env.RECIPIENT_PHONE
+    });
   } catch (error) {
     // Never leave the caller on a dead line because a text failed
     console.error('Text failed:', error);
