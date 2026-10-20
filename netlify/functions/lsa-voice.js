@@ -8,8 +8,8 @@ const querystring = require('querystring');
 
 // Callers with caller ID: we capture their number and Jenn texts them back from her own phone
 const GREETING =
-  "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients and doesn't take phone calls, " +
-  "but we've got your number, and Jenn will text you shortly. Talk soon!";
+  "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients right now, but she has your number " +
+  'and will text you shortly to discuss your goals and set up a consultation. Thank you!';
 // Blocked caller ID: we can't capture the number, so point them to the website
 const GREETING_NO_TEXT =
   "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients and doesn't take phone calls, " +
