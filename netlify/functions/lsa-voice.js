@@ -8,19 +8,19 @@ const querystring = require('querystring');
 const JENN_DISPLAY = '(206) 295-4549';
 const DEDUPE_HOURS = 12;
 
-// Always read Jenn's number aloud: the auto-text can be carrier-blocked until A2P registration is approved
+// Callers with caller ID: we capture their number and Jenn texts them back from her own phone
 const GREETING =
   "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients and doesn't take phone calls, " +
-  'but she would love to help by text. Please text Jenn at 2 0 6, 2 9 5, 4 5 4 9. Again, that is 2 0 6, 2 9 5, 4 5 4 9. ' +
-  "We're also sending you a text with her number. Thank you!";
+  "but we've got your number, and Jenn will text you shortly. Talk soon!";
+// Blocked caller ID: we can't capture the number, so ask them to text Jenn
 const GREETING_NO_TEXT =
-  "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients and doesn't take phone calls. " +
+  "Hi, thanks for calling Westside Style hair extensions. Jenn is with clients and doesn't take phone calls, " +
+  "and your number came through as blocked, so we can't text you back. " +
   'Please text Jenn at 2 0 6, 2 9 5, 4 5 4 9, and she will get right back to you. Again, that is 2 0 6, 2 9 5, 4 5 4 9. Thank you!';
 
 const CALLER_TEXT =
-  "Hi! Thanks for calling Westside Style Hair Extensions. Jenn is with clients and doesn't take calls, " +
-  `but she'd love to help by text. Text her directly at ${JENN_DISPLAY}, ` +
-  'or book a free consultation: westside.style/consultation';
+  "Hi! Thanks for calling Westside Style Hair Extensions. We got your number and Jenn will text you shortly " +
+  `from ${JENN_DISPLAY}. You can also book a free consultation: westside.style/consultation`;
 
 const twiml = (say) => ({
   statusCode: 200,
@@ -70,8 +70,8 @@ exports.handler = async (event) => {
 
     const alert = [
       `Local Services call from ${formatPhone(caller)} at ${when}.`,
-      texted ? 'We auto-texted them to text you.' : textable ? 'They called again (already texted).' : 'Caller ID was blocked, so we could not text them.',
-      textable ? 'Text them first to win the booking!' : null
+      textable ? 'They were told you will text them shortly.' : 'Caller ID was blocked; they were asked to text you.',
+      textable ? `TEXT THEM NOW: ${formatPhone(caller)}` : null
     ].filter(Boolean).join('\n');
 
     const [sms, mail] = await Promise.allSettled([
