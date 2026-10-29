@@ -562,7 +562,7 @@
                 <span class="font-mono text-sm tracking-extreme text-warm-ochre">FIRST STEP</span>
                 <h2 class="font-display text-5xl lg:text-6xl mt-2">FREE HAIR EXTENSION CONSULTATION</h2>
             </div>
-            <div class="grid sm:grid-cols-2 gap-x-10 gap-y-6">
+            <div class="grid sm:grid-cols-3 gap-x-10 gap-y-6">
                 <div class="border-l-2 border-warm-ochre pl-6">
                     <h3 class="font-display text-2xl mb-1">YOUR GOALS</h3>
                     <p class="font-serif text-lg text-neutral-ash leading-relaxed">More length, more volume, easier styling? We start with what you want your hair to do for you.</p>
@@ -572,20 +572,27 @@
                     <p class="font-serif text-lg text-neutral-ash leading-relaxed">Jenn looks at your texture, density, length and health to see what will look most natural.</p>
                 </div>
                 <div class="border-l-2 border-warm-ochre pl-6">
-                    <h3 class="font-display text-2xl mb-1">THE RIGHT METHOD</h3>
-                    <p class="font-serif text-lg text-neutral-ash leading-relaxed">Keratin bonds, hand-sewn wefts or tape-ins, and why one fits your hair and lifestyle best.</p>
-                </div>
-                <div class="border-l-2 border-warm-ochre pl-6">
                     <h3 class="font-display text-2xl mb-1">PRICE &amp; UPKEEP</h3>
                     <p class="font-serif text-lg text-neutral-ash leading-relaxed">What it costs, how often you come back, and what to expect. No surprises.</p>
                 </div>
             </div>
-            <div class="text-center mt-10">
-                <p class="font-display text-2xl text-neutral-ink mb-6">No obligation. No pressure. Just honest advice.</p>
-                <button onclick="openContactModal()" class="w-full sm:w-auto font-mono text-base tracking-extreme text-neutral-ink px-10 py-4 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">
-                    REQUEST A FREE CONSULTATION
-                </button>
-                <a href="/consultation.html" class="block mt-4 font-mono text-sm tracking-wide uppercase text-warm-ochre hover:text-neutral-ink transition-colors">More about the consultation →</a>
+            <form onsubmit="submitContact(event)" data-page="Homepage consultation section" class="max-w-md mx-auto mt-10 space-y-5 bg-warm-bone p-6">
+                <div>
+                    <label for="hc-name" class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NAME</label>
+                    <input type="text" id="hc-name" name="name" required class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="Your name">
+                </div>
+                <div>
+                    <label for="hc-phone" class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">PHONE</label>
+                    <input type="tel" id="hc-phone" name="phone" required inputmode="tel" pattern="[0-9]{3}[.\-\s]?[0-9]{3}[.\-\s]?[0-9]{4}" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors" placeholder="206.000.0000">
+                </div>
+                <div>
+                    <label for="hc-notes" class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NOTES <span class="text-neutral-stone/60">(OPTIONAL)</span></label>
+                    <textarea id="hc-notes" name="notes" rows="3" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none" placeholder="What are you looking for?"></textarea>
+                </div>
+                <button type="submit" class="w-full font-mono text-base tracking-wide uppercase text-neutral-ink px-6 py-3 transition-all duration-300" style="background-color: rgba(212,175,55,0.7);">SEND MESSAGE</button>
+            </form>
+            <div class="text-center mt-4">
+                <a href="/consultation.html" class="font-mono text-sm tracking-wide uppercase text-warm-ochre hover:text-neutral-ink transition-colors">More about the consultation →</a>
             </div>
         </div>
     </section>
@@ -704,7 +711,7 @@
 
                 <div>
                     <label class="block font-mono text-sm tracking-wide text-neutral-ash mb-1">NOTES <span class="text-neutral-stone/60">(OPTIONAL)</span></label>
-                    <textarea id="cf-notes" rows="3" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none" placeholder="What are you looking for?"></textarea>
+                    <textarea id="cf-notes" name="notes" rows="3" class="w-full bg-transparent border-b border-neutral-stone/40 focus:border-[#D4AF37] outline-none py-2 font-serif text-xl text-neutral-ink placeholder-neutral-stone/40 transition-colors resize-none" placeholder="What are you looking for?"></textarea>
                 </div>
                 <div class="pt-2">
                     <button type="submit"
@@ -731,11 +738,12 @@
 
         function submitContact(e) {
             e.preventDefault();
-            const name  = document.getElementById('cf-name').value.trim();
-            const phone = document.getElementById('cf-phone').value.trim();
-            const notes = document.getElementById('cf-notes').value.trim();
+            const form  = e.target;
+            const name  = form.elements.name.value.trim();
+            const phone = form.elements.phone.value.trim();
+            const notes = form.elements.notes.value.trim();
 
-            const btn = document.querySelector('#contactForm button[type="submit"]');
+            const btn = form.querySelector('button[type="submit"]');
             btn.textContent = 'SENDING...';
             btn.disabled = true;
 
@@ -748,7 +756,7 @@
                     phone: phone,
                     notes: notes,
                     service_type: 'general_inquiry',
-                    page: 'Homepage'
+                    page: form.dataset.page || 'Homepage'
                 })
             })
             .then(response => response.json())
