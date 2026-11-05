@@ -116,7 +116,7 @@ Unnecessary changes diminish trust. Each unauthorized change makes the user wond
 
 #### File Naming:
 - New test pages: `{method}-seattle-NEW.html` in /test/
-- Videos: `{method}-result-{number}.mp4` in /test/videos/
+- Videos: `{method}-result-{number}.mp4` in /videos/ (test pages link to ../videos/)
 - Placeholders: Use existing videos with overlay text
 
 #### Git Commits:
